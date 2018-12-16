@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>Creating FreeDOS Image under ubuntu</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="Creating FreeDOS Image under ubuntu" />
+<meta property="og:description" content="Pre-requites apt-get install wget unzip genisoimage  wget - pulling down files from the internet unzip - uncompress any zip files genisoimage - Needed for creating the ISO image
+Making custom freedos disk  make a source directory where you will keep all these files.
+mkdir ~/src_freedos export FDSRC=~/src_freedos cd $FDSRC
+ Download the FreeDos OEM CD-ROM disc builder http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip
+wget http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip -O ${FDSRC}/FDOEMCD.builder.zip
+ unzip the package and go into the new directory called &ldquo;FDOEMCD&rdquo;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/creating-freedos-image-under-ubuntu/" /><meta property="article:published_time" content="2012-03-06T10:42:08&#43;00:00"/>
+<meta property="article:modified_time" content="2012-03-06T10:42:08&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="Creating FreeDOS Image under ubuntu">
+<meta itemprop="description" content="Pre-requites apt-get install wget unzip genisoimage  wget - pulling down files from the internet unzip - uncompress any zip files genisoimage - Needed for creating the ISO image
+Making custom freedos disk  make a source directory where you will keep all these files.
+mkdir ~/src_freedos export FDSRC=~/src_freedos cd $FDSRC
+ Download the FreeDos OEM CD-ROM disc builder http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip
+wget http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip -O ${FDSRC}/FDOEMCD.builder.zip
+ unzip the package and go into the new directory called &ldquo;FDOEMCD&rdquo;">
+
+
+<meta itemprop="datePublished" content="2012-03-06T10:42:08&#43;00:00" />
+<meta itemprop="dateModified" content="2012-03-06T10:42:08&#43;00:00" />
+<meta itemprop="wordCount" content="316">
+
+
+
+<meta itemprop="keywords" content="firmware,freedos,iso,pxe,ubuntu," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Creating FreeDOS Image under ubuntu"/>
+<meta name="twitter:description" content="Pre-requites apt-get install wget unzip genisoimage  wget - pulling down files from the internet unzip - uncompress any zip files genisoimage - Needed for creating the ISO image
+Making custom freedos disk  make a source directory where you will keep all these files.
+mkdir ~/src_freedos export FDSRC=~/src_freedos cd $FDSRC
+ Download the FreeDos OEM CD-ROM disc builder http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip
+wget http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip -O ${FDSRC}/FDOEMCD.builder.zip
+ unzip the package and go into the new directory called &ldquo;FDOEMCD&rdquo;"/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Creating FreeDOS Image under ubuntu</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        March 6, 2012
+        <br>
+        
+        
+            
+                <a href="http://blog.thinkside.uk/tags/firmware">firmware</a>
+            
+                <a href="http://blog.thinkside.uk/tags/freedos">freedos</a>
+            
+                <a href="http://blog.thinkside.uk/tags/iso">iso</a>
+            
+                <a href="http://blog.thinkside.uk/tags/pxe">pxe</a>
+            
+                <a href="http://blog.thinkside.uk/tags/ubuntu">ubuntu</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<h3 id="pre-requites">Pre-requites</h3>
+
+<pre><code>apt-get install wget unzip genisoimage
+</code></pre>
+
+<p>wget - pulling down files from the internet
+unzip - uncompress any zip files
+genisoimage - Needed for creating the ISO image</p>
+
+<h3 id="making-custom-freedos-disk">Making custom freedos disk</h3>
+
+<ol>
+<li><p>make a source directory where you will keep all these files.</p>
+
+<p>mkdir ~/src_freedos
+export FDSRC=~/src_freedos
+cd $FDSRC</p></li>
+
+<li><p>Download the FreeDos OEM CD-ROM disc builder <a href="http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip">http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip</a></p>
+
+<p>wget <a href="http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip">http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip</a> -O ${FDSRC}/FDOEMCD.builder.zip</p></li>
+
+<li><p>unzip the package and go into the new directory called &ldquo;FDOEMCD&rdquo;</p>
+
+<p>unzip FDOEMCD.builder.zip
+cd ${FDSRC}/FDOEMCD</p></li>
+
+<li><p>Time for customising the FreeDOS image, always remember once you have created this image you will be making it as a read only media so this will be the only time which you will be able to make any changes (unless you setup a RAMDISK to the image which isn’t in the scope of this document). It is recommended to copy the files you want into their own directory under &ldquo;CDROOT&rdquo;. In the example below i am copying a BIOS firmware update package and renaming one of the applications</p>
+
+<p>mkdir -p ${FDSRC}/FDOEMCD/CDROOT/BIOS
+unzip /tmp/X8dtu61.708.zip -d ${FDSRC}/FDOEMCD/CDROOT/BIOS
+cd ${FDSRC}/FDOEMCD/CDROOT/BIOS
+cp AFUDOS.SMC AFUDOS.EXE</p></li>
+</ol>
+
+<p>4a. One useful application to install to the image is reboot <a href="http://mirror.aarnet.edu.au/pub/freedos/files/util/system/reboot.zip">http://mirror.aarnet.edu.au/pub/freedos/files/util/system/reboot.zip</a>, by default DOS does not have an application for performing a reboot of the server after you have finished performing the work you wish todo.</p>
+
+<pre><code>cd ${FDSRC}/
+wget http://mirror.aarnet.edu.au/pub/freedos/files/util/system/reboot.zip -O ${FDSRC}/reboot.zip
+unzip ${FDSRC}/reboot.zip -d ${FDSRC}/FDOEMCD/CDROOT
+</code></pre>
+
+<ol>
+<li><p>Time to re-compile the image to an ISO image for use as either a CD or PXE boot image, drop back to the &ldquo;FDOEMCD&rdquo; directory and then run the following mkisofs command (feel free to alter the publisher information if you wish i have left in the FreeDos information in place, i sometimes alter it to highlight whether it’s been built for a specific hardware platform).</p>
+
+<p>cd ${FDSRC}/FDOEMCD
+mkisofs -o fdoem-20120306.iso -q -l -N
+-boot-info-table -iso-level 4 -no-emul-boot
+-b isolinux/isolinux.bin
+-publisher &ldquo;FreeDOS - www.freedos.org&rdquo;
+-A &ldquo;FreeDOS 1.0 Distribution&rdquo; -V FDOSBIOS -v CDROOT</p></li>
+</ol>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2fcreating-freedos-image-under-ubuntu%2f - Creating%20FreeDOS%20Image%20under%20ubuntu by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-cx_oracle-under-ubuntu-10-10/">installing cx_oracle under ubuntu 10.10<aside class="dates">Dec 1 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/what-this-space/">Watch this space<aside class="dates">May 14 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

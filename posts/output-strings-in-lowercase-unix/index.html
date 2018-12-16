@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>Output Strings in Lowercase -- UNIX</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="Output Strings in Lowercase -- UNIX" />
+<meta property="og:description" content="This is something I found on someone else&rsquo;s blog which i find useful, its always the simple things you forget.
+# cat uppercasefile | tr &quot;[:upper:]&quot; &quot;[:lower:]&quot;  this file&rsquo;s contents are in uppercase but its output should be lowercased
+# tr &quot;[:upper:]&quot; &quot;[:lower:]&quot; &lt; uppercasefile  this file&rsquo;s contents are in uppercase
+but its output should be
+lowercased # cat uppercase | tr &#39;[A-Z]&#39; &#39;[a-z]&#39;  this file&rsquo;s contents are in uppercase" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/output-strings-in-lowercase-unix/" /><meta property="article:published_time" content="2009-01-16T17:07:23&#43;00:00"/>
+<meta property="article:modified_time" content="2009-01-16T17:07:23&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="Output Strings in Lowercase -- UNIX">
+<meta itemprop="description" content="This is something I found on someone else&rsquo;s blog which i find useful, its always the simple things you forget.
+# cat uppercasefile | tr &quot;[:upper:]&quot; &quot;[:lower:]&quot;  this file&rsquo;s contents are in uppercase but its output should be lowercased
+# tr &quot;[:upper:]&quot; &quot;[:lower:]&quot; &lt; uppercasefile  this file&rsquo;s contents are in uppercase
+but its output should be
+lowercased # cat uppercase | tr &#39;[A-Z]&#39; &#39;[a-z]&#39;  this file&rsquo;s contents are in uppercase">
+
+
+<meta itemprop="datePublished" content="2009-01-16T17:07:23&#43;00:00" />
+<meta itemprop="dateModified" content="2009-01-16T17:07:23&#43;00:00" />
+<meta itemprop="wordCount" content="118">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Output Strings in Lowercase -- UNIX"/>
+<meta name="twitter:description" content="This is something I found on someone else&rsquo;s blog which i find useful, its always the simple things you forget.
+# cat uppercasefile | tr &quot;[:upper:]&quot; &quot;[:lower:]&quot;  this file&rsquo;s contents are in uppercase but its output should be lowercased
+# tr &quot;[:upper:]&quot; &quot;[:lower:]&quot; &lt; uppercasefile  this file&rsquo;s contents are in uppercase
+but its output should be
+lowercased # cat uppercase | tr &#39;[A-Z]&#39; &#39;[a-z]&#39;  this file&rsquo;s contents are in uppercase"/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Output Strings in Lowercase -- UNIX</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        January 16, 2009
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>This is something I found on someone else&rsquo;s blog which i find useful, its always the simple things you forget.</p>
+
+<pre><code># cat uppercasefile | tr &quot;[:upper:]&quot; &quot;[:lower:]&quot;
+</code></pre>
+
+<p>this file&rsquo;s contents are in uppercase
+but its output should be
+lowercased</p>
+
+<pre><code># tr &quot;[:upper:]&quot; &quot;[:lower:]&quot; &lt; uppercasefile
+</code></pre>
+
+<p>this file&rsquo;s contents are in uppercase</p>
+
+<p>but its output should be</p>
+
+<p>lowercased
+ </p>
+
+<pre><code># cat uppercase | tr '[A-Z]' '[a-z]'
+</code></pre>
+
+<p>this file&rsquo;s contents are in uppercase</p>
+
+<p>but its output should be</p>
+
+<p>lowercased</p>
+
+<pre><code># tr '[A-Z]' '[a-z]' &lt; uppercasefile
+</code></pre>
+
+<p>this file&rsquo;s contents are in uppercase</p>
+
+<p>but its output should be</p>
+
+<p>lowercased</p>
+
+<p>Output lowercase strings to file</p>
+
+<pre><code># tr '[A-Z]' '[a-z]'  outputfile_lower
+
+
+
+
+
+
+# date | tr &quot;[:upper:]&quot; &quot;[:lower:]&quot;
+
+sat sep  8 23:24:20 kst 2007
+</code></pre>
+
+<p>From: <a href="http://www.mysysad.com/2007/09/output-strings-in-lowercase-unix.html">http://www.mysysad.com/2007/09/output-strings-in-lowercase-unix.html</a></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2foutput-strings-in-lowercase-unix%2f - Output%20Strings%20in%20Lowercase%20--%20UNIX by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/creating-freedos-image-under-ubuntu/">Creating FreeDOS Image under ubuntu<aside class="dates">Mar 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-cx_oracle-under-ubuntu-10-10/">installing cx_oracle under ubuntu 10.10<aside class="dates">Dec 1 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

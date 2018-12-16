@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networking on Thinkside</title>
+    <link>http://blog.thinkside.uk/categories/networking/</link>
+    <description>Recent content in Networking on Thinkside</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 06 Nov 2009 12:14:25 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.thinkside.uk/categories/networking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Netscaler nslog commands</title>
+      <link>http://blog.thinkside.uk/posts/netscaler-nslog-commands/</link>
+      <pubDate>Fri, 06 Nov 2009 12:14:25 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/netscaler-nslog-commands/</guid>
+      <description>I have been using this forum when every i have had any questions about Netscalers and they do have a lot of very useful HOW-TO&amp;rsquo;s and debugging guides here so anyone who uses netscalers i would strongly recommend bookmarking this forum (http://www.netscalerkb.com).  Any way here is a copy of the commands.
+If you want to: Uncompress an archived log file: gunzip newnslog.21.gz Discover the time period covered by the log: nsconmsg -K newnslog.</description>
+    </item>
+    
+    <item>
+      <title>Enabling SNMP on a Netscaler though the CLI</title>
+      <link>http://blog.thinkside.uk/posts/enabling-snmp-on-a-netscaler-though-the-cli/</link>
+      <pubDate>Thu, 17 Sep 2009 14:14:22 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/enabling-snmp-on-a-netscaler-though-the-cli/</guid>
+      <description>Useful if you wish to monitor the Netscaler remotely though cacti or some other monitoring/trending software.
+## # Display SNMP Community ## sh snmp community ## # Adding SNMP community ## addsnmpcommunity public all  Where public is the community string, you can also create traps on the Netscalers as well but i havent done much digging into this yet. More playing with monitoring the different services we have setup.</description>
+    </item>
+    
+    <item>
+      <title>Releasing IP from DHCP pool of a cisco router</title>
+      <link>http://blog.thinkside.uk/posts/releasing-ip-from-dhcp-pool-of-a-cisco-router/</link>
+      <pubDate>Mon, 06 Jul 2009 13:38:15 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/releasing-ip-from-dhcp-pool-of-a-cisco-router/</guid>
+      <description>gateway#show ip dhcp binding Bindings from all pools not associated with VRF: IP address Client-ID/ Lease expiration Type Hardware address/ User name 192.168.2.22 0100.123f.8e52.06 Apr 17 2009 03:41 PM Automatic 192.168.2.25 0100.0244.3908.79 Apr 17 2009 03:13 PM Automatic 192.168.2.59 0100.1500.2020.6b Apr 17 2009 03:42 PM Automatic 192.168.2.134 0100.016c.cb00.0e Apr 17 2009 03:12 PM Automatic gateway#clear ip dhcp binding 192.168.2.25 gateway#show ip dhcp binding Bindings from all pools not associated with VRF: IP address Client-ID/ Lease expiration Type Hardware address/ User name 192.</description>
+    </item>
+    
+    <item>
+      <title>Simple use of netcat for checking a port is open on a firewall/load balancer</title>
+      <link>http://blog.thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</link>
+      <pubDate>Tue, 27 Jan 2009 11:01:27 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</guid>
+      <description>Server (Listener) root@server:/&amp;lt;span class=&amp;quot;code-keyword&amp;quot;&amp;gt;var&amp;lt;/span&amp;gt;/tmp&amp;gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/&amp;lt;span class=&amp;quot;code-keyword&amp;quot;&amp;gt;var&amp;lt;/span&amp;gt;/tmp&amp;gt; netcat -l -s server.example.com -p 7735 &amp;lt;pcanham.txt  ![](http://www.thinkside.co.uk/blog/images/warning.gif)  once something has connected the app will stop you will need to put it into a loop    Option Desc  -l  listener   -s  source address (IP address to bind to)   -p  port    Client root@scar:/&amp;gt; telnet server.</description>
+    </item>
+    
+    <item>
+      <title>Displaying DHCP clients from the CLI of a CISCO 877 router</title>
+      <link>http://blog.thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/</link>
+      <pubDate>Mon, 12 Jan 2009 15:48:16 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/</guid>
+      <description>gateway#show ip dhcp binding Bindings from all pools not associated with VRF: IP address Client-ID/ Lease expiration Type Hardware address/ User name 192.168.2.23 XXXX.XXX.XXXX.XX Jan 12 2009 05:12 PM Automatic 192.168.2.27 XXXX.XXXX.XXXX.XX Jan 12 2009 05:20 PM Automatic gateway#
+XXXX.XXXX.XXXX.XX = MAC address of server or network appliance.</description>
+    </item>
+    
+  </channel>
+</rss>

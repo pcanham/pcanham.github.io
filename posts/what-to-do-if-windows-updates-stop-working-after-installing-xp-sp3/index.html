@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>What to do if windows updates stop working after installing XP SP3</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="What to do if windows updates stop working after installing XP SP3" />
+<meta property="og:description" content="Register the Wups2.dll file in Windows loadTOCNode(2, &lsquo;resolution&rsquo;); To register the Wups2.dll file in Windows, follow these steps: 1. 
+Stop the Automatic Updates service. To do this, follow these steps: a. 
+Click Start, click Run, type cmd, and then click OK.   b. 
+At the command prompt, type the following command, and then press ENTER:
+net stop wuauserv
+  
+  2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/" /><meta property="article:published_time" content="2008-08-11T18:23:47&#43;00:00"/>
+<meta property="article:modified_time" content="2008-08-11T18:23:47&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="What to do if windows updates stop working after installing XP SP3">
+<meta itemprop="description" content="Register the Wups2.dll file in Windows loadTOCNode(2, &lsquo;resolution&rsquo;); To register the Wups2.dll file in Windows, follow these steps: 1. 
+Stop the Automatic Updates service. To do this, follow these steps: a. 
+Click Start, click Run, type cmd, and then click OK.   b. 
+At the command prompt, type the following command, and then press ENTER:
+net stop wuauserv
+  
+  2.">
+
+
+<meta itemprop="datePublished" content="2008-08-11T18:23:47&#43;00:00" />
+<meta itemprop="dateModified" content="2008-08-11T18:23:47&#43;00:00" />
+<meta itemprop="wordCount" content="153">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What to do if windows updates stop working after installing XP SP3"/>
+<meta name="twitter:description" content="Register the Wups2.dll file in Windows loadTOCNode(2, &lsquo;resolution&rsquo;); To register the Wups2.dll file in Windows, follow these steps: 1. 
+Stop the Automatic Updates service. To do this, follow these steps: a. 
+Click Start, click Run, type cmd, and then click OK.   b. 
+At the command prompt, type the following command, and then press ENTER:
+net stop wuauserv
+  
+  2."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>What to do if windows updates stop working after installing XP SP3</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        August 11, 2008
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<h3 id="register-the-wups2-dll-file-in-windows">Register the Wups2.dll file in Windows</h3>
+
+<p>loadTOCNode(2, &lsquo;resolution&rsquo;); To register the Wups2.dll file in Windows, follow these steps:
+<table border="0" class="list ol" >
+<tbody >
+<tr ></p>
+
+<p><td class="number" >1.
+</td></p>
+
+<p><td class="text" >Stop the Automatic Updates service. To do this, follow these steps:
+<table border="0" class="list al" >
+<tbody >
+<tr ></p>
+
+<p><td class="number" >a.
+</td></p>
+
+<p><td class="text" >Click <strong>Start</strong>, click <strong>Run</strong>, type cmd, and then click <strong>OK</strong>.
+</td>
+</tr>
+<tr ></p>
+
+<p><td class="number" >b.
+</td></p>
+
+<p><td class="text" >At the command prompt, type the following command, and then press ENTER:</p>
+
+<p>net stop wuauserv</p>
+
+<p></td>
+</tr>
+</tbody></table></p>
+
+<p></td>
+</tr>
+<tr ></p>
+
+<p><td class="number" >2.
+</td></p>
+
+<p><td class="text" >Register the Wups2.dll file. To do this, follow these steps:
+<table border="0" class="list al" >
+<tbody >
+<tr ></p>
+
+<p><td class="number" >a.
+</td></p>
+
+<p><td class="text" >At the command prompt, type the following command, and then press ENTER:</p>
+
+<p>regsvr32 %windir%system32wups2.dll</p>
+
+<p><strong>Note</strong> For a computer that is running Windows XP Professional x64 Edition, type the following command, and then press ENTER:</p>
+
+<p>regsvr32 %windir%syswow64wups2.dll</p>
+
+<p></td>
+</tr>
+<tr ></p>
+
+<p><td class="number" >b.
+</td></p>
+
+<p><td class="text" >Click <strong>OK</strong> on each verification message that you receive.
+</td>
+</tr>
+</tbody></table></p>
+
+<p></td>
+</tr>
+<tr ></p>
+
+<p><td class="number" >3.
+</td></p>
+
+<p><td class="text" >Start the Automatic Updates service. To do this, type the following command at the command prompt, and then press ENTER:</p>
+
+<p>net start wuauserv</p>
+
+<p></td>
+</tr>
+<tr ></p>
+
+<p><td class="number" >4.
+</td></p>
+
+<p><td class="text" >Exit the command prompt. To do this type exit, and then press ENTER.
+</td>
+</tr>
+</tbody></table></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2fwhat-to-do-if-windows-updates-stop-working-after-installing-xp-sp3%2f - What%20to%20do%20if%20windows%20updates%20stop%20working%20after%20installing%20XP%20SP3 by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/creating-freedos-image-under-ubuntu/">Creating FreeDOS Image under ubuntu<aside class="dates">Mar 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-cx_oracle-under-ubuntu-10-10/">installing cx_oracle under ubuntu 10.10<aside class="dates">Dec 1 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

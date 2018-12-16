@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>Compiling Orca in Solaris 10</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="Compiling Orca in Solaris 10" />
+<meta property="og:description" content="Compiling Software Locations  Orca - http://www.orcaware.com/orca/pub/snapshots/ (writing of the snapshot-r531 was the latest)
+ RICHSe - http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz
+  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env
+SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr
+ On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/compiling-orca-in-solaris-10/" /><meta property="article:published_time" content="2009-01-27T10:52:36&#43;00:00"/>
+<meta property="article:modified_time" content="2009-01-27T10:52:36&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="Compiling Orca in Solaris 10">
+<meta itemprop="description" content="Compiling Software Locations  Orca - http://www.orcaware.com/orca/pub/snapshots/ (writing of the snapshot-r531 was the latest)
+ RICHSe - http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz
+  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env
+SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr
+ On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.">
+
+
+<meta itemprop="datePublished" content="2009-01-27T10:52:36&#43;00:00" />
+<meta itemprop="dateModified" content="2009-01-27T10:52:36&#43;00:00" />
+<meta itemprop="wordCount" content="262">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Compiling Orca in Solaris 10"/>
+<meta name="twitter:description" content="Compiling Software Locations  Orca - http://www.orcaware.com/orca/pub/snapshots/ (writing of the snapshot-r531 was the latest)
+ RICHSe - http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz
+  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env
+SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr
+ On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Compiling Orca in Solaris 10</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        January 27, 2009
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<h1 id="compiling">Compiling</h1>
+
+<h2 id="software-locations">Software Locations</h2>
+
+<ul>
+<li><p>Orca - <a href="http://www.orcaware.com/orca/pub/snapshots/">http://www.orcaware.com/orca/pub/snapshots/</a> (writing of the snapshot-r531 was the latest)</p></li>
+
+<li><p>RICHSe - <a href="http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz">http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz</a></p></li>
+</ul>
+
+<h2 id="setting-up-the-build-environment">Setting up the build environment</h2>
+
+<ol>
+<li><p>Make sure the following packages are installed to a Solaris 10 env</p>
+
+<p>SUNWbtool,
+SUNWsprot,
+SUNWtoo,
+SUNWcpp,
+SUNWhea,
+SUNWarc,
+SUNWlibm,
+SUNWlibms,
+SUNWdfbh,
+SUNWcg6h,
+SUNWxwinc,
+SUNWlibC,
+SUNWzlib,
+SUNWscpu,
+SUNWperl584core,
+SUNWperl584usr</p></li>
+
+<li><p>On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path. Also make sure that /usr/perl5/bin is on the path.</p>
+
+<ol>
+<li><p><code>which cc</code> should give &lsquo;/opt/SUNWspro/bin/cc&rsquo;</p></li>
+
+<li><p><code>which perl</code> should give the one in &lsquo;/usr/bin&rsquo;</p></li>
+
+<li><p><code>which pod2man</code> should give &lsquo;/usr/perl5/bin&rsquo;</p></li>
+
+<li><p><strong>Note:</strong> which gcc must not find anything, otherwise it will be used erroneously instead!</p></li>
+</ol>
+
+<p>export PATH=/sbin:/usr/bin:/usr/sbin:/usr/perl5/bin:/usr/bin:/usr/ccs/bin:/usr/X/bin:/usr/bin:/opt/SUNWspro/bin</p></li>
+</ol>
+
+<h2 id="compiling-options">Compiling options</h2>
+
+<ol>
+<li><p>Install the software</p>
+
+<p>export CC=cc ; export CXX=CC ; export CFLAGS=<span class="code-quote">&rdquo;-g -O2&rdquo;</span>
+./configure &ndash;prefix=/usr/local/orca &ndash;with-html-dir=/usr/local/orca/html
+make
+make install</p></li>
+</ol>
+
+<h2 id="setup-orca-to-use-new-se-toolkit">Setup orca to use new SE Toolkit</h2>
+
+<pre><code>cp -R /usr/local/orca/lib/SE/3.4/ /usr/local/orca/lib/SE/3.4.1/
+cp -R /usr/local/orca/lib/SE/3.4/ /usr/local/orca/lib/SE/3.5/
+</code></pre>
+
+<h2 id="if-you-see-an-error-in-nohub-out-about-errors-in-live-rules-se">If you see an error in nohub.out about errors in live_rules.se</h2>
+
+<pre><code>root@t1000-orca:/usr/local/orca/bin&gt; ./restart_orcallator
+Writing data into /usr/local/orca/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/orca/orcallator/t1000-orca/
+Starting logging
+Sending output to nohup.out
+root@t1000-orca:/usr/local/orca/bin&gt; cat /nohup.out
+&lt;span class=&quot;code-quote&quot;&gt;&quot;/usr/local/orca/lib/SE/3.4/live_rules.se&quot;&lt;/span&gt;, line 101: error: syntax error
+&lt;span class=&quot;code-quote&quot;&gt;&quot;/usr/local/orca/lib/SE/3.4/live_rules.se&quot;&lt;/span&gt;, line 101: fatal: Errors detected.  Exiting.
+</code></pre>
+
+<p>Move the orcallator.se file from /optr/RICHPse/orcallator/orcallator.se to /usr/local/orca/lib</p>
+
+<h1 id="making-solaris-package">Making Solaris package</h1>
+
+<ol>
+<li><p>collect files you wish to package</p>
+
+<p>find /usr/local/orca -print &gt; /export/home/pcanham/pkgs/orca/files</p></li>
+
+<li><p>Make a Prototype</p>
+
+<p>cat /export/home/pcanham/pkgs/orca/files | pkgproto &gt; /export/home/pcanham/pkgs/orca/Prototype</p></li>
+
+<li><p>Make a pkginfo file to help people</p>
+
+<p>PKG=<span class="code-quote">&ldquo;SVNorca&rdquo;</span>
+NAME=<span class="code-quote">&ldquo;Orca&rdquo;</span>
+VERSION=<span class="code-quote">&ldquo;snapshot-r531&rdquo;</span>
+ARCH=<span class="code-quote">&ldquo;sparc&rdquo;</span>
+SUNW_PKG_THISZONE=<span class="code-quote">&ldquo;<span class="code-keyword">true</span>&ldquo;</span>
+CLASSES=<span class="code-quote">&ldquo;none&rdquo;</span>
+CATEGORY=<span class="code-quote">&ldquo;application&rdquo;</span>
+PSTAMP=<span class="code-quote">&ldquo;Paul Canham&rdquo;</span>
+EMAIL=<span class="code-quote">&ldquo;pcanhham@seven.com&rdquo;</span>
+BASEDIR=<span class="code-quote">&rdquo;/&rdquo;</span>
+DESC=<span class="code-quote">&ldquo;Orca snapshot-r531 compiled with: &ndash;prefix=/usr/local/orca &ndash;with-html-dir=/usr/local/orca/html&rdquo;</span></p></li>
+
+<li><p>Make package</p>
+
+<p>cd /export/home/pcanham/pkgs
+pkgmk -b /export/home/pcanham/pkgs/orca/SVNorca -f Prototype -r /</p></li>
+</ol>
+
+<p>5.Make nice *.pkg file.</p>
+
+<pre><code>pkgtrans /&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/spool/pkg /export/home/pcanham/pkgs/orca/SVNorca.snapshot-r531.SPARC.pkg SVNorca
+</code></pre>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2fcompiling-orca-in-solaris-10%2f - Compiling%20Orca%20in%20Solaris%2010 by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/creating-freedos-image-under-ubuntu/">Creating FreeDOS Image under ubuntu<aside class="dates">Mar 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-cx_oracle-under-ubuntu-10-10/">installing cx_oracle under ubuntu 10.10<aside class="dates">Dec 1 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

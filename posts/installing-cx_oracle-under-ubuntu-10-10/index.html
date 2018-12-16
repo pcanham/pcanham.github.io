@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>installing cx_oracle under ubuntu 10.10</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="installing cx_oracle under ubuntu 10.10" />
+<meta property="og:description" content="If you plan on writing any python applications/scripts for performing any basic SQL query&rsquo;s against an oracle database you will need to have the cx_oracle library files installed to your machine (or server) here are some quick instructions on how to install them.
+Please be aware i have only tested these instructions under Ubuntu 10.10 (32bit) using the 11.2 oracle instant client, when I have time I will try and install this on one of the x86_64 machines i have access to." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/installing-cx_oracle-under-ubuntu-10-10/" /><meta property="article:published_time" content="2010-12-01T15:30:52&#43;00:00"/>
+<meta property="article:modified_time" content="2010-12-01T15:30:52&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="installing cx_oracle under ubuntu 10.10">
+<meta itemprop="description" content="If you plan on writing any python applications/scripts for performing any basic SQL query&rsquo;s against an oracle database you will need to have the cx_oracle library files installed to your machine (or server) here are some quick instructions on how to install them.
+Please be aware i have only tested these instructions under Ubuntu 10.10 (32bit) using the 11.2 oracle instant client, when I have time I will try and install this on one of the x86_64 machines i have access to.">
+
+
+<meta itemprop="datePublished" content="2010-12-01T15:30:52&#43;00:00" />
+<meta itemprop="dateModified" content="2010-12-01T15:30:52&#43;00:00" />
+<meta itemprop="wordCount" content="207">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="installing cx_oracle under ubuntu 10.10"/>
+<meta name="twitter:description" content="If you plan on writing any python applications/scripts for performing any basic SQL query&rsquo;s against an oracle database you will need to have the cx_oracle library files installed to your machine (or server) here are some quick instructions on how to install them.
+Please be aware i have only tested these instructions under Ubuntu 10.10 (32bit) using the 11.2 oracle instant client, when I have time I will try and install this on one of the x86_64 machines i have access to."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>installing cx_oracle under ubuntu 10.10</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        December 1, 2010
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>If you plan on writing any python applications/scripts for performing any basic SQL query&rsquo;s against an oracle database you will need to have the cx_oracle library files installed to your machine (or server) here are some quick instructions on how to install them.</p>
+
+<p>Please be aware i have only tested these instructions under Ubuntu 10.10 (32bit) using the 11.2 oracle instant client, when I have time I will try and install this on one of the x86_64 machines i have access to.</p>
+
+<ol>
+<li><p>become root user</p>
+
+<p>sudo su -</p></li>
+
+<li><p>install python-setuptools python-dev needed for the easy_install later on.</p>
+
+<p>apt-get install python-setuptools python-dev</p></li>
+
+<li><p>install the following from the oracle website <a href="http://www.oracle.com/technology/software/tech/oci/instantclient/index.html">http://www.oracle.com/technology/software/tech/oci/instantclient/index.html</a></p></li>
+
+<li><p>instantclient-basic-linux (32bit or 64bit depending on your system)</p></li>
+
+<li><p>instantclient-sdk-linux (32bit or 64bit depending on your system)
+I have installed the files to /opt/instantclient_11_2 for ease</p></li>
+
+<li><p>Setup ORACLE_HOME and LD_LIBRARY_PATH e.g.</p>
+
+<p>export ORACLE_HOME=/opt/instantclient_11_2
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME</p></li>
+
+<li><p>The cx_oracle file needs to find a certain library file libclntsh.so you will find this under /opt/instantclient_11_2/libclntsh.so.X.X (X = version number) please make a symlink as follows</p>
+
+<p>cd $ORACLE_HOME
+ln -s libclntsh.so.11.1 libclntsh.so</p></li>
+
+<li><p>run the following from the command line as root</p>
+
+<p>easy_install cx_oracle</p></li>
+
+<li><p>job done.</p></li>
+</ol>
+
+<p>Here is a good tutoral on how to use the library files once you have things installed</p>
+
+<p><a href="http://www.orafaq.com/wiki/Python">http://www.orafaq.com/wiki/Python</a></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2finstalling-cx_oracle-under-ubuntu-10-10%2f - installing%20cx_oracle%20under%20ubuntu%2010.10 by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/creating-freedos-image-under-ubuntu/">Creating FreeDOS Image under ubuntu<aside class="dates">Mar 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/what-this-space/">Watch this space<aside class="dates">May 14 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash Shell Scripting on Thinkside</title>
+    <link>http://blog.thinkside.uk/tags/bash-shell-scripting/</link>
+    <description>Recent content in Bash Shell Scripting on Thinkside</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 23 Oct 2007 10:21:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.thinkside.uk/tags/bash-shell-scripting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash Shortcuts</title>
+      <link>http://blog.thinkside.uk/posts/bash-shortcuts/</link>
+      <pubDate>Tue, 23 Oct 2007 10:21:58 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/bash-shortcuts/</guid>
+      <description>alt-f &amp;ndash; move forward one word alt-b &amp;ndash; move backwards one word ctrl-a &amp;ndash; takes you to the begining of the command you are currently typing. ctrl-b &amp;ndash; move backwards one character ctrl-c &amp;ndash; kills the current command or process. ctrl-d &amp;ndash; kills the shell. ctrl-e &amp;ndash; takes you to the end of the command you are currently typing in. ctrl-f &amp;ndash; move forward one character ctrl-h &amp;ndash; deletes one letter at a time from the command you are typing in.</description>
+    </item>
+    
+  </channel>
+</rss>

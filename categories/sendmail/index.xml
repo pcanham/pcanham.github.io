@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sendmail on Thinkside</title>
+    <link>http://blog.thinkside.uk/categories/sendmail/</link>
+    <description>Recent content in Sendmail on Thinkside</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 23 Oct 2007 12:46:14 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.thinkside.uk/categories/sendmail/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blocking Users in Sendmail</title>
+      <link>http://blog.thinkside.uk/posts/blocking-users-in-sendmail/</link>
+      <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/blocking-users-in-sendmail/</guid>
+      <description> Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example  Browse to folder cd /etc/mail
+ Edit access vi access
+  joebloggs@example.com - email address being blocked due to being invalid joebloggs@example.com DISCARD
+ Update table makemap hash access.db &amp;lt; access  </description>
+    </item>
+    
+  </channel>
+</rss>

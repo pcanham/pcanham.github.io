@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on Thinkside</title>
+    <link>http://blog.thinkside.uk/tags/mac/</link>
+    <description>Recent content in Mac on Thinkside</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 06 Jan 2009 23:35:33 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.thinkside.uk/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Home and End Keys on a Mac Keyboard</title>
+      <link>http://blog.thinkside.uk/posts/42/</link>
+      <pubDate>Tue, 06 Jan 2009 23:35:33 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/42/</guid>
+      <description>the HOME and END keys on a mac keyboard scroll to the very top or bottom of the current document.
+To go to the start or end of the current line, all you need to do is use CMD+left-arrow or CMD+right-arrow</description>
+    </item>
+    
+  </channel>
+</rss>

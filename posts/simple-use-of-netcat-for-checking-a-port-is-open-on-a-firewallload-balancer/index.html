@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>Simple use of netcat for checking a port is open on a firewall/load balancer</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="Simple use of netcat for checking a port is open on a firewall/load balancer" />
+<meta property="og:description" content="Server (Listener) root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; netcat -l -s server.example.com -p 7735 &lt;pcanham.txt  ![](http://www.thinkside.co.uk/blog/images/warning.gif)  once something has connected the app will stop you will need to put it into a loop    Option Desc  -l  listener   -s  source address (IP address to bind to)   -p  port    Client root@scar:/&gt; telnet server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/" /><meta property="article:published_time" content="2009-01-27T11:01:27&#43;00:00"/>
+<meta property="article:modified_time" content="2009-01-27T11:01:27&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="Simple use of netcat for checking a port is open on a firewall/load balancer">
+<meta itemprop="description" content="Server (Listener) root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; netcat -l -s server.example.com -p 7735 &lt;pcanham.txt  ![](http://www.thinkside.co.uk/blog/images/warning.gif)  once something has connected the app will stop you will need to put it into a loop    Option Desc  -l  listener   -s  source address (IP address to bind to)   -p  port    Client root@scar:/&gt; telnet server.">
+
+
+<meta itemprop="datePublished" content="2009-01-27T11:01:27&#43;00:00" />
+<meta itemprop="dateModified" content="2009-01-27T11:01:27&#43;00:00" />
+<meta itemprop="wordCount" content="82">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Simple use of netcat for checking a port is open on a firewall/load balancer"/>
+<meta name="twitter:description" content="Server (Listener) root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; netcat -l -s server.example.com -p 7735 &lt;pcanham.txt  ![](http://www.thinkside.co.uk/blog/images/warning.gif)  once something has connected the app will stop you will need to put it into a loop    Option Desc  -l  listener   -s  source address (IP address to bind to)   -p  port    Client root@scar:/&gt; telnet server."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Simple use of netcat for checking a port is open on a firewall/load balancer</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        January 27, 2009
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<h2 id="server-listener">Server (Listener)</h2>
+
+<pre><code>root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; cat pcanham.txt
+Welcome to the Server on port 7735.
+root@server:/&lt;span class=&quot;code-keyword&quot;&gt;var&lt;/span&gt;/tmp&gt; netcat -l -s server.example.com -p 7735 &lt;pcanham.txt
+</code></pre>
+
+<table border="0" class="noteMacro" >
+<tbody >
+<tr >
+
+<td valign="top" >![](http://www.thinkside.co.uk/blog/images/warning.gif)
+</td>
+
+<td >once something has connected the app will stop you will need to put it into a loop
+</td>
+</tr>
+</tbody></table>
+
+<table border="0" >
+<tbody >
+<tr >
+Option
+Desc
+</tr>
+<tr >
+
+<td class="Td" >-l
+</td>
+
+<td class="Td" >listener
+</td>
+</tr>
+<tr >
+
+<td class="Td" >-s
+</td>
+
+<td class="Td" >source address (IP address to bind to)
+</td>
+</tr>
+<tr >
+
+<td class="Td" >-p
+</td>
+
+<td class="Td" >port
+</td>
+</tr>
+</tbody></table>
+
+<h2 id="client">Client</h2>
+
+<pre><code>root@scar:/&gt; telnet server.example.com 7735
+Trying 10.10.10.20...
+Connected to server.example.com.
+Escape character is '^]'.
+Welcome to the Server on port 7735.
+^]
+telnet&gt; q
+Connection to server.example.com closed.
+</code></pre>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2fsimple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer%2f - Simple%20use%20of%20netcat%20for%20checking%20a%20port%20is%20open%20on%20a%20firewall%2fload%20balancer by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/creating-freedos-image-under-ubuntu/">Creating FreeDOS Image under ubuntu<aside class="dates">Mar 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-cx_oracle-under-ubuntu-10-10/">installing cx_oracle under ubuntu 10.10<aside class="dates">Dec 1 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

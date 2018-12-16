@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Thinkside</title>
+    <link>http://blog.thinkside.uk/categories/windows/</link>
+    <description>Recent content in Windows on Thinkside</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 11 Aug 2008 18:23:47 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.thinkside.uk/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What to do if windows updates stop working after installing XP SP3</title>
+      <link>http://blog.thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/</link>
+      <pubDate>Mon, 11 Aug 2008 18:23:47 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/</guid>
+      <description>Register the Wups2.dll file in Windows loadTOCNode(2, &amp;lsquo;resolution&amp;rsquo;); To register the Wups2.dll file in Windows, follow these steps: 1. 
+Stop the Automatic Updates service. To do this, follow these steps: a. 
+Click Start, click Run, type cmd, and then click OK.   b. 
+At the command prompt, type the following command, and then press ENTER:
+net stop wuauserv
+  
+  2.</description>
+    </item>
+    
+    <item>
+      <title>Speeding up the firefox loading process</title>
+      <link>http://blog.thinkside.uk/posts/speeding-up-the-firefox-loading-process/</link>
+      <pubDate>Mon, 24 Dec 2007 12:21:10 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/speeding-up-the-firefox-loading-process/</guid>
+      <description>I cant find the URL where I found this tweak but it is a very useful one to do. There is a config setting called **browser.cache.disk.capacity **within firefox if you drop the value down from 50000 to 15000 this speeds up the load time and you should also find that firefox should be a little more friendly on the system memory.
+FYI, if your not sure how to find the config settings open up firefox and then browse to the following &amp;lsquo;about:config&amp;rsquo; minus the quotes.</description>
+    </item>
+    
+  </channel>
+</rss>

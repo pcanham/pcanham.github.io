@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Thinkside</title>
+    <link>http://blog.thinkside.uk/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Thinkside</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 06 Mar 2012 10:42:08 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.thinkside.uk/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating FreeDOS Image under ubuntu</title>
+      <link>http://blog.thinkside.uk/posts/creating-freedos-image-under-ubuntu/</link>
+      <pubDate>Tue, 06 Mar 2012 10:42:08 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/creating-freedos-image-under-ubuntu/</guid>
+      <description>Pre-requites apt-get install wget unzip genisoimage  wget - pulling down files from the internet unzip - uncompress any zip files genisoimage - Needed for creating the ISO image
+Making custom freedos disk  make a source directory where you will keep all these files.
+mkdir ~/src_freedos export FDSRC=~/src_freedos cd $FDSRC
+ Download the FreeDos OEM CD-ROM disc builder http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip
+wget http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip -O ${FDSRC}/FDOEMCD.builder.zip
+ unzip the package and go into the new directory called &amp;ldquo;FDOEMCD&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu:  Booting from ISO from PXE</title>
+      <link>http://blog.thinkside.uk/posts/ubuntu-booting-from-iso-from-pxe/</link>
+      <pubDate>Fri, 10 Feb 2012 16:34:19 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/ubuntu-booting-from-iso-from-pxe/</guid>
+      <description>  install syslinux
+apt-get install syslinux copy memdisk to tftp root
+cp /usr/lib/syslinux/memdisk /var/lib/tftpboot/11.04/ Add following into pxelinux.cdf/default
+LABEL dos kernel memdisk append iso initrd=dos/dos_622_supermicro_bios.iso
+  </description>
+    </item>
+    
+    <item>
+      <title>Changing timezone in ubuntu/debian</title>
+      <link>http://blog.thinkside.uk/posts/changing-timezone-in-ubuntudebian/</link>
+      <pubDate>Thu, 09 Sep 2010 08:18:06 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/posts/changing-timezone-in-ubuntudebian/</guid>
+      <description>Debian echo &amp;quot;US/Pacific&amp;quot; &amp;gt; /etc/timezone dpkg-reconfigure --frontend noninteractive tzdata  Ubuntu (assuming you are not root) echo &amp;quot;US/Pacific&amp;quot; | sudo tee /etc/timezone sudo dpkg-reconfigure --frontend noninteractive tzdata  NOTE: there is no need to reboot the system for the new settings to apply</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Thinkside</title>
+    <link>http://blog.thinkside.uk/categories/</link>
+    <description>Recent content in Categories on Thinkside</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 24 Oct 2007 10:39:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.thinkside.uk/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Apache</title>
+      <link>http://blog.thinkside.uk/categories/apache/</link>
+      <pubDate>Wed, 24 Oct 2007 10:39:01 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash Shell Scripting</title>
+      <link>http://blog.thinkside.uk/categories/bash-shell-scripting/</link>
+      <pubDate>Mon, 02 Feb 2009 16:36:04 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/bash-shell-scripting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome</title>
+      <link>http://blog.thinkside.uk/categories/chrome/</link>
+      <pubDate>Wed, 11 May 2011 08:29:24 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cisco</title>
+      <link>http://blog.thinkside.uk/categories/cisco/</link>
+      <pubDate>Mon, 06 Jul 2009 13:38:15 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/cisco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Databases</title>
+      <link>http://blog.thinkside.uk/categories/databases/</link>
+      <pubDate>Wed, 01 Dec 2010 15:30:52 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/databases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://blog.thinkside.uk/categories/java/</link>
+      <pubDate>Tue, 23 Oct 2007 13:00:37 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://blog.thinkside.uk/categories/linux/</link>
+      <pubDate>Fri, 10 Feb 2012 16:53:48 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>http://blog.thinkside.uk/categories/mac/</link>
+      <pubDate>Sun, 15 Feb 2009 18:38:54 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Miscellaneous</title>
+      <link>http://blog.thinkside.uk/categories/miscellaneous/</link>
+      <pubDate>Tue, 31 Mar 2009 13:40:54 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/miscellaneous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>http://blog.thinkside.uk/categories/monitoring/</link>
+      <pubDate>Fri, 10 Feb 2012 16:44:03 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>http://blog.thinkside.uk/categories/networking/</link>
+      <pubDate>Fri, 06 Nov 2009 12:14:25 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operating Systems</title>
+      <link>http://blog.thinkside.uk/categories/operating-systems/</link>
+      <pubDate>Mon, 21 Sep 2009 10:50:13 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/operating-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>http://blog.thinkside.uk/categories/oracle/</link>
+      <pubDate>Wed, 01 Dec 2010 15:30:52 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Osx</title>
+      <link>http://blog.thinkside.uk/categories/osx/</link>
+      <pubDate>Mon, 09 Mar 2009 18:46:24 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Postfix</title>
+      <link>http://blog.thinkside.uk/categories/postfix/</link>
+      <pubDate>Fri, 10 Feb 2012 16:58:50 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/postfix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sendmail</title>
+      <link>http://blog.thinkside.uk/categories/sendmail/</link>
+      <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/sendmail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snmp</title>
+      <link>http://blog.thinkside.uk/categories/snmp/</link>
+      <pubDate>Thu, 17 Sep 2009 14:14:22 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/snmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>http://blog.thinkside.uk/categories/software/</link>
+      <pubDate>Thu, 12 May 2011 14:32:01 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solaris</title>
+      <link>http://blog.thinkside.uk/categories/solaris/</link>
+      <pubDate>Sun, 11 Apr 2010 20:14:23 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/solaris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>http://blog.thinkside.uk/categories/ubuntu/</link>
+      <pubDate>Tue, 06 Mar 2012 10:42:08 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>http://blog.thinkside.uk/categories/windows/</link>
+      <pubDate>Mon, 11 Aug 2008 18:23:47 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xen</title>
+      <link>http://blog.thinkside.uk/categories/xen/</link>
+      <pubDate>Thu, 17 Sep 2009 14:25:55 +0000</pubDate>
+      
+      <guid>http://blog.thinkside.uk/categories/xen/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

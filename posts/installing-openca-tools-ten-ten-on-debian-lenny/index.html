@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>Installing openca-tools ten-ten on debian lenny</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="Installing openca-tools ten-ten on debian lenny" />
+<meta property="og:description" content=" Needed for openca apt-get install mysql-server apt-get install apache2  Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl  openca tools ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --with-web-host=openca.toon-net.local --enable-ocspd make make install  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/installing-openca-tools-ten-ten-on-debian-lenny/" /><meta property="article:published_time" content="2010-04-11T20:23:07&#43;00:00"/>
+<meta property="article:modified_time" content="2010-04-11T20:23:07&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="Installing openca-tools ten-ten on debian lenny">
+<meta itemprop="description" content=" Needed for openca apt-get install mysql-server apt-get install apache2  Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl  openca tools ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --with-web-host=openca.toon-net.local --enable-ocspd make make install  ">
+
+
+<meta itemprop="datePublished" content="2010-04-11T20:23:07&#43;00:00" />
+<meta itemprop="dateModified" content="2010-04-11T20:23:07&#43;00:00" />
+<meta itemprop="wordCount" content="57">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Installing openca-tools ten-ten on debian lenny"/>
+<meta name="twitter:description" content=" Needed for openca apt-get install mysql-server apt-get install apache2  Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl  openca tools ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --with-web-host=openca.toon-net.local --enable-ocspd make make install  "/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Installing openca-tools ten-ten on debian lenny</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        April 11, 2010
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<h2 id="needed-for-openca">Needed for openca</h2>
+
+<pre><code>apt-get install mysql-server
+apt-get install apache2
+</code></pre>
+
+<h2 id="needed-for-compiling">Needed for compiling</h2>
+
+<pre><code>apt-get install libssl-dev
+apt-get install build-essential
+apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl
+</code></pre>
+
+<h2 id="openca-tools">openca tools</h2>
+
+<pre><code>./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --with-web-host=openca.toon-net.local --enable-ocspd
+make
+make install
+</code></pre>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2finstalling-openca-tools-ten-ten-on-debian-lenny%2f - Installing%20openca-tools%20ten-ten%20on%20debian%20lenny by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/creating-freedos-image-under-ubuntu/">Creating FreeDOS Image under ubuntu<aside class="dates">Mar 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-cx_oracle-under-ubuntu-10-10/">installing cx_oracle under ubuntu 10.10<aside class="dates">Dec 1 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

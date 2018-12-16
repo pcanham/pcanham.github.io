@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Paul Canham">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.52" />
+<title>svc:/application/management/sma:default not displaying even though packages have been installed</title>
+<link rel="shortcut icon" href="http://blog.thinkside.uk/images/favicon.ico">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/style.css">
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://blog.thinkside.uk/css/monosocialiconsfont.css">
+
+
+
+<link href="http://blog.thinkside.uk/index.xml" rel="alternate" type="application/rss+xml" title="Thinkside" />
+
+
+<meta property="og:title" content="svc:/application/management/sma:default not displaying even though packages have been installed" />
+<meta property="og:description" content="When you try and manually start the sma up you get the following error
+bash-3.00# /etc/init.d/init.sma start svcadm: Pattern &#39;svc:/application/management/sma:default&#39; doesn&#39;t match any instances  Solution:
+pkill configd svccfg -v import /var/svc/manifest/application/management/sma.xml svccfg -v import /var/svc/manifest/application/management/seaport.xml svcadm enable svc:/application/management/sma:default  Link back: http://www.gnuunix.info/forum?id=12&amp;catid=13&amp;func=fb_pdf" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.thinkside.uk/posts/svcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed/" /><meta property="article:published_time" content="2009-07-06T13:35:31&#43;00:00"/>
+<meta property="article:modified_time" content="2009-07-06T13:35:31&#43;00:00"/>
+
+
+
+<meta itemprop="name" content="svc:/application/management/sma:default not displaying even though packages have been installed">
+<meta itemprop="description" content="When you try and manually start the sma up you get the following error
+bash-3.00# /etc/init.d/init.sma start svcadm: Pattern &#39;svc:/application/management/sma:default&#39; doesn&#39;t match any instances  Solution:
+pkill configd svccfg -v import /var/svc/manifest/application/management/sma.xml svccfg -v import /var/svc/manifest/application/management/seaport.xml svcadm enable svc:/application/management/sma:default  Link back: http://www.gnuunix.info/forum?id=12&amp;catid=13&amp;func=fb_pdf">
+
+
+<meta itemprop="datePublished" content="2009-07-06T13:35:31&#43;00:00" />
+<meta itemprop="dateModified" content="2009-07-06T13:35:31&#43;00:00" />
+<meta itemprop="wordCount" content="41">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="svc:/application/management/sma:default not displaying even though packages have been installed"/>
+<meta name="twitter:description" content="When you try and manually start the sma up you get the following error
+bash-3.00# /etc/init.d/init.sma start svcadm: Pattern &#39;svc:/application/management/sma:default&#39; doesn&#39;t match any instances  Solution:
+pkill configd svccfg -v import /var/svc/manifest/application/management/sma.xml svccfg -v import /var/svc/manifest/application/management/seaport.xml svcadm enable svc:/application/management/sma:default  Link back: http://www.gnuunix.info/forum?id=12&amp;catid=13&amp;func=fb_pdf"/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkjest"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='http://blog.thinkside.uk/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+		<a class="cta" href="http://blog.thinkside.uk/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>svc:/application/management/sma:default not displaying even though packages have been installed</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        July 6, 2009
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>When you try and manually start the sma up you get the following error</p>
+
+<pre><code>bash-3.00# /etc/init.d/init.sma start
+svcadm: Pattern 'svc:/application/management/sma:default' doesn't match
+any instances
+</code></pre>
+
+<p>Solution:</p>
+
+<pre><code>pkill configd
+svccfg -v import /var/svc/manifest/application/management/sma.xml
+svccfg -v import /var/svc/manifest/application/management/seaport.xml
+svcadm enable svc:/application/management/sma:default
+</code></pre>
+
+<p>Link back: <a href="http://www.gnuunix.info/forum?id=12&amp;catid=13&amp;func=fb_pdf">http://www.gnuunix.info/forum?id=12&amp;catid=13&amp;func=fb_pdf</a></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/darkjest">
+    <img class="avatar" src="http://blog.thinkside.uk/images/avatar.png">
+    <div>
+        <span class="dark">Paul Canham</span>
+        <span>I&#39;m an blogger.</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fblog.thinkside.uk%2fposts%2fsvcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed%2f - svc%3a%2fapplication%2fmanagement%2fsma%3adefault%20not%20displaying%20even%20though%20packages%20have%20been%20installed by @darkjest"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/creating-freedos-image-under-ubuntu/">Creating FreeDOS Image under ubuntu<aside class="dates">Mar 6 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/making-postfix-config-changes-on-the-fly/">Making Postfix config changes on the fly<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/corosync-logging/">Corosync Logging<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bbwin-xymonhobbitmon-windows-client-installation/">bbwin - xymon/hobbitmon windows client installation<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-ubuntu-to-hp-dl140-g3/">Installing ubuntu to HP DL140 G3<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ubuntu-booting-from-iso-from-pxe/">Ubuntu:  Booting from ISO from PXE<aside class="dates">Feb 10 2012</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/fixing-locale-errors-in-ubuntu/">Fixing Locale errors in Ubuntu<aside class="dates">May 12 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/how-to-install-your-own-ca-cert-into-google-chrome/">How to install your own CA cert into Google Chrome<aside class="dates">May 11 2011</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/installing-cx_oracle-under-ubuntu-10-10/">installing cx_oracle under ubuntu 10.10<aside class="dates">Dec 1 2010</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/changing-timezone-in-ubuntudebian/">Changing timezone in ubuntu/debian<aside class="dates">Sep 9 2010</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/pcanham">
+        circlegithubalt
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/pcanham">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkjest">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Paul Canham
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://blog.thinkside.uk/js/main.js"></script>
+<script src="http://blog.thinkside.uk/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
