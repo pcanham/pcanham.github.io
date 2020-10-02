@@ -13,7 +13,10 @@
       <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
       
       <guid>https://thinkside.uk/posts/blocking-users-in-sendmail/</guid>
-      <description>Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example  Browse to folder cd /etc/mail Edit access vi access # joebloggs@example.com - email address being blocked # due to being invalid joebloggs@example.com DISCARD Update table makemap hash access.db &amp;lt; access  </description>
+      <description>Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example   Browse to folder cd /etc/mail 
+  Edit access vi access # joebloggs@example.com - email address being blocked # due to being invalid joebloggs@example.com DISCARD 
+  Update table makemap hash access.db &amp;lt; access 
+  </description>
     </item>
     
   </channel>

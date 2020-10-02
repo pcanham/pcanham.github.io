@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ubuntu on ThinkSide</title>
+    <title>Ubuntu on ThinkSide</title>
     <link>https://thinkside.uk/tags/ubuntu/</link>
-    <description>Recent content in ubuntu on ThinkSide</description>
+    <description>Recent content in Ubuntu on ThinkSide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Mar 2012 10:42:08 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
@@ -48,6 +48,17 @@ echo | perl this will generate the error if the locales are wrong.</description>
     </item>
     
     <item>
+      <title>How to install your own CA cert into Google Chrome</title>
+      <link>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</link>
+      <pubDate>Wed, 11 May 2011 08:29:24 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</guid>
+      <description>There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
+To stop this from happening here is how you install your CA certificate to chrome
+ Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert.</description>
+    </item>
+    
+    <item>
       <title>installing cx_oracle under ubuntu 10.10</title>
       <link>https://thinkside.uk/posts/installing-cx_oracle-under-ubuntu-10-10/</link>
       <pubDate>Wed, 01 Dec 2010 15:30:52 +0000</pubDate>
@@ -64,6 +75,16 @@ Please be aware i have only tested these instructions under Ubuntu 10.10 (32bit)
       
       <guid>https://thinkside.uk/posts/changing-timezone-in-ubuntudebian/</guid>
       <description>Debian echo &amp;#34;US/Pacific&amp;#34; &amp;gt; /etc/timezone dpkg-reconfigure --frontend noninteractive tzdata Ubuntu (assuming you are not root) echo &amp;#34;US/Pacific&amp;#34; | sudo tee /etc/timezone sudo dpkg-reconfigure --frontend noninteractive tzdata NOTE: there is no need to reboot the system for the new settings to apply</description>
+    </item>
+    
+    <item>
+      <title>Installing Oracle 10g client on Ubuntu 9.10 x64</title>
+      <link>https://thinkside.uk/posts/installing-oracle-10g-client-on-ubuntu-9-10-x64/</link>
+      <pubDate>Fri, 09 Apr 2010 09:31:50 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/installing-oracle-10g-client-on-ubuntu-9-10-x64/</guid>
+      <description>Here is a very quick way to get the oracle client installed under Ubuntu, only down side i have found on this is that you have to install the build packages and X to the machine to get it to install which isn&amp;rsquo;t something I like doing on production machines i would rather have X and build tools else where and install just the needed packages but never mind.
+Install necessary package apt-get install ia32-libs xorg build-essential Extract the Oracle client into a temp directory I normally use either the roots home directory or /var/tmp</description>
     </item>
     
   </channel>

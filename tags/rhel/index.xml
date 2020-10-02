@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RHEL on ThinkSide</title>
+    <link>https://thinkside.uk/tags/rhel/</link>
+    <description>Recent content in RHEL on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Jan 2009 10:13:55 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/rhel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful CentOS Repo&#39;s</title>
+      <link>https://thinkside.uk/posts/useful-centos-repos/</link>
+      <pubDate>Fri, 02 Jan 2009 10:13:55 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/useful-centos-repos/</guid>
+      <description>EPEL - http://fedoraproject.org/wiki/EPEL RPMForge - https://rpmrepo.org/RPMforge</description>
+    </item>
+    
+    <item>
+      <title>Adding NTFS Support into Centos and Fedora Core</title>
+      <link>https://thinkside.uk/posts/adding-ntfs-support-into-centos-and-fedora-core/</link>
+      <pubDate>Sun, 11 Nov 2007 12:55:36 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/adding-ntfs-support-into-centos-and-fedora-core/</guid>
+      <description>Here are some useful link which i used to get my external harddisk mounted to to the systems for backing data up.
+CentOs - http://wiki.centos.org/TipsAndTricks/NTFSPartitions
+yum install fuse fuse-ntfs-3g dkms dkms-fuse Install NTFS driver for Fedora With repositories like Fedora Extras it&amp;rsquo;s now very easy to add NTFS support to Fedora:
+# yum -y install ntfs-3g Then you can simply mount NTFS file systems using the option -t ntfs-3g. You can find more detailed information about this driver at http://www.</description>
+    </item>
+    
+  </channel>
+</rss>

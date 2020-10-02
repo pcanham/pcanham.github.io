@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netscaler on ThinkSide</title>
+    <link>https://thinkside.uk/tags/netscaler/</link>
+    <description>Recent content in Netscaler on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Nov 2009 12:14:25 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/netscaler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Netscaler nslog commands</title>
+      <link>https://thinkside.uk/posts/netscaler-nslog-commands/</link>
+      <pubDate>Fri, 06 Nov 2009 12:14:25 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/netscaler-nslog-commands/</guid>
+      <description>I have been using this forum when every i have had any questions about Netscalers and they do have a lot of very useful HOW-TO&amp;rsquo;s and debugging guides here so anyone who uses netscalers i would strongly recommend bookmarking this forum (http://www.netscalerkb.com). Any way here is a copy of the commands.
+If you want to: Uncompress an archived log file: gunzip newnslog.21.gz Discover the time period covered by the log: nsconmsg -K newnslog.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -63,7 +63,7 @@ postconf | grep message_size_limit message_size_limit = 10240000 10240000 = 10mb
       <pubDate>Tue, 27 Jan 2009 11:10:27 +0000</pubDate>
       
       <guid>https://thinkside.uk/posts/how-to-discard-emails-using-the-sender-email-address-in-postfix/</guid>
-      <description> Make list of email address/domains you wish to discard vi /opt/csw/etc/postfix/sender_access sender@example.com DISCARD DoNotReply@spam.example.com DISCARD subdomain.example.com DISCARD Hash table the file /opt/csw/sbin/postmap dbm:/opt/csw/etc/postfix/sender_access Add into the postfix config the smtp restriction line in vi /etc/opt/csw/postfix/main.cf smtpd_sender_restrictions = check_sender_access dbm:/opt/csw/etc/postfix/sender_access Reload postfix /opt/csw/sbin/postfix reload  </description>
+      <description> Make list of email address/domains you wish to discard vi /opt/csw/etc/postfix/sender_access sender@example.com DISCARD DoNotReply@spam.example.com DISCARD subdomain.example.com DISCARD  Hash table the file /opt/csw/sbin/postmap dbm:/opt/csw/etc/postfix/sender_access  Add into the postfix config the smtp restriction line in vi /etc/opt/csw/postfix/main.cf smtpd_sender_restrictions = check_sender_access dbm:/opt/csw/etc/postfix/sender_access Reload postfix /opt/csw/sbin/postfix reload  </description>
     </item>
     
     <item>

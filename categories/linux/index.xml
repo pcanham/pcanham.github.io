@@ -6,74 +6,25 @@
     <description>Recent content in Linux on ThinkSide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Feb 2012 16:53:48 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Mar 2012 10:42:08 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Corosync Logging</title>
-      <link>https://thinkside.uk/posts/corosync-logging/</link>
-      <pubDate>Fri, 10 Feb 2012 16:53:48 +0000</pubDate>
+      <title>Creating FreeDOS Image under ubuntu</title>
+      <link>https://thinkside.uk/posts/creating-freedos-image-under-ubuntu/</link>
+      <pubDate>Tue, 06 Mar 2012 10:42:08 +0000</pubDate>
       
-      <guid>https://thinkside.uk/posts/corosync-logging/</guid>
-      <description>Setting up corosync logging, by default the data is logged to /var/log/syslog in ubuntu.
-corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr: yes to_logfile: yes to_syslog: no syslog_facility: daemon debug: off logfile: /var/log/corosync/corosync.log timestamp: on logger_subsys { subsys: AMF debug: off tags: enter|leave|trace1|trace2|trace3|trace4|trace6 } logrotate config - /etc/logrotate.d/corosync /var/log/corosync/*.log { weekly missingok rotate 52 compress delaycompress notifempty create 640 root adm sharedscripts copytruncate } </description>
+      <guid>https://thinkside.uk/posts/creating-freedos-image-under-ubuntu/</guid>
+      <description>Pre-requites apt-get install wget unzip genisoimage wget - pulling down files from the internet unzip - uncompress any zip files genisoimage - Needed for creating the ISO image
+Making custom freedos disk  make a source directory where you will keep all these files.  mkdir ~/src_freedos export FDSRC=~/src_freedos cd $FDSRC Download the FreeDos OEM CD-ROM disc builder http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip  wget http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip -O ${FDSRC}/FDOEMCD.builder.zip unzip the package and go into the new directory called &amp;ldquo;FDOEMCD&amp;rdquo;  unzip FDOEMCD.</description>
     </item>
     
     <item>
-      <title>installing cx_oracle under ubuntu 10.10</title>
-      <link>https://thinkside.uk/posts/installing-cx_oracle-under-ubuntu-10-10/</link>
-      <pubDate>Wed, 01 Dec 2010 15:30:52 +0000</pubDate>
+      <title>Installing ubuntu to HP DL140 G3</title>
+      <link>https://thinkside.uk/posts/installing-ubuntu-to-hp-dl140-g3/</link>
+      <pubDate>Fri, 10 Feb 2012 16:37:41 +0000</pubDate>
       
-      <guid>https://thinkside.uk/posts/installing-cx_oracle-under-ubuntu-10-10/</guid>
-      <description>If you plan on writing any python applications/scripts for performing any basic SQL query&amp;rsquo;s against an oracle database you will need to have the cx_oracle library files installed to your machine (or server) here are some quick instructions on how to install them.
-Please be aware i have only tested these instructions under Ubuntu 10.10 (32bit) using the 11.2 oracle instant client, when I have time I will try and install this on one of the x86_64 machines i have access to.</description>
-    </item>
-    
-    <item>
-      <title>Changing timezone in ubuntu/debian</title>
-      <link>https://thinkside.uk/posts/changing-timezone-in-ubuntudebian/</link>
-      <pubDate>Thu, 09 Sep 2010 08:18:06 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/changing-timezone-in-ubuntudebian/</guid>
-      <description>Debian echo &amp;#34;US/Pacific&amp;#34; &amp;gt; /etc/timezone dpkg-reconfigure --frontend noninteractive tzdata Ubuntu (assuming you are not root) echo &amp;#34;US/Pacific&amp;#34; | sudo tee /etc/timezone sudo dpkg-reconfigure --frontend noninteractive tzdata NOTE: there is no need to reboot the system for the new settings to apply</description>
-    </item>
-    
-    <item>
-      <title>If you wish to setup a postfix/courier imap mail server under ubuntu</title>
-      <link>https://thinkside.uk/posts/if-you-wish-to-setup-a-postfixcourier-imap-mail-server-under-ubuntu/</link>
-      <pubDate>Sun, 11 Apr 2010 20:40:40 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/if-you-wish-to-setup-a-postfixcourier-imap-mail-server-under-ubuntu/</guid>
-      <description>Here is a very good how to on setting up a mail server under ubuntu (can be modified to work under Debian Lenny as well just need to tweak some of the package versions :) )
-http://flurdy.com/docs/postfix/
-I&amp;rsquo;m working on tweaking my setup to get maildrop working so I can get some server side mail rules working, only down side i can see doing this is that you might see some slowness on mail being processed.</description>
-    </item>
-    
-    <item>
-      <title>Installing openca-base ten-ten on debian lenny</title>
-      <link>https://thinkside.uk/posts/installing-openca-base-ten-ten-on-debian-lenny/</link>
-      <pubDate>Sun, 11 Apr 2010 20:25:06 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/installing-openca-base-ten-ten-on-debian-lenny/</guid>
-      <description>NOTE: openca-tools need to be compiled/installed first.
-Needed for openca apt-get install mysql-server apt-get install apache2 Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl openca base export PATH=$PATH:/usr/local/openca/bin ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-openssl-tools-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --enable-scep --with-service-mail-account=cacert@toon-net.local --with-cert-chars=UTF8 --with-ca-organization=ThinkSide --with-ca-locality=Cambridge --with-ca-state=Cambridgeshire --with-ca-country=GB --with-web-host=openca.toon-net.local --with-httpd-fs-prefix=/usr/local/openca/htdocs --with-dist-user=madwolf --with-dist-group=openca --with-db-type=mysql --with-db-user=openca --with-db-name=openca --with-db-host=localhost --with-db-port=3306 --with-db-passwd=openca --with-db-namespace= make make install-offline make install-online </description>
-    </item>
-    
-    <item>
-      <title>Installing openca-tools ten-ten on debian lenny</title>
-      <link>https://thinkside.uk/posts/installing-openca-tools-ten-ten-on-debian-lenny/</link>
-      <pubDate>Sun, 11 Apr 2010 20:23:07 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/installing-openca-tools-ten-ten-on-debian-lenny/</guid>
-      <description>Needed for openca apt-get install mysql-server apt-get install apache2 Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl openca tools ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --with-web-host=openca.toon-net.local --enable-ocspd make make install </description>
-    </item>
-    
-    <item>
-      <title>Installing Oracle 10g client on Ubuntu 9.10 x64</title>
-      <link>https://thinkside.uk/posts/installing-oracle-10g-client-on-ubuntu-9-10-x64/</link>
-      <pubDate>Fri, 09 Apr 2010 09:31:50 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/installing-oracle-10g-client-on-ubuntu-9-10-x64/</guid>
-      <description>Here is a very quick way to get the oracle client installed under Ubuntu, only down side i have found on this is that you have to install the build packages and X to the machine to get it to install which isn&amp;rsquo;t something I like doing on production machines i would rather have X and build tools else where and install just the needed packages but never mind.
-Install necessary package apt-get install ia32-libs xorg build-essential Extract the Oracle client into a temp directory I normally use either the roots home directory or /var/tmp</description>
+      <guid>https://thinkside.uk/posts/installing-ubuntu-to-hp-dl140-g3/</guid>
+      <description>ilom You will get into the inital screen all OK but if you dont alter the frame buffer you will just see rubbish on the screen, to fix this, do the following.
+ Set what Language you wish to use. Hit &amp;lsquo;F6&amp;rsquo; to choose the &amp;ldquo;Other Options&amp;rdquo; menu Choose &amp;ldquo;Expert Mode&amp;rdquo; this will allow you to alter the kernel parameters Hit &amp;ldquo;Space bar&amp;rdquo; to select the Expert Mode and then &amp;ldquo;Esc&amp;rdquo; to escape out of the menu option.</description>
     </item>
     
     <item>
@@ -99,24 +50,6 @@ Starting the image xm create /etc/xen/drclaw.</description>
       <guid>https://thinkside.uk/posts/snmp-and-xen-machines-on-debian-lenny/</guid>
       <description>Found out the hard way on this that yes you can install snmpd on the xen domu machines but, you have a very limited amount of snmp mibs to play with, things you can not do unless you create your own snmp mib file.
  Disk space CPU Connected users to machine  If you do some googling though you will find that some people have written some perl scripts which you can use in conjunction with snmp to collect this information.</description>
-    </item>
-    
-    <item>
-      <title>Getting the following error in your script &#39;-bash: 08: value too great for base (error token is &#34;08&#34;)&#39;</title>
-      <link>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</link>
-      <pubDate>Mon, 02 Feb 2009 16:36:04 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</guid>
-      <description>Loop which will fail with this error nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[${nodes}+1] done Solution nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[$((10#${nodes}))+1] done 10#${nodes} = base#number (in this case we want to be using base 10)</description>
-    </item>
-    
-    <item>
-      <title>Simple use of netcat for checking a port is open on a firewall/load balancer</title>
-      <link>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</link>
-      <pubDate>Tue, 27 Jan 2009 11:01:27 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</guid>
-      <description>Server (Listener) root@server:/var/tmp&amp;gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/var/tmp&amp;gt; netcat -l -s server.example.com -p 7735 &amp;lt;pcanham.txt Client root@scar:/&amp;gt; telnet server.example.com 7735 Trying 10.10.10.20... Connected to server.example.com. Escape character is &amp;#39;^]&amp;#39;. Welcome to the Server on port 7735. ^] telnet&amp;gt; q Connection to server.example.com closed. </description>
     </item>
     
     <item>
@@ -170,19 +103,6 @@ Use find command to remove file find . -inum &amp;lt;inode-number&amp;gt; -exec 
     </item>
     
     <item>
-      <title>Orca - Trending, reporting, and Capacity Planning</title>
-      <link>https://thinkside.uk/posts/orca-trending-reporting-and-capacity-planning/</link>
-      <pubDate>Mon, 24 Dec 2007 12:14:58 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/orca-trending-reporting-and-capacity-planning/</guid>
-      <description>This is a great application for trending your servers (Solaris, Linux and also windows machines with some tweaking)
-Trends all the usual things cpu, memory, http requests, uptime etc.
-http://www.orcaware.com/orca/
-Worth taking a look at it if you need some sort of data to prove you need to either purchase additional equipment or just need to move certain services off machines due to CPU being maxed.
-You can also create your own monitoring plugins as well you can set the system up to monitor garbage collection states for any java process&amp;rsquo;s you have running.</description>
-    </item>
-    
-    <item>
       <title>Disabling unneeded services in CentOS</title>
       <link>https://thinkside.uk/posts/disabling-unneeded-services-in-centos/</link>
       <pubDate>Mon, 24 Dec 2007 11:58:28 +0000</pubDate>
@@ -206,24 +126,6 @@ Checking what services are running (run this as root). chkconfig --list | grep o
 CentOs - http://wiki.centos.org/TipsAndTricks/NTFSPartitions
 yum install fuse fuse-ntfs-3g dkms dkms-fuse Install NTFS driver for Fedora With repositories like Fedora Extras it&amp;rsquo;s now very easy to add NTFS support to Fedora:
 # yum -y install ntfs-3g Then you can simply mount NTFS file systems using the option -t ntfs-3g. You can find more detailed information about this driver at http://www.</description>
-    </item>
-    
-    <item>
-      <title>Blocking Users in Sendmail</title>
-      <link>https://thinkside.uk/posts/blocking-users-in-sendmail/</link>
-      <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/blocking-users-in-sendmail/</guid>
-      <description>Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example  Browse to folder cd /etc/mail Edit access vi access # joebloggs@example.com - email address being blocked # due to being invalid joebloggs@example.com DISCARD Update table makemap hash access.db &amp;lt; access  </description>
-    </item>
-    
-    <item>
-      <title>Bash Shortcuts</title>
-      <link>https://thinkside.uk/posts/bash-shortcuts/</link>
-      <pubDate>Tue, 23 Oct 2007 10:21:58 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/bash-shortcuts/</guid>
-      <description>alt-f &amp;ndash; move forward one word alt-b &amp;ndash; move backwards one word ctrl-a &amp;ndash; takes you to the begining of the command you are currently typing. ctrl-b &amp;ndash; move backwards one character ctrl-c &amp;ndash; kills the current command or process. ctrl-d &amp;ndash; kills the shell. ctrl-e &amp;ndash; takes you to the end of the command you are currently typing in. ctrl-f &amp;ndash; move forward one character ctrl-h &amp;ndash; deletes one letter at a time from the command you are typing in.</description>
     </item>
     
   </channel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clustering on ThinkSide</title>
+    <link>https://thinkside.uk/categories/clustering/</link>
+    <description>Recent content in Clustering on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2012 16:53:48 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/clustering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Corosync Logging</title>
+      <link>https://thinkside.uk/posts/corosync-logging/</link>
+      <pubDate>Fri, 10 Feb 2012 16:53:48 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/corosync-logging/</guid>
+      <description>Setting up corosync logging, by default the data is logged to /var/log/syslog in ubuntu.
+corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr: yes to_logfile: yes to_syslog: no syslog_facility: daemon debug: off logfile: /var/log/corosync/corosync.log timestamp: on logger_subsys { subsys: AMF debug: off tags: enter|leave|trace1|trace2|trace3|trace4|trace6 } logrotate config - /etc/logrotate.d/corosync /var/log/corosync/*.log { weekly missingok rotate 52 compress delaycompress notifempty create 640 root adm sharedscripts copytruncate } </description>
+    </item>
+    
+  </channel>
+</rss>

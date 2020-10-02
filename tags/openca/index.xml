@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenCA on ThinkSide</title>
+    <link>https://thinkside.uk/tags/openca/</link>
+    <description>Recent content in OpenCA on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Apr 2010 20:25:06 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/openca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing openca-base ten-ten on debian lenny</title>
+      <link>https://thinkside.uk/posts/installing-openca-base-ten-ten-on-debian-lenny/</link>
+      <pubDate>Sun, 11 Apr 2010 20:25:06 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/installing-openca-base-ten-ten-on-debian-lenny/</guid>
+      <description>NOTE: openca-tools need to be compiled/installed first.
+Needed for openca apt-get install mysql-server apt-get install apache2 Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl openca base export PATH=$PATH:/usr/local/openca/bin ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-openssl-tools-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --enable-scep --with-service-mail-account=cacert@toon-net.local --with-cert-chars=UTF8 --with-ca-organization=ThinkSide --with-ca-locality=Cambridge --with-ca-state=Cambridgeshire --with-ca-country=GB --with-web-host=openca.toon-net.local --with-httpd-fs-prefix=/usr/local/openca/htdocs --with-dist-user=madwolf --with-dist-group=openca --with-db-type=mysql --with-db-user=openca --with-db-name=openca --with-db-host=localhost --with-db-port=3306 --with-db-passwd=openca --with-db-namespace= make make install-offline make install-online </description>
+    </item>
+    
+  </channel>
+</rss>

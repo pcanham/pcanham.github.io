@@ -6,39 +6,7 @@
     <description>Recent content in Miscellaneous on ThinkSide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Mar 2009 13:40:54 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Rubber Duck method of debugging</title>
-      <link>https://thinkside.uk/posts/rubber-duck-method-of-debugging/</link>
-      <pubDate>Tue, 31 Mar 2009 13:40:54 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/rubber-duck-method-of-debugging/</guid>
-      <description>We called it the Rubber Duck method of debugging. It goes like this:
-1) Beg, borrow, steal, buy, fabricate or otherwise obtain a rubber duck (bathtub variety) 2) Place rubber duck on desk and inform it you are just going to go over some code with it, if that&#39;s all right. 3) Explain to the duck what you code is supposed to do, and then go into detail and explain things line by line 4) At some point you will tell the duck what you are doing next and then realise that that is not in fact what you are actually doing.</description>
-    </item>
-    
-    <item>
-      <title>Checking a *.CRT, *.CSR and *.KEY are correct.</title>
-      <link>https://thinkside.uk/posts/checking-a-crt-and-key-are-correct/</link>
-      <pubDate>Tue, 23 Sep 2008 08:48:33 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/checking-a-crt-and-key-are-correct/</guid>
-      <description>Two commands which you need to run. #openssl rsa -noout -text -in www.domainname.com.key #openssl req -noout -text -in www.domainname.com.csr #openssl x509 -noout -text -in www.domainname.com.crt Check for modulus part in the output of both commands
-If the modulus output match, then your .crt and .key files are matching.</description>
-    </item>
-    
-    <item>
-      <title>What to do if windows updates stop working after installing XP SP3</title>
-      <link>https://thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/</link>
-      <pubDate>Mon, 11 Aug 2008 18:23:47 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/</guid>
-      <description>Register the Wups2.dll file in Windows loadTOCNode(2, &amp;lsquo;resolution&amp;rsquo;); To register the Wups2.dll file in Windows, follow these steps:
-net stop wuauserv
-regsvr32 %windir%system32wups2.dll Note For a computer that is running Windows XP Professional x64 Edition, type the following command, and then press ENTER:
-regsvr32 %windir%syswow64wups2.dll net start wuauserv </description>
-    </item>
-    
+    <lastBuildDate>Mon, 24 Dec 2007 12:31:18 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>If you use BT Broadband and have DNS issues</title>
       <link>https://thinkside.uk/posts/if-you-use-bt-broadband-and-have-dns-issues/</link>

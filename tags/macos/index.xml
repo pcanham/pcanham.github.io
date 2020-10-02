@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacOS on ThinkSide</title>
+    <link>https://thinkside.uk/tags/macos/</link>
+    <description>Recent content in MacOS on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Mar 2009 18:46:24 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Howto force a cd/DVD eject on a Mac Mini</title>
+      <link>https://thinkside.uk/posts/howto-force-a-cddvd-eject-on-a-mac-mini/</link>
+      <pubDate>Mon, 09 Mar 2009 18:46:24 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/howto-force-a-cddvd-eject-on-a-mac-mini/</guid>
+      <description>You hold down the left button on the mouse and then power the mac mini on this will force the system to eject what ever you have in the drive.</description>
+    </item>
+    
+    <item>
+      <title>Hash key # on a UK Mac Keyboard</title>
+      <link>https://thinkside.uk/posts/hash-key-on-a-uk-mac-keyboard/</link>
+      <pubDate>Sun, 15 Feb 2009 18:38:54 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/hash-key-on-a-uk-mac-keyboard/</guid>
+      <description>This tooks sometime to find i must admit and guessing this is very frustrating for people to hunt down
+its
+[alt] + [3]
+or
+[Option] + [3]
+NOTE: If you have Meta keys enabled in Terminal you will need to make a different short cut link otherwise you will get alittle frustrated.</description>
+    </item>
+    
+    <item>
+      <title>Getting the following error in your script &#39;-bash: 08: value too great for base (error token is &#34;08&#34;)&#39;</title>
+      <link>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</link>
+      <pubDate>Mon, 02 Feb 2009 16:36:04 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</guid>
+      <description>Loop which will fail with this error nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[${nodes}+1] done Solution nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[$((10#${nodes}))+1] done 10#${nodes} = base#number (in this case we want to be using base 10)</description>
+    </item>
+    
+    <item>
+      <title>Turn on built in vncserver in OSX</title>
+      <link>https://thinkside.uk/posts/turn-on-built-in-vncserver-in-osx/</link>
+      <pubDate>Tue, 06 Jan 2009 23:41:25 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/turn-on-built-in-vncserver-in-osx/</guid>
+      <description> goto System Preferences Select Sharing Turn on Apple Remote Desktop  </description>
+    </item>
+    
+    <item>
+      <title>Home and End Keys on a Mac Keyboard</title>
+      <link>https://thinkside.uk/posts/42/</link>
+      <pubDate>Tue, 06 Jan 2009 23:35:33 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/42/</guid>
+      <description>the HOME and END keys on a mac keyboard scroll to the very top or bottom of the current document.
+To go to the start or end of the current line, all you need to do is use CMD+left-arrow or CMD+right-arrow</description>
+    </item>
+    
+  </channel>
+</rss>

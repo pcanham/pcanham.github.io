@@ -6,7 +6,64 @@
     <description>Recent content in Operating Systems on ThinkSide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2009 10:50:13 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/operating-systems/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Mar 2012 10:42:08 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/operating-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating FreeDOS Image under ubuntu</title>
+      <link>https://thinkside.uk/posts/creating-freedos-image-under-ubuntu/</link>
+      <pubDate>Tue, 06 Mar 2012 10:42:08 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/creating-freedos-image-under-ubuntu/</guid>
+      <description>Pre-requites apt-get install wget unzip genisoimage wget - pulling down files from the internet unzip - uncompress any zip files genisoimage - Needed for creating the ISO image
+Making custom freedos disk  make a source directory where you will keep all these files.  mkdir ~/src_freedos export FDSRC=~/src_freedos cd $FDSRC Download the FreeDos OEM CD-ROM disc builder http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip  wget http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip -O ${FDSRC}/FDOEMCD.builder.zip unzip the package and go into the new directory called &amp;ldquo;FDOEMCD&amp;rdquo;  unzip FDOEMCD.</description>
+    </item>
+    
+    <item>
+      <title>Corosync Logging</title>
+      <link>https://thinkside.uk/posts/corosync-logging/</link>
+      <pubDate>Fri, 10 Feb 2012 16:53:48 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/corosync-logging/</guid>
+      <description>Setting up corosync logging, by default the data is logged to /var/log/syslog in ubuntu.
+corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr: yes to_logfile: yes to_syslog: no syslog_facility: daemon debug: off logfile: /var/log/corosync/corosync.log timestamp: on logger_subsys { subsys: AMF debug: off tags: enter|leave|trace1|trace2|trace3|trace4|trace6 } logrotate config - /etc/logrotate.d/corosync /var/log/corosync/*.log { weekly missingok rotate 52 compress delaycompress notifempty create 640 root adm sharedscripts copytruncate } </description>
+    </item>
+    
+    <item>
+      <title>Installing ubuntu to HP DL140 G3</title>
+      <link>https://thinkside.uk/posts/installing-ubuntu-to-hp-dl140-g3/</link>
+      <pubDate>Fri, 10 Feb 2012 16:37:41 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/installing-ubuntu-to-hp-dl140-g3/</guid>
+      <description>ilom You will get into the inital screen all OK but if you dont alter the frame buffer you will just see rubbish on the screen, to fix this, do the following.
+ Set what Language you wish to use. Hit &amp;lsquo;F6&amp;rsquo; to choose the &amp;ldquo;Other Options&amp;rdquo; menu Choose &amp;ldquo;Expert Mode&amp;rdquo; this will allow you to alter the kernel parameters Hit &amp;ldquo;Space bar&amp;rdquo; to select the Expert Mode and then &amp;ldquo;Esc&amp;rdquo; to escape out of the menu option.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu:  Booting from ISO from PXE</title>
+      <link>https://thinkside.uk/posts/ubuntu-booting-from-iso-from-pxe/</link>
+      <pubDate>Fri, 10 Feb 2012 16:34:19 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/ubuntu-booting-from-iso-from-pxe/</guid>
+      <description> install syslinux  # apt-get install syslinux copy memdisk to tftp root  # cp /usr/lib/syslinux/memdisk /var/lib/tftpboot/11.04/ Add following into pxelinux.cdf/default  LABEL dos kernel memdisk append iso initrd=dos/dos_622_supermicro_bios.iso </description>
+    </item>
+    
+    <item>
+      <title>Changing timezone in ubuntu/debian</title>
+      <link>https://thinkside.uk/posts/changing-timezone-in-ubuntudebian/</link>
+      <pubDate>Thu, 09 Sep 2010 08:18:06 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/changing-timezone-in-ubuntudebian/</guid>
+      <description>Debian echo &amp;#34;US/Pacific&amp;#34; &amp;gt; /etc/timezone dpkg-reconfigure --frontend noninteractive tzdata Ubuntu (assuming you are not root) echo &amp;#34;US/Pacific&amp;#34; | sudo tee /etc/timezone sudo dpkg-reconfigure --frontend noninteractive tzdata NOTE: there is no need to reboot the system for the new settings to apply</description>
+    </item>
+    
+    <item>
+      <title>Working out used physical memory in solaris 10</title>
+      <link>https://thinkside.uk/posts/working-out-used-physical-memory-in-solaris-10/</link>
+      <pubDate>Sun, 11 Apr 2010 20:14:23 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/working-out-used-physical-memory-in-solaris-10/</guid>
+      <description>How much memory is being used pcanham@solman:~$ echo &amp;#34;`prtconf | grep &amp;#39;Memory size&amp;#39; | awk &amp;#39;{print $3}&amp;#39;` - (`vmstat 1 2 | tail -1 | awk &amp;#39;{print $5}&amp;#39;` /1024)&amp;#34; | bc 4891 Workout total server memory pcanham@solman:~$ prtconf | grep &amp;#39;Memory size&amp;#39; | awk &amp;#39;{print $3}&amp;#39; 8064 Percentage of memory in use pcanham@solman:~$ echo &amp;#34;4891/(8064/100)&amp;#34; | bc 61 61% of memory in use</description>
+    </item>
+    
     <item>
       <title>Packages needed for installing X Windows in Solaris 10 for being able to use vncserver</title>
       <link>https://thinkside.uk/posts/packages-needed-for-installing-x-windows-in-solaris-10-for-being-able-to-use-vncserver/</link>
@@ -16,6 +73,36 @@
       <description>I have found a couple of times that i need to setup vncserver on a machine in one of the remote offices very useful when needing to load up either some web UI&amp;rsquo;s or applications locally due to either bandwidth limitations or licensing.
 These are the packages you need for being able to install vncserver from the opencsw repository (these should also work for the blastwave repo as well)
 system SUNWxwcft X Window System common (not required) fonts system SUNWxwdv X Windows System Window Drivers system SUNWxwfnt X Window System platform required fonts system SUNWxwice X Window System Inter-Client Exchange (ICE) Components system SUNWxwmod X Window System kernel modules system SUNWxwopt X Window System Optional Clients system SUNWxwplr X Window System platform software configuration system SUNWxwplt X Window System platform software system SUNWxwrtl X Window System &amp;amp; Graphics Runtime Library Links in /usr/lib system SUNWpl5u Perl 5.</description>
+    </item>
+    
+    <item>
+      <title>SNMP and XEN Machines on debian lenny</title>
+      <link>https://thinkside.uk/posts/snmp-and-xen-machines-on-debian-lenny/</link>
+      <pubDate>Tue, 28 Jul 2009 13:25:53 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/snmp-and-xen-machines-on-debian-lenny/</guid>
+      <description>Found out the hard way on this that yes you can install snmpd on the xen domu machines but, you have a very limited amount of snmp mibs to play with, things you can not do unless you create your own snmp mib file.
+ Disk space CPU Connected users to machine  If you do some googling though you will find that some people have written some perl scripts which you can use in conjunction with snmp to collect this information.</description>
+    </item>
+    
+    <item>
+      <title>svc:/application/management/sma:default not displaying even though packages have been installed</title>
+      <link>https://thinkside.uk/posts/svcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed/</link>
+      <pubDate>Mon, 06 Jul 2009 13:35:31 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/svcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed/</guid>
+      <description>When you try and manually start the sma up you get the following error
+bash-3.00# /etc/init.d/init.sma start svcadm: Pattern &amp;#39;svc:/application/management/sma:default&amp;#39; doesn&amp;#39;t match any instances Solution:
+pkill configd svccfg -v import /var/svc/manifest/application/management/sma.xml svccfg -v import /var/svc/manifest/application/management/seaport.xml svcadm enable svc:/application/management/sma:default Link back: http://www.gnuunix.info/forum?id=12&amp;amp;catid=13&amp;amp;func=fb_pdf</description>
+    </item>
+    
+    <item>
+      <title>Howto force a cd/DVD eject on a Mac Mini</title>
+      <link>https://thinkside.uk/posts/howto-force-a-cddvd-eject-on-a-mac-mini/</link>
+      <pubDate>Mon, 09 Mar 2009 18:46:24 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/howto-force-a-cddvd-eject-on-a-mac-mini/</guid>
+      <description>You hold down the left button on the mouse and then power the mac mini on this will force the system to eject what ever you have in the drive.</description>
     </item>
     
     <item>
@@ -44,6 +131,145 @@ http://wikis.sun.com/display/BigAdmin/A+script+to+start+and+stop+ramdisks+in+the
       
       <guid>https://thinkside.uk/posts/creating-a-ramdisk-in-solaris-10/</guid>
       <description>Creating a 40m ramdisk bash-3.00# ramdiskadm -a ramdisk_rrd 40m /dev/ramdisk/ramdisk_rrd Checking ramdisk file system bash-3.00# fstyp /dev/ramdisk/ramdisk_rrd Unknown_fstyp (no matches) Creating filesystem on ramdisk bash-3.00# newfs /dev/ramdisk/ramdisk_rrd newfs: construct a new file system /dev/rramdisk/ramdisk_rrd: (y/n)? y /dev/rramdisk/ramdisk_rrd: 81872 sectors in 136 cylinders of 1 tracks, 602 sectors 40.0MB in 9 cyl groups (16 c/g, 4.70MB/g, 2240 i/g) super-block backups (for fsck -F ufs -o b=#) at: 32, 9664, 19296, 28928, 38560, 48192, 57824, 67456, 77088, Make mount path bash-3.</description>
+    </item>
+    
+    <item>
+      <title>Hash key # on a UK Mac Keyboard</title>
+      <link>https://thinkside.uk/posts/hash-key-on-a-uk-mac-keyboard/</link>
+      <pubDate>Sun, 15 Feb 2009 18:38:54 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/hash-key-on-a-uk-mac-keyboard/</guid>
+      <description>This tooks sometime to find i must admit and guessing this is very frustrating for people to hunt down
+its
+[alt] + [3]
+or
+[Option] + [3]
+NOTE: If you have Meta keys enabled in Terminal you will need to make a different short cut link otherwise you will get alittle frustrated.</description>
+    </item>
+    
+    <item>
+      <title>Turn on built in vncserver in OSX</title>
+      <link>https://thinkside.uk/posts/turn-on-built-in-vncserver-in-osx/</link>
+      <pubDate>Tue, 06 Jan 2009 23:41:25 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/turn-on-built-in-vncserver-in-osx/</guid>
+      <description> goto System Preferences Select Sharing Turn on Apple Remote Desktop  </description>
+    </item>
+    
+    <item>
+      <title>Home and End Keys on a Mac Keyboard</title>
+      <link>https://thinkside.uk/posts/42/</link>
+      <pubDate>Tue, 06 Jan 2009 23:35:33 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/42/</guid>
+      <description>the HOME and END keys on a mac keyboard scroll to the very top or bottom of the current document.
+To go to the start or end of the current line, all you need to do is use CMD+left-arrow or CMD+right-arrow</description>
+    </item>
+    
+    <item>
+      <title>Useful CentOS Repo&#39;s</title>
+      <link>https://thinkside.uk/posts/useful-centos-repos/</link>
+      <pubDate>Fri, 02 Jan 2009 10:13:55 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/useful-centos-repos/</guid>
+      <description>EPEL - http://fedoraproject.org/wiki/EPEL RPMForge - https://rpmrepo.org/RPMforge</description>
+    </item>
+    
+    <item>
+      <title>What to do if windows updates stop working after installing XP SP3</title>
+      <link>https://thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/</link>
+      <pubDate>Mon, 11 Aug 2008 18:23:47 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/</guid>
+      <description>Register the Wups2.dll file in Windows loadTOCNode(2, &amp;lsquo;resolution&amp;rsquo;); To register the Wups2.dll file in Windows, follow these steps:
+net stop wuauserv
+regsvr32 %windir%system32wups2.dll Note For a computer that is running Windows XP Professional x64 Edition, type the following command, and then press ENTER:
+regsvr32 %windir%syswow64wups2.dll net start wuauserv </description>
+    </item>
+    
+    <item>
+      <title>Disabling IP6 within CentOS</title>
+      <link>https://thinkside.uk/posts/disabling-ip6-within-centos/</link>
+      <pubDate>Mon, 24 Dec 2007 12:47:51 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/disabling-ip6-within-centos/</guid>
+      <description> Edit /etc/sysconfig/network and set &amp;ldquo;NETWORKING_IPV6&amp;rdquo; to &amp;ldquo;no&amp;rdquo; Add the following to /etc/modprobe.conf : alias ipv6 off alias net-pf-10 off Reboot the system  </description>
+    </item>
+    
+    <item>
+      <title>Disabling unneeded services in CentOS</title>
+      <link>https://thinkside.uk/posts/disabling-unneeded-services-in-centos/</link>
+      <pubDate>Mon, 24 Dec 2007 11:58:28 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/disabling-unneeded-services-in-centos/</guid>
+      <description>Found this great blog article about disabling unneeded Services, here is a brief over view of the services you can disable on a server
+Checking what services are running (run this as root). chkconfig --list | grep on Turning off the services chkconfig --level 0123456 &amp;lt;Service Name&amp;gt; off Services Safe to turn off on a server   isdn
+  gpm
+  pcmcia
+  sendmail
+  Reference Source http://prefetch.</description>
+    </item>
+    
+    <item>
+      <title>Creating an account in ALOM on a T2000</title>
+      <link>https://thinkside.uk/posts/creating-an-account-in-alom-on-a-t2000/</link>
+      <pubDate>Mon, 26 Nov 2007 09:05:52 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/creating-an-account-in-alom-on-a-t2000/</guid>
+      <description>Get into ALOM (from console for &amp;lsquo;#.&amp;rsquo; minus quotes)
+  to add the user run the following &amp;lsquo;useradd &amp;rsquo;
+  To assign a password this account run &amp;lsquo;userpassword &amp;rsquo;
+  Assigning permissions to the user account &amp;lsquo;userperm [a|u|c|r]&amp;rsquo; e.g. full permissions would be &amp;lsquo;userperm aucr&amp;rsquo;
+  Permission Level Description</description>
+    </item>
+    
+    <item>
+      <title>Adding NTFS Support into Centos and Fedora Core</title>
+      <link>https://thinkside.uk/posts/adding-ntfs-support-into-centos-and-fedora-core/</link>
+      <pubDate>Sun, 11 Nov 2007 12:55:36 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/adding-ntfs-support-into-centos-and-fedora-core/</guid>
+      <description>Here are some useful link which i used to get my external harddisk mounted to to the systems for backing data up.
+CentOs - http://wiki.centos.org/TipsAndTricks/NTFSPartitions
+yum install fuse fuse-ntfs-3g dkms dkms-fuse Install NTFS driver for Fedora With repositories like Fedora Extras it&amp;rsquo;s now very easy to add NTFS support to Fedora:
+# yum -y install ntfs-3g Then you can simply mount NTFS file systems using the option -t ntfs-3g. You can find more detailed information about this driver at http://www.</description>
+    </item>
+    
+    <item>
+      <title>Finding out how many physical CPU&#39;s you have in a SUN Box</title>
+      <link>https://thinkside.uk/posts/finding-out-how-many-physical-cpus-you-have-in-a-sun-box/</link>
+      <pubDate>Thu, 25 Oct 2007 15:07:04 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/finding-out-how-many-physical-cpus-you-have-in-a-sun-box/</guid>
+      <description>When running &amp;lsquo;psrinfo&amp;rsquo; on a T2000 it will display all of the cores as CPU&amp;rsquo;s. Runing &amp;lsquo;psrinfo -p&amp;rsquo; will display only the physical CPU&amp;rsquo;s.
+Example # psrinfo 0 on-line since 02/20/2007 00:48:07 1 on-line since 02/20/2007 00:48:08 2 on-line since 02/20/2007 00:48:08 3 on-line since 02/20/2007 00:48:08 4 on-line since 02/20/2007 00:48:08 5 on-line since 02/20/2007 00:48:08 6 on-line since 02/20/2007 00:48:08 7 on-line since 02/20/2007 00:48:08 8 on-line since 02/20/2007 00:48:08 9 on-line since 02/20/2007 00:48:08 10 on-line since 02/20/2007 00:48:08 11 on-line since 02/20/2007 00:48:08 12 on-line since 02/20/2007 00:48:08 13 on-line since 02/20/2007 00:48:08 14 on-line since 02/20/2007 00:48:08 15 on-line since 02/20/2007 00:48:08 16 on-line since 02/20/2007 00:48:08 17 on-line since 02/20/2007 00:48:08 18 on-line since 02/20/2007 00:48:08 19 on-line since 02/20/2007 00:48:08 20 on-line since 02/20/2007 00:48:08 21 on-line since 02/20/2007 00:48:08 22 on-line since 02/20/2007 00:48:08 23 on-line since 02/20/2007 00:48:08 24 on-line since 02/20/2007 00:48:08 25 on-line since 02/20/2007 00:48:08 26 on-line since 02/20/2007 00:48:08 27 on-line since 02/20/2007 00:48:08 28 on-line since 02/20/2007 00:48:08 29 on-line since 02/20/2007 00:48:08 30 on-line since 02/20/2007 00:48:08 31 on-line since 02/20/2007 00:48:08 # psrinfo -p 1 </description>
+    </item>
+    
+    <item>
+      <title>Displaying yesterdays date in solaris</title>
+      <link>https://thinkside.uk/posts/displaying-yesterdays-date-in-solaris/</link>
+      <pubDate>Thu, 25 Oct 2007 09:21:02 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/displaying-yesterdays-date-in-solaris/</guid>
+      <description>Sounds like a daft thing to do i know but for a couple of my scripts this is needed # echo `TZ=GMT+24 date +&amp;#34;%D&amp;#34;` This method doesnt always work, depends on what time of day you call this. I have also found a perl method of doing this as well # perl -e &amp;#39;($d,$m,$y)=(localtime(time-86400))[3..5];$m+=1;$y+=1900;print &amp;#34;$m/$d/$yn&amp;#34;;&amp;#39;</description>
+    </item>
+    
+    <item>
+      <title>Solaris Package Tips</title>
+      <link>https://thinkside.uk/posts/solaris-package-tips/</link>
+      <pubDate>Tue, 23 Oct 2007 12:35:39 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/solaris-package-tips/</guid>
+      <description>View the files that make up a Solaris package /usr/sbin/pkgchk -l SUNWcsr | grep Pathname | sed &amp;#39;s/Pathname: (.*)/1/&amp;#39; Check which package a file belongs to /usr/sbin/pkgchk -lp somefile </description>
+    </item>
+    
+    <item>
+      <title>Displaying EPOCH Date in Solaris</title>
+      <link>https://thinkside.uk/posts/displaying-epoch-date-in-solaris-10/</link>
+      <pubDate>Tue, 23 Oct 2007 10:22:49 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/displaying-epoch-date-in-solaris-10/</guid>
+      <description>Solaris 10 #!/bin/sh /usr/bin/truss /usr/bin/date 2&amp;gt;&amp;amp;1 | nawk -F= &amp;#39;/^time()/ {gsub(/ /,&amp;#34;&amp;#34;,$2);print $2}&amp;#39; exit $? Solaris 9 and below /usr/bin/perl -e &amp;#39;printf &amp;#34;%dn&amp;#34;, time;&amp;#39; </description>
     </item>
     
   </channel>

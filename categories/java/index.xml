@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>java on ThinkSide</title>
+    <title>Java on ThinkSide</title>
     <link>https://thinkside.uk/categories/java/</link>
-    <description>Recent content in java on ThinkSide</description>
+    <description>Recent content in Java on ThinkSide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Oct 2007 13:00:37 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/java/index.xml" rel="self" type="application/rss+xml" />
@@ -14,7 +14,10 @@
       
       <guid>https://thinkside.uk/posts/how-to-enable-snmp-with-a-jvm/</guid>
       <description>This is useful to do when you are wishing to monitor the Memory allocation with in your java application.
-HowTo  Add the following to JVM_OPTS -Dcom.sun.management.config.file=/export/home/pcanham/jvmsnmp/management.properties Contents of management.properties is com.sun.management.snmp.interface=0.0.0.0 com.sun.management.snmp.port=1161 com.sun.management.snmp.trap=1162 com.sun.management.snmp.acl=false If wishing ACL create a file called snmp.acl and the change &amp;lsquo;com.sun.management.snmp.acl=false&amp;rsquo; to &amp;lsquo;com.sun.management.snmp.acl=snmp.acl&amp;rsquo; Make sure only owner has read and write access nobody and group are not allowed any access -rw------- 1 pcanham other 356 Aug 8 16:01 snmp.</description>
+HowTo   Add the following to JVM_OPTS -Dcom.sun.management.config.file=/export/home/pcanham/jvmsnmp/management.properties 
+  Contents of management.properties is com.sun.management.snmp.interface=0.0.0.0 com.sun.management.snmp.port=1161 com.sun.management.snmp.trap=1162 com.sun.management.snmp.acl=false 
+  If wishing ACL create a file called snmp.acl and the change &amp;lsquo;com.sun.management.snmp.acl=false&amp;rsquo; to &amp;lsquo;com.sun.management.snmp.acl=snmp.acl&amp;rsquo;
+  Make sure only owner has read and write access nobody and group are not allowed any access -rw------- 1 pcanham other 356 Aug 8 16:01 snmp.</description>
     </item>
     
   </channel>

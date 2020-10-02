@@ -34,7 +34,7 @@
       <guid>https://thinkside.uk/posts/compiling-orca-in-solaris-10/</guid>
       <description>Compiling Software Locations   Orca - http://www.orcaware.com/orca/pub/snapshots/ (writing of the snapshot-r531 was the latest)
   RICHSe - http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz
-  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env  SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.</description>
+  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env  SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr  On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.</description>
     </item>
     
     <item>

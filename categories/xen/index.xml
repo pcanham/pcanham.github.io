@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>xen on ThinkSide</title>
+    <title>XEN on ThinkSide</title>
     <link>https://thinkside.uk/categories/xen/</link>
-    <description>Recent content in xen on ThinkSide</description>
+    <description>Recent content in XEN on ThinkSide</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 17 Sep 2009 14:25:55 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/xen/index.xml" rel="self" type="application/rss+xml" />
@@ -20,16 +20,6 @@
 #role=udev setups udev on the image you might find you have issues with ssh and console on the image otherwise
 #accounts = import non system &amp;ndash;accounts into image from master server
 Starting the image xm create /etc/xen/drclaw.</description>
-    </item>
-    
-    <item>
-      <title>SNMP and XEN Machines on debian lenny</title>
-      <link>https://thinkside.uk/posts/snmp-and-xen-machines-on-debian-lenny/</link>
-      <pubDate>Tue, 28 Jul 2009 13:25:53 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/snmp-and-xen-machines-on-debian-lenny/</guid>
-      <description>Found out the hard way on this that yes you can install snmpd on the xen domu machines but, you have a very limited amount of snmp mibs to play with, things you can not do unless you create your own snmp mib file.
- Disk space CPU Connected users to machine  If you do some googling though you will find that some people have written some perl scripts which you can use in conjunction with snmp to collect this information.</description>
     </item>
     
   </channel>

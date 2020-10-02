@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CentOS on ThinkSide</title>
+    <link>https://thinkside.uk/tags/centos/</link>
+    <description>Recent content in CentOS on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Jan 2009 10:13:55 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful CentOS Repo&#39;s</title>
+      <link>https://thinkside.uk/posts/useful-centos-repos/</link>
+      <pubDate>Fri, 02 Jan 2009 10:13:55 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/useful-centos-repos/</guid>
+      <description>EPEL - http://fedoraproject.org/wiki/EPEL RPMForge - https://rpmrepo.org/RPMforge</description>
+    </item>
+    
+    <item>
+      <title>Disabling IP6 within CentOS</title>
+      <link>https://thinkside.uk/posts/disabling-ip6-within-centos/</link>
+      <pubDate>Mon, 24 Dec 2007 12:47:51 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/disabling-ip6-within-centos/</guid>
+      <description> Edit /etc/sysconfig/network and set &amp;ldquo;NETWORKING_IPV6&amp;rdquo; to &amp;ldquo;no&amp;rdquo; Add the following to /etc/modprobe.conf : alias ipv6 off alias net-pf-10 off Reboot the system  </description>
+    </item>
+    
+    <item>
+      <title>Disabling unneeded services in CentOS</title>
+      <link>https://thinkside.uk/posts/disabling-unneeded-services-in-centos/</link>
+      <pubDate>Mon, 24 Dec 2007 11:58:28 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/disabling-unneeded-services-in-centos/</guid>
+      <description>Found this great blog article about disabling unneeded Services, here is a brief over view of the services you can disable on a server
+Checking what services are running (run this as root). chkconfig --list | grep on Turning off the services chkconfig --level 0123456 &amp;lt;Service Name&amp;gt; off Services Safe to turn off on a server   isdn
+  gpm
+  pcmcia
+  sendmail
+  Reference Source http://prefetch.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -18,5 +18,16 @@ perl: warning: Setting locale failed. perl: warning: Please check that your loca
 echo | perl this will generate the error if the locales are wrong.</description>
     </item>
     
+    <item>
+      <title>How to install your own CA cert into Google Chrome</title>
+      <link>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</link>
+      <pubDate>Wed, 11 May 2011 08:29:24 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</guid>
+      <description>There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
+To stop this from happening here is how you install your CA certificate to chrome
+ Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert.</description>
+    </item>
+    
   </channel>
 </rss>

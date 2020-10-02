@@ -65,7 +65,8 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
       <description>BBwin installation   Install bbwin client to machine
   Edit c:program filesBBWinetcBBWin.cfg telling it the server is &amp;ldquo;10.10.10.10&amp;rdquo; (will be under a setting called bbdisplay)
   edit the bbwin registry to make it use the FQDN and not the server name. Change the hostname entry from &amp;ldquo;%COMPUTERNAME%&amp;rdquo; to &amp;ldquo;%COMPUTERNAME%.%USERDNSDOMAIN%&amp;rdquo; minus the quotes
-  * 64bit Machines = &amp;quot;HKEY_LOCAL_MACHINESOFTWAREWow6432NodeBBWin&amp;quot;. * 32bit Machines = &amp;quot;HKEY_LOCAL_MACHINESOFTWAREBBWin&amp;quot;   With 64bit Windows you need to add an extra setting in bbwin.</description>
+  64bit Machines = &amp;ldquo;HKEY_LOCAL_MACHINESOFTWAREWow6432NodeBBWin&amp;rdquo;.
+ 32bit Machines = &amp;ldquo;HKEY_LOCAL_MACHINESOFTWAREBBWin&amp;rdquo;      With 64bit Windows you need to add an extra setting in bbwin.</description>
     </item>
     
     <item>
@@ -347,7 +348,7 @@ http://wikis.sun.com/display/BigAdmin/A+script+to+start+and+stop+ramdisks+in+the
       <pubDate>Tue, 03 Mar 2009 12:55:26 +0000</pubDate>
       
       <guid>https://thinkside.uk/posts/starting-and-stopping-an-oracle-db/</guid>
-      <description>STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&amp;gt; connect sys as sysdba 2. run command &amp;#39;startup&amp;#39; SQL&amp;gt; startup 3. Exit from sqlplus SQL&amp;gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-bash&amp;#34; data-lang=&amp;#34;bash&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# emctl start dbconsole&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;#### example&amp;lt;/span&amp;gt; &amp;amp;lt;div class&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;highlight&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;pre style&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;code class&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;language-bash&amp;amp;#34;&amp;lt;/span&amp;gt; data-lang&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;bash&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10.</description>
+      <description>STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&amp;gt; connect sys as sysdba 2. run command &amp;#39;startup&amp;#39; SQL&amp;gt; startup 3. Exit from sqlplus SQL&amp;gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-bash&amp;#34; data-lang=&amp;#34;bash&amp;#34;&amp;gt; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# emctl start dbconsole&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;#### example&amp;lt;/span&amp;gt; &amp;amp;lt;div class&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;highlight&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;pre style&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;code class&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;language-bash&amp;amp;#34;&amp;lt;/span&amp;gt; data-lang&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;bash&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10.</description>
     </item>
     
     <item>
@@ -444,7 +445,7 @@ NOTE: If you have Meta keys enabled in Terminal you will need to make a differen
       <pubDate>Tue, 27 Jan 2009 11:10:27 +0000</pubDate>
       
       <guid>https://thinkside.uk/posts/how-to-discard-emails-using-the-sender-email-address-in-postfix/</guid>
-      <description> Make list of email address/domains you wish to discard vi /opt/csw/etc/postfix/sender_access sender@example.com DISCARD DoNotReply@spam.example.com DISCARD subdomain.example.com DISCARD Hash table the file /opt/csw/sbin/postmap dbm:/opt/csw/etc/postfix/sender_access Add into the postfix config the smtp restriction line in vi /etc/opt/csw/postfix/main.cf smtpd_sender_restrictions = check_sender_access dbm:/opt/csw/etc/postfix/sender_access Reload postfix /opt/csw/sbin/postfix reload  </description>
+      <description> Make list of email address/domains you wish to discard vi /opt/csw/etc/postfix/sender_access sender@example.com DISCARD DoNotReply@spam.example.com DISCARD subdomain.example.com DISCARD  Hash table the file /opt/csw/sbin/postmap dbm:/opt/csw/etc/postfix/sender_access  Add into the postfix config the smtp restriction line in vi /etc/opt/csw/postfix/main.cf smtpd_sender_restrictions = check_sender_access dbm:/opt/csw/etc/postfix/sender_access Reload postfix /opt/csw/sbin/postfix reload  </description>
     </item>
     
     <item>
@@ -483,7 +484,7 @@ Error May 20 23:32:51 server.example.com postfix/postdrop[7779]: [ID 947731 mail
       <guid>https://thinkside.uk/posts/compiling-orca-in-solaris-10/</guid>
       <description>Compiling Software Locations   Orca - http://www.orcaware.com/orca/pub/snapshots/ (writing of the snapshot-r531 was the latest)
   RICHSe - http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz
-  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env  SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.</description>
+  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env  SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr  On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.</description>
     </item>
     
     <item>
@@ -636,7 +637,7 @@ regsvr32 %windir%syswow64wups2.dll net start wuauserv </description>
       <description>To get rid of these edit the following file and change the year to the current year
 File: /etc/acct/holidays
 Example Output below with section marked as bold what you need to alter
-* @(#)holidays January 1, 2006 * * Prime/Nonprime Table for UNIX Accounting System * * Curr Prime Non-Prime * Year Start Start * **2008 ** 0800 1800 * * only the first column (month/day) is significiant. * * month/day Company * Holiday * 1/1 New Years Day 7/4 Indep.</description>
+* @(#)holidays January 1, 2006 * * Prime/Nonprime Table for UNIX Accounting System * * Curr Prime Non-Prime * Year Start Start * * * * only the first column (month/day) is significiant. * * month/day Company * Holiday * </description>
     </item>
     
     <item>
@@ -794,7 +795,10 @@ Example # psrinfo 0 on-line since 02/20/2007 00:48:07 1 on-line since 02/20/
       
       <guid>https://thinkside.uk/posts/how-to-enable-snmp-with-a-jvm/</guid>
       <description>This is useful to do when you are wishing to monitor the Memory allocation with in your java application.
-HowTo  Add the following to JVM_OPTS -Dcom.sun.management.config.file=/export/home/pcanham/jvmsnmp/management.properties Contents of management.properties is com.sun.management.snmp.interface=0.0.0.0 com.sun.management.snmp.port=1161 com.sun.management.snmp.trap=1162 com.sun.management.snmp.acl=false If wishing ACL create a file called snmp.acl and the change &amp;lsquo;com.sun.management.snmp.acl=false&amp;rsquo; to &amp;lsquo;com.sun.management.snmp.acl=snmp.acl&amp;rsquo; Make sure only owner has read and write access nobody and group are not allowed any access -rw------- 1 pcanham other 356 Aug 8 16:01 snmp.</description>
+HowTo   Add the following to JVM_OPTS -Dcom.sun.management.config.file=/export/home/pcanham/jvmsnmp/management.properties 
+  Contents of management.properties is com.sun.management.snmp.interface=0.0.0.0 com.sun.management.snmp.port=1161 com.sun.management.snmp.trap=1162 com.sun.management.snmp.acl=false 
+  If wishing ACL create a file called snmp.acl and the change &amp;lsquo;com.sun.management.snmp.acl=false&amp;rsquo; to &amp;lsquo;com.sun.management.snmp.acl=snmp.acl&amp;rsquo;
+  Make sure only owner has read and write access nobody and group are not allowed any access -rw------- 1 pcanham other 356 Aug 8 16:01 snmp.</description>
     </item>
     
     <item>
@@ -803,7 +807,10 @@ HowTo  Add the following to JVM_OPTS -Dcom.sun.management.config.file=/export/ho
       <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
       
       <guid>https://thinkside.uk/posts/blocking-users-in-sendmail/</guid>
-      <description>Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example  Browse to folder cd /etc/mail Edit access vi access # joebloggs@example.com - email address being blocked # due to being invalid joebloggs@example.com DISCARD Update table makemap hash access.db &amp;lt; access  </description>
+      <description>Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example   Browse to folder cd /etc/mail 
+  Edit access vi access # joebloggs@example.com - email address being blocked # due to being invalid joebloggs@example.com DISCARD 
+  Update table makemap hash access.db &amp;lt; access 
+  </description>
     </item>
     
     <item>

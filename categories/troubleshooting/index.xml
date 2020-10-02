@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Troubleshooting on ThinkSide</title>
+    <link>https://thinkside.uk/categories/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jan 2009 11:01:27 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple use of netcat for checking a port is open on a firewall/load balancer</title>
+      <link>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</link>
+      <pubDate>Tue, 27 Jan 2009 11:01:27 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</guid>
+      <description>Server (Listener) root@server:/var/tmp&amp;gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/var/tmp&amp;gt; netcat -l -s server.example.com -p 7735 &amp;lt;pcanham.txt Client root@scar:/&amp;gt; telnet server.example.com 7735 Trying 10.10.10.20... Connected to server.example.com. Escape character is &amp;#39;^]&amp;#39;. Welcome to the Server on port 7735. ^] telnet&amp;gt; q Connection to server.example.com closed. </description>
+    </item>
+    
+  </channel>
+</rss>

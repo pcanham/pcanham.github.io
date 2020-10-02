@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSL on ThinkSide</title>
+    <link>https://thinkside.uk/categories/ssl/</link>
+    <description>Recent content in SSL on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 May 2011 08:29:24 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install your own CA cert into Google Chrome</title>
+      <link>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</link>
+      <pubDate>Wed, 11 May 2011 08:29:24 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</guid>
+      <description>There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
+To stop this from happening here is how you install your CA certificate to chrome
+ Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert.</description>
+    </item>
+    
+    <item>
+      <title>Installing openca-base ten-ten on debian lenny</title>
+      <link>https://thinkside.uk/posts/installing-openca-base-ten-ten-on-debian-lenny/</link>
+      <pubDate>Sun, 11 Apr 2010 20:25:06 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/installing-openca-base-ten-ten-on-debian-lenny/</guid>
+      <description>NOTE: openca-tools need to be compiled/installed first.
+Needed for openca apt-get install mysql-server apt-get install apache2 Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl openca base export PATH=$PATH:/usr/local/openca/bin ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-openssl-tools-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --enable-scep --with-service-mail-account=cacert@toon-net.local --with-cert-chars=UTF8 --with-ca-organization=ThinkSide --with-ca-locality=Cambridge --with-ca-state=Cambridgeshire --with-ca-country=GB --with-web-host=openca.toon-net.local --with-httpd-fs-prefix=/usr/local/openca/htdocs --with-dist-user=madwolf --with-dist-group=openca --with-db-type=mysql --with-db-user=openca --with-db-name=openca --with-db-host=localhost --with-db-port=3306 --with-db-passwd=openca --with-db-namespace= make make install-offline make install-online </description>
+    </item>
+    
+    <item>
+      <title>Installing openca-tools ten-ten on debian lenny</title>
+      <link>https://thinkside.uk/posts/installing-openca-tools-ten-ten-on-debian-lenny/</link>
+      <pubDate>Sun, 11 Apr 2010 20:23:07 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/installing-openca-tools-ten-ten-on-debian-lenny/</guid>
+      <description>Needed for openca apt-get install mysql-server apt-get install apache2 Needed for compiling apt-get install libssl-dev apt-get install build-essential apt-get install libapache2-mod-perl2 libcgi-session-perl libxml-parser-perl libauthen-sasl-perl libconvert-asn1-perl libdigest-hmac-perl libdigest-sha1-perl libintl-perl libio-socket-ssl-perl libio-stringy-perl libmime-lite-perl libmime-perl libmailtools-perl libnet-server-perl libnet-ldap-perl libparse-recdescent-perl libx500-dn-perl libxml-twig-perl libdbd-pg-perl libdbi-perl libpg-perl libxml-dom-perl libxml-sax-perl openca tools ./configure --prefix=/usr/local/openca --with-httpd-user=www-data --with-httpd-group=www-data --with-openca-prefix=/usr/local/openca --with-etc-prefix=/usr/local/openca/etc --with-module-prefix=/usr/local/openca/modules --with-web-host=openca.toon-net.local --enable-ocspd make make install </description>
+    </item>
+    
+    <item>
+      <title>Checking a *.CRT, *.CSR and *.KEY are correct.</title>
+      <link>https://thinkside.uk/posts/checking-a-crt-and-key-are-correct/</link>
+      <pubDate>Tue, 23 Sep 2008 08:48:33 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/checking-a-crt-and-key-are-correct/</guid>
+      <description>Two commands which you need to run. #openssl rsa -noout -text -in www.domainname.com.key #openssl req -noout -text -in www.domainname.com.csr #openssl x509 -noout -text -in www.domainname.com.crt Check for modulus part in the output of both commands
+If the modulus output match, then your .crt and .key files are matching.</description>
+    </item>
+    
+  </channel>
+</rss>

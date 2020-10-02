@@ -16,7 +16,8 @@
       <description>BBwin installation   Install bbwin client to machine
   Edit c:program filesBBWinetcBBWin.cfg telling it the server is &amp;ldquo;10.10.10.10&amp;rdquo; (will be under a setting called bbdisplay)
   edit the bbwin registry to make it use the FQDN and not the server name. Change the hostname entry from &amp;ldquo;%COMPUTERNAME%&amp;rdquo; to &amp;ldquo;%COMPUTERNAME%.%USERDNSDOMAIN%&amp;rdquo; minus the quotes
-  * 64bit Machines = &amp;quot;HKEY_LOCAL_MACHINESOFTWAREWow6432NodeBBWin&amp;quot;. * 32bit Machines = &amp;quot;HKEY_LOCAL_MACHINESOFTWAREBBWin&amp;quot;   With 64bit Windows you need to add an extra setting in bbwin.</description>
+  64bit Machines = &amp;ldquo;HKEY_LOCAL_MACHINESOFTWAREWow6432NodeBBWin&amp;rdquo;.
+ 32bit Machines = &amp;ldquo;HKEY_LOCAL_MACHINESOFTWAREBBWin&amp;rdquo;      With 64bit Windows you need to add an extra setting in bbwin.</description>
     </item>
     
   </channel>

@@ -18,16 +18,6 @@
     </item>
     
     <item>
-      <title>Checking a *.CRT, *.CSR and *.KEY are correct.</title>
-      <link>https://thinkside.uk/posts/checking-a-crt-and-key-are-correct/</link>
-      <pubDate>Tue, 23 Sep 2008 08:48:33 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/checking-a-crt-and-key-are-correct/</guid>
-      <description>Two commands which you need to run. #openssl rsa -noout -text -in www.domainname.com.key #openssl req -noout -text -in www.domainname.com.csr #openssl x509 -noout -text -in www.domainname.com.crt Check for modulus part in the output of both commands
-If the modulus output match, then your .crt and .key files are matching.</description>
-    </item>
-    
-    <item>
       <title>What to do if windows updates stop working after installing XP SP3</title>
       <link>https://thinkside.uk/posts/what-to-do-if-windows-updates-stop-working-after-installing-xp-sp3/</link>
       <pubDate>Mon, 11 Aug 2008 18:23:47 +0000</pubDate>

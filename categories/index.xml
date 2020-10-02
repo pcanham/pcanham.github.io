@@ -8,11 +8,29 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Jan 2019 20:39:00 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>blog</title>
+      <title>Blog</title>
       <link>https://thinkside.uk/categories/blog/</link>
       <pubDate>Mon, 21 Jan 2019 20:39:00 +0000</pubDate>
       
       <guid>https://thinkside.uk/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://thinkside.uk/categories/linux/</link>
+      <pubDate>Tue, 06 Mar 2012 10:42:08 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operating Systems</title>
+      <link>https://thinkside.uk/categories/operating-systems/</link>
+      <pubDate>Tue, 06 Mar 2012 10:42:08 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/categories/operating-systems/</guid>
       <description></description>
     </item>
     
@@ -26,20 +44,20 @@
     </item>
     
     <item>
-      <title>Postfix</title>
-      <link>https://thinkside.uk/categories/postfix/</link>
+      <title>MTA</title>
+      <link>https://thinkside.uk/categories/mta/</link>
       <pubDate>Fri, 10 Feb 2012 16:58:50 +0000</pubDate>
       
-      <guid>https://thinkside.uk/categories/postfix/</guid>
+      <guid>https://thinkside.uk/categories/mta/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://thinkside.uk/categories/linux/</link>
+      <title>Clustering</title>
+      <link>https://thinkside.uk/categories/clustering/</link>
       <pubDate>Fri, 10 Feb 2012 16:53:48 +0000</pubDate>
       
-      <guid>https://thinkside.uk/categories/linux/</guid>
+      <guid>https://thinkside.uk/categories/clustering/</guid>
       <description></description>
     </item>
     
@@ -62,11 +80,11 @@
     </item>
     
     <item>
-      <title>Chrome</title>
-      <link>https://thinkside.uk/categories/chrome/</link>
+      <title>SSL</title>
+      <link>https://thinkside.uk/categories/ssl/</link>
       <pubDate>Wed, 11 May 2011 08:29:24 +0000</pubDate>
       
-      <guid>https://thinkside.uk/categories/chrome/</guid>
+      <guid>https://thinkside.uk/categories/ssl/</guid>
       <description></description>
     </item>
     
@@ -107,16 +125,7 @@
     </item>
     
     <item>
-      <title>Operating Systems</title>
-      <link>https://thinkside.uk/categories/operating-systems/</link>
-      <pubDate>Mon, 21 Sep 2009 10:50:13 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/categories/operating-systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>xen</title>
+      <title>XEN</title>
       <link>https://thinkside.uk/categories/xen/</link>
       <pubDate>Thu, 17 Sep 2009 14:25:55 +0000</pubDate>
       
@@ -125,56 +134,47 @@
     </item>
     
     <item>
-      <title>SNMP</title>
-      <link>https://thinkside.uk/categories/snmp/</link>
-      <pubDate>Thu, 17 Sep 2009 14:14:22 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/categories/snmp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cisco</title>
-      <link>https://thinkside.uk/categories/cisco/</link>
-      <pubDate>Mon, 06 Jul 2009 13:38:15 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/categories/cisco/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Miscellaneous</title>
-      <link>https://thinkside.uk/categories/miscellaneous/</link>
-      <pubDate>Tue, 31 Mar 2009 13:40:54 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/categories/miscellaneous/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OSX</title>
-      <link>https://thinkside.uk/categories/osx/</link>
+      <title>Apple</title>
+      <link>https://thinkside.uk/categories/apple/</link>
       <pubDate>Mon, 09 Mar 2009 18:46:24 +0000</pubDate>
       
-      <guid>https://thinkside.uk/categories/osx/</guid>
+      <guid>https://thinkside.uk/categories/apple/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Mac</title>
-      <link>https://thinkside.uk/categories/mac/</link>
-      <pubDate>Sun, 15 Feb 2009 18:38:54 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/categories/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bash Shell Scripting</title>
-      <link>https://thinkside.uk/categories/bash-shell-scripting/</link>
+      <title>Bash</title>
+      <link>https://thinkside.uk/categories/bash/</link>
       <pubDate>Mon, 02 Feb 2009 16:36:04 +0000</pubDate>
       
-      <guid>https://thinkside.uk/categories/bash-shell-scripting/</guid>
+      <guid>https://thinkside.uk/categories/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://thinkside.uk/categories/troubleshooting/</link>
+      <pubDate>Tue, 27 Jan 2009 11:01:27 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/categories/troubleshooting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unix</title>
+      <link>https://thinkside.uk/categories/unix/</link>
+      <pubDate>Fri, 16 Jan 2009 17:07:23 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/categories/unix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cisco</title>
+      <link>https://thinkside.uk/categories/cisco/</link>
+      <pubDate>Mon, 12 Jan 2009 15:48:16 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/categories/cisco/</guid>
       <description></description>
     </item>
     
@@ -188,16 +188,16 @@
     </item>
     
     <item>
-      <title>Apache</title>
-      <link>https://thinkside.uk/categories/apache/</link>
-      <pubDate>Wed, 24 Oct 2007 10:39:01 +0000</pubDate>
+      <title>Miscellaneous</title>
+      <link>https://thinkside.uk/categories/miscellaneous/</link>
+      <pubDate>Mon, 24 Dec 2007 12:31:18 +0000</pubDate>
       
-      <guid>https://thinkside.uk/categories/apache/</guid>
+      <guid>https://thinkside.uk/categories/miscellaneous/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>java</title>
+      <title>Java</title>
       <link>https://thinkside.uk/categories/java/</link>
       <pubDate>Tue, 23 Oct 2007 13:00:37 +0000</pubDate>
       
@@ -206,20 +206,11 @@
     </item>
     
     <item>
-      <title>Sendmail</title>
-      <link>https://thinkside.uk/categories/sendmail/</link>
-      <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
+      <title>SNMP</title>
+      <link>https://thinkside.uk/categories/snmp/</link>
+      <pubDate>Tue, 23 Oct 2007 13:00:37 +0000</pubDate>
       
-      <guid>https://thinkside.uk/categories/sendmail/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>unix</title>
-      <link>https://thinkside.uk/categories/unix/</link>
-      <pubDate>Tue, 23 Oct 2007 10:22:49 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/categories/unix/</guid>
+      <guid>https://thinkside.uk/categories/snmp/</guid>
       <description></description>
     </item>
     

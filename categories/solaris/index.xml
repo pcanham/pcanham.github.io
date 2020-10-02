@@ -96,15 +96,6 @@ From syslocation &amp;#34;System administrators office&amp;#34; syscontact &am
     </item>
     
     <item>
-      <title>Getting the following error in your script &#39;-bash: 08: value too great for base (error token is &#34;08&#34;)&#39;</title>
-      <link>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</link>
-      <pubDate>Mon, 02 Feb 2009 16:36:04 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</guid>
-      <description>Loop which will fail with this error nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[${nodes}+1] done Solution nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[$((10#${nodes}))+1] done 10#${nodes} = base#number (in this case we want to be using base 10)</description>
-    </item>
-    
-    <item>
       <title>Permissions error on postfix package from blastwave</title>
       <link>https://thinkside.uk/posts/permissions-error-on-postfix-package-from-blastwave/</link>
       <pubDate>Tue, 27 Jan 2009 11:03:35 +0000</pubDate>
@@ -115,15 +106,6 @@ Error May 20 23:32:51 server.example.com postfix/postdrop[7779]: [ID 947731 mail
     </item>
     
     <item>
-      <title>Simple use of netcat for checking a port is open on a firewall/load balancer</title>
-      <link>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</link>
-      <pubDate>Tue, 27 Jan 2009 11:01:27 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</guid>
-      <description>Server (Listener) root@server:/var/tmp&amp;gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/var/tmp&amp;gt; netcat -l -s server.example.com -p 7735 &amp;lt;pcanham.txt Client root@scar:/&amp;gt; telnet server.example.com 7735 Trying 10.10.10.20... Connected to server.example.com. Escape character is &amp;#39;^]&amp;#39;. Welcome to the Server on port 7735. ^] telnet&amp;gt; q Connection to server.example.com closed. </description>
-    </item>
-    
-    <item>
       <title>Compiling Orca in Solaris 10</title>
       <link>https://thinkside.uk/posts/compiling-orca-in-solaris-10/</link>
       <pubDate>Tue, 27 Jan 2009 10:52:36 +0000</pubDate>
@@ -131,7 +113,7 @@ Error May 20 23:32:51 server.example.com postfix/postdrop[7779]: [ID 947731 mail
       <guid>https://thinkside.uk/posts/compiling-orca-in-solaris-10/</guid>
       <description>Compiling Software Locations   Orca - http://www.orcaware.com/orca/pub/snapshots/ (writing of the snapshot-r531 was the latest)
   RICHSe - http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz
-  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env  SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.</description>
+  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env  SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr  On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.</description>
     </item>
     
     <item>
@@ -212,7 +194,7 @@ that&amp;rsquo;ll make it use the extra swap file when the system reboots</descr
       <description>To get rid of these edit the following file and change the year to the current year
 File: /etc/acct/holidays
 Example Output below with section marked as bold what you need to alter
-* @(#)holidays January 1, 2006 * * Prime/Nonprime Table for UNIX Accounting System * * Curr Prime Non-Prime * Year Start Start * **2008 ** 0800 1800 * * only the first column (month/day) is significiant. * * month/day Company * Holiday * 1/1 New Years Day 7/4 Indep.</description>
+* @(#)holidays January 1, 2006 * * Prime/Nonprime Table for UNIX Accounting System * * Curr Prime Non-Prime * Year Start Start * * * * only the first column (month/day) is significiant. * * month/day Company * Holiday * </description>
     </item>
     
     <item>
@@ -255,19 +237,6 @@ http://prefetch.net/blog/index.php/2005/11/12/converting-an-rc-script-to-an-smf-
     </item>
     
     <item>
-      <title>Orca - Trending, reporting, and Capacity Planning</title>
-      <link>https://thinkside.uk/posts/orca-trending-reporting-and-capacity-planning/</link>
-      <pubDate>Mon, 24 Dec 2007 12:14:58 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/orca-trending-reporting-and-capacity-planning/</guid>
-      <description>This is a great application for trending your servers (Solaris, Linux and also windows machines with some tweaking)
-Trends all the usual things cpu, memory, http requests, uptime etc.
-http://www.orcaware.com/orca/
-Worth taking a look at it if you need some sort of data to prove you need to either purchase additional equipment or just need to move certain services off machines due to CPU being maxed.
-You can also create your own monitoring plugins as well you can set the system up to monitor garbage collection states for any java process&amp;rsquo;s you have running.</description>
-    </item>
-    
-    <item>
       <title>Creating an account in ALOM on a T2000</title>
       <link>https://thinkside.uk/posts/creating-an-account-in-alom-on-a-t2000/</link>
       <pubDate>Mon, 26 Nov 2007 09:05:52 +0000</pubDate>
@@ -300,15 +269,6 @@ Example # psrinfo 0 on-line since 02/20/2007 00:48:07 1 on-line since 02/20/
     </item>
     
     <item>
-      <title>Blocking Users in Sendmail</title>
-      <link>https://thinkside.uk/posts/blocking-users-in-sendmail/</link>
-      <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/blocking-users-in-sendmail/</guid>
-      <description>Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example  Browse to folder cd /etc/mail Edit access vi access # joebloggs@example.com - email address being blocked # due to being invalid joebloggs@example.com DISCARD Update table makemap hash access.db &amp;lt; access  </description>
-    </item>
-    
-    <item>
       <title>Solaris Package Tips</title>
       <link>https://thinkside.uk/posts/solaris-package-tips/</link>
       <pubDate>Tue, 23 Oct 2007 12:35:39 +0000</pubDate>
@@ -324,15 +284,6 @@ Example # psrinfo 0 on-line since 02/20/2007 00:48:07 1 on-line since 02/20/
       
       <guid>https://thinkside.uk/posts/displaying-epoch-date-in-solaris-10/</guid>
       <description>Solaris 10 #!/bin/sh /usr/bin/truss /usr/bin/date 2&amp;gt;&amp;amp;1 | nawk -F= &amp;#39;/^time()/ {gsub(/ /,&amp;#34;&amp;#34;,$2);print $2}&amp;#39; exit $? Solaris 9 and below /usr/bin/perl -e &amp;#39;printf &amp;#34;%dn&amp;#34;, time;&amp;#39; </description>
-    </item>
-    
-    <item>
-      <title>Bash Shortcuts</title>
-      <link>https://thinkside.uk/posts/bash-shortcuts/</link>
-      <pubDate>Tue, 23 Oct 2007 10:21:58 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/bash-shortcuts/</guid>
-      <description>alt-f &amp;ndash; move forward one word alt-b &amp;ndash; move backwards one word ctrl-a &amp;ndash; takes you to the begining of the command you are currently typing. ctrl-b &amp;ndash; move backwards one character ctrl-c &amp;ndash; kills the current command or process. ctrl-d &amp;ndash; kills the shell. ctrl-e &amp;ndash; takes you to the end of the command you are currently typing in. ctrl-f &amp;ndash; move forward one character ctrl-h &amp;ndash; deletes one letter at a time from the command you are typing in.</description>
     </item>
     
   </channel>

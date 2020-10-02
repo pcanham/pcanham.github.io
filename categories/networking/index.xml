@@ -37,15 +37,6 @@ If you want to: Uncompress an archived log file: gunzip newnslog.21.gz Discover 
     </item>
     
     <item>
-      <title>Simple use of netcat for checking a port is open on a firewall/load balancer</title>
-      <link>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</link>
-      <pubDate>Tue, 27 Jan 2009 11:01:27 +0000</pubDate>
-      
-      <guid>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</guid>
-      <description>Server (Listener) root@server:/var/tmp&amp;gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/var/tmp&amp;gt; netcat -l -s server.example.com -p 7735 &amp;lt;pcanham.txt Client root@scar:/&amp;gt; telnet server.example.com 7735 Trying 10.10.10.20... Connected to server.example.com. Escape character is &amp;#39;^]&amp;#39;. Welcome to the Server on port 7735. ^] telnet&amp;gt; q Connection to server.example.com closed. </description>
-    </item>
-    
-    <item>
       <title>Displaying DHCP clients from the CLI of a CISCO 877 router</title>
       <link>https://thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/</link>
       <pubDate>Mon, 12 Jan 2009 15:48:16 +0000</pubDate>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MTA on ThinkSide</title>
+    <link>https://thinkside.uk/tags/mta/</link>
+    <description>Recent content in MTA on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Dec 2009 09:32:53 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/mta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Attachment size limit in postfix</title>
+      <link>https://thinkside.uk/posts/attachment-size-limit-in-postfix/</link>
+      <pubDate>Fri, 04 Dec 2009 09:32:53 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/attachment-size-limit-in-postfix/</guid>
+      <description>By default this is set to 10mb, if you want this to be set to a smaller value you will need to add this into your config file (main.cf)
+Quick way to check what its set to
+postconf | grep message_size_limit message_size_limit = 10240000 10240000 = 10mb</description>
+    </item>
+    
+  </channel>
+</rss>

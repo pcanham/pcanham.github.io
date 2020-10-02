@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Starting and stopping an oracle DB" />
-<meta property="og:description" content="STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&gt; connect sys as sysdba 2. run command &#39;startup&#39; SQL&gt; startup 3. Exit from sqlplus SQL&gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# emctl start dbconsole&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#### example&lt;/span&gt; &amp;lt;div class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10." />
+<meta property="og:description" content="STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&gt; connect sys as sysdba 2. run command &#39;startup&#39; SQL&gt; startup 3. Exit from sqlplus SQL&gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# emctl start dbconsole&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#### example&lt;/span&gt; &amp;lt;div class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://thinkside.uk/posts/starting-and-stopping-an-oracle-db/" />
 <meta property="article:published_time" content="2009-03-03T12:55:26+00:00" />
@@ -29,10 +29,10 @@
 
     
     <meta itemprop="name" content="Starting and stopping an oracle DB">
-<meta itemprop="description" content="STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&gt; connect sys as sysdba 2. run command &#39;startup&#39; SQL&gt; startup 3. Exit from sqlplus SQL&gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# emctl start dbconsole&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#### example&lt;/span&gt; &amp;lt;div class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10.">
+<meta itemprop="description" content="STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&gt; connect sys as sysdba 2. run command &#39;startup&#39; SQL&gt; startup 3. Exit from sqlplus SQL&gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# emctl start dbconsole&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#### example&lt;/span&gt; &amp;lt;div class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10.">
 <meta itemprop="datePublished" content="2009-03-03T12:55:26+00:00" />
 <meta itemprop="dateModified" content="2009-03-03T12:55:26+00:00" />
-<meta itemprop="wordCount" content="387">
+<meta itemprop="wordCount" content="396">
 
 
 
@@ -40,7 +40,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Starting and stopping an oracle DB"/>
-<meta name="twitter:description" content="STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&gt; connect sys as sysdba 2. run command &#39;startup&#39; SQL&gt; startup 3. Exit from sqlplus SQL&gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# emctl start dbconsole&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#### example&lt;/span&gt; &amp;lt;div class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10."/>
+<meta name="twitter:description" content="STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&gt; connect sys as sysdba 2. run command &#39;startup&#39; SQL&gt; startup 3. Exit from sqlplus SQL&gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# emctl start dbconsole&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#### example&lt;/span&gt; &amp;lt;div class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10."/>
 <meta name="twitter:site" content="@darkjest"/>
 
     
@@ -81,7 +81,7 @@
           
           
           
-          <a class="main-nav-link" href="https://thinkside.uk/tags/">Tags</a>
+          <a class="main-nav-link" href="https://thinkside.uk/categories/">Categories</a>
           
           
           
@@ -124,7 +124,7 @@
           
           
           
-          <td><a class="main-nav-link" href="https://thinkside.uk/tags/">Tags</a></td>
+          <td><a class="main-nav-link" href="https://thinkside.uk/categories/">Categories</a></td>
           
           
           
@@ -163,12 +163,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        0
+        81
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          39
+          49
         
         <span>
             Tags
@@ -302,22 +302,25 @@
             <h3 id="starting-database">STARTING DATABASE</h3>
 <ol start="0">
 <li>Start Listerner up
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># lsnrctl start</span>
-1. Connect to sqlplus as sysdba
-SQL&gt; connect sys as sysdba
-2. run command <span style="color:#e6db74">&#39;startup&#39;</span>
-SQL&gt; startup
-3. Exit from sqlplus
-SQL&gt; exit
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   
+   <span style="color:#75715e"># lsnrctl start</span>
 
+1. Connect to sqlplus as sysdba
+   SQL&gt; connect sys as sysdba
+
+2. run command <span style="color:#e6db74">&#39;startup&#39;</span>
+   SQL&gt; startup
+
+3. Exit from sqlplus
+   SQL&gt; exit
 
 <span style="color:#75715e">### STARTING Enterprise Manager</span>
 
-
 1. Login as oracle user
-2. run following command
-&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;highlight&#34;</span>&gt;&lt;pre style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span>&gt;&lt;code class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;language-bash&#34;</span> data-lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bash&#34;</span>&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#75715e&#34;</span>&gt;# emctl start dbconsole&lt;/span&gt;
 
+2. run following command
+   &lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;highlight&#34;</span>&gt;&lt;pre style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span>&gt;&lt;code class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;language-bash&#34;</span> data-lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bash&#34;</span>&gt;   
+   &lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#75715e&#34;</span>&gt;# emctl start dbconsole&lt;/span&gt;
 
 &lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#75715e&#34;</span>&gt;#### example&lt;/span&gt;
 
@@ -326,15 +329,20 @@ Oracle Enterprise Manager 10g Database Control Release 10.2.0.2.0
 Copyright &amp;lt;span style&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&amp;lt;/span&amp;gt;c&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&amp;lt;/span&amp;gt; 1996, &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#ae81ff&amp;#34;&lt;/span&gt;&amp;gt;2005&amp;lt;/span&amp;gt; Oracle Corporation.  All rights reserved.</span>
 http://dbman.toon-net.local:5500/em/console/aboutApplication
 Starting Oracle Enterprise Manager 10g Database Control .............. started.
+
 ------------------------------------------------------------------
+
 Logs are generated in directory /db/oracle/102/dbman.toon-net.local_cava/sysman/log&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;
 
 &lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#75715e&#34;</span>&gt;### Starting iSQL*Plus <span style="color:#f92672">(</span>http://dbman.toon-net.local:5560/isqlplus/<span style="color:#f92672">)</span>&lt;/span&gt;
 
-
 1. Login as oracle
+
 2. run following command
-&amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#75715e&amp;#34;&lt;/span&gt;&amp;gt;# isqlplusctl start&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;</span>
+   &amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-bash&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;   </span>
+   &amp;lt;span style&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;color:#75715e&amp;#34;&lt;/span&gt;&amp;gt;# isqlplusctl start&amp;lt;/span&amp;gt;</span>
+   
+   &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;
 
 &lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#75715e&#34;</span>&gt;#### example&lt;/span&gt;
 
@@ -343,15 +351,18 @@ iSQL*Plus 10.2.0.2.0
 Copyright &amp;lt;span style&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&amp;lt;/span&amp;gt;c&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&amp;lt;/span&amp;gt; 2003, 2005, Oracle.  All Rights Reserved.</span>
 Starting iSQL*Plus ...
 iSQL*Plus started.&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;
+
 &lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#75715e&#34;</span>&gt;### SHUTTING DOWN DATABASE&lt;/span&gt;
 
-
 1. Connect to sqlplus as sysdba
-&amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-sql&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sql&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;connect&amp;lt;/span&amp;gt; sys &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;as&amp;lt;/span&amp;gt; sysdba&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;</span>
+   &amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-sql&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sql&amp;#34;&lt;/span&gt;&amp;gt;   &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;connect&amp;lt;/span&amp;gt; sys &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;as&amp;lt;/span&amp;gt; sysdba</span>
+   &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;
 2. run command &lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#39;shutdown immediate&amp;#39;&lt;/span&gt;</span>
-&amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-sql&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sql&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;SQL&amp;lt;/span&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; shutdown &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;immediate&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;</span>
+   &amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-sql&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sql&amp;#34;&lt;/span&gt;&amp;gt;   &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;SQL&amp;lt;/span&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; shutdown &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;immediate&amp;lt;/span&amp;gt;</span>
+   &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;
 3. Exit from sqlplus
-&amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-sql&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sql&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;SQL&amp;lt;/span&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; exit&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;</span>
+   &amp;lt;div class&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#f92672&#34;</span>&gt;<span style="color:#f92672">=</span>&lt;/span&gt;&lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#e6db74&#34;</span>&gt;&amp;<span style="color:#75715e">#34;highlight&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;pre style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;code class&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;language-sql&amp;#34;&lt;/span&gt; data-lang&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sql&amp;#34;&lt;/span&gt;&amp;gt;   &amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#66d9ef&amp;#34;&lt;/span&gt;&amp;gt;SQL&amp;lt;/span&amp;gt;&amp;lt;span style&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color:#f92672&amp;#34;&lt;/span&gt;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; exit</span>
+   &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt;
 
 &lt;span style<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:#75715e&#34;</span>&gt;#### example&lt;/span&gt;
 
@@ -487,211 +498,6 @@ With the Partitioning, OLAP and Data Mining options&amp;lt;/code&amp;gt;&amp;lt;
 
     
 
-
-<div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-        <ul class="category-list">
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/apache">
-                    apache
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/bash-shell-scripting">
-                    bash-shell-scripting
-                </a>
-                <span class="category-list-count">3</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/blog">
-                    blog
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/chrome">
-                    chrome
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/cisco">
-                    cisco
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/databases">
-                    databases
-                </a>
-                <span class="category-list-count">7</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/java">
-                    java
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/linux">
-                    linux
-                </a>
-                <span class="category-list-count">21</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/mac">
-                    mac
-                </a>
-                <span class="category-list-count">5</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/miscellaneous">
-                    miscellaneous
-                </a>
-                <span class="category-list-count">5</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/monitoring">
-                    monitoring
-                </a>
-                <span class="category-list-count">5</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/networking">
-                    networking
-                </a>
-                <span class="category-list-count">5</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/operating-systems">
-                    operating-systems
-                </a>
-                <span class="category-list-count">4</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/oracle">
-                    oracle
-                </a>
-                <span class="category-list-count">8</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/osx">
-                    osx
-                </a>
-                <span class="category-list-count">3</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/postfix">
-                    postfix
-                </a>
-                <span class="category-list-count">8</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/sendmail">
-                    sendmail
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/snmp">
-                    snmp
-                </a>
-                <span class="category-list-count">6</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/software">
-                    software
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/solaris">
-                    solaris
-                </a>
-                <span class="category-list-count">32</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/ubuntu">
-                    ubuntu
-                </a>
-                <span class="category-list-count">8</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/unix">
-                    unix
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/windows">
-                    windows
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://thinkside.uk/categories/xen">
-                    xen
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-
-
-
     
 
     
@@ -707,13 +513,16 @@ With the Partitioning, OLAP and Data Mining options&amp;lt;/code&amp;gt;&amp;lt;
         <a href="https://thinkside.uk/tags/apache" style="font-size: 12px;">apache</a>
         
         
+        <a href="https://thinkside.uk/tags/bash" style="font-size: 12px;">bash</a>
+        
+        
         <a href="https://thinkside.uk/tags/bash-shell-scripting" style="font-size: 12px;">bash-shell-scripting</a>
         
         
         <a href="https://thinkside.uk/tags/bbwin" style="font-size: 12px;">bbwin</a>
         
         
-        <a href="https://thinkside.uk/tags/chrome-google" style="font-size: 12px;">chrome-google</a>
+        <a href="https://thinkside.uk/tags/centos" style="font-size: 12px;">centos</a>
         
         
         <a href="https://thinkside.uk/tags/cisco" style="font-size: 12px;">cisco</a>
@@ -725,13 +534,22 @@ With the Partitioning, OLAP and Data Mining options&amp;lt;/code&amp;gt;&amp;lt;
         <a href="https://thinkside.uk/tags/debian" style="font-size: 12px;">debian</a>
         
         
+        <a href="https://thinkside.uk/tags/dhcp" style="font-size: 12px;">dhcp</a>
+        
+        
         <a href="https://thinkside.uk/tags/engineering" style="font-size: 12px;">engineering</a>
+        
+        
+        <a href="https://thinkside.uk/tags/fedora" style="font-size: 12px;">fedora</a>
         
         
         <a href="https://thinkside.uk/tags/firmware" style="font-size: 12px;">firmware</a>
         
         
         <a href="https://thinkside.uk/tags/freedos" style="font-size: 12px;">freedos</a>
+        
+        
+        <a href="https://thinkside.uk/tags/google-chrome" style="font-size: 12px;">google-chrome</a>
         
         
         <a href="https://thinkside.uk/tags/ha" style="font-size: 12px;">ha</a>
@@ -761,13 +579,28 @@ With the Partitioning, OLAP and Data Mining options&amp;lt;/code&amp;gt;&amp;lt;
         <a href="https://thinkside.uk/tags/mac" style="font-size: 12px;">mac</a>
         
         
+        <a href="https://thinkside.uk/tags/macos" style="font-size: 12px;">macos</a>
+        
+        
         <a href="https://thinkside.uk/tags/miscellaneous" style="font-size: 12px;">miscellaneous</a>
         
         
         <a href="https://thinkside.uk/tags/monitoring" style="font-size: 12px;">monitoring</a>
         
         
+        <a href="https://thinkside.uk/tags/mta" style="font-size: 12px;">mta</a>
+        
+        
+        <a href="https://thinkside.uk/tags/netscaler" style="font-size: 12px;">netscaler</a>
+        
+        
         <a href="https://thinkside.uk/tags/networking" style="font-size: 12px;">networking</a>
+        
+        
+        <a href="https://thinkside.uk/tags/openca" style="font-size: 12px;">openca</a>
+        
+        
+        <a href="https://thinkside.uk/tags/openssl" style="font-size: 12px;">openssl</a>
         
         
         <a href="https://thinkside.uk/tags/operating-systems" style="font-size: 12px;">operating-systems</a>
@@ -783,6 +616,9 @@ With the Partitioning, OLAP and Data Mining options&amp;lt;/code&amp;gt;&amp;lt;
         
         
         <a href="https://thinkside.uk/tags/pxe" style="font-size: 12px;">pxe</a>
+        
+        
+        <a href="https://thinkside.uk/tags/rhel" style="font-size: 12px;">rhel</a>
         
         
         <a href="https://thinkside.uk/tags/sendmail" style="font-size: 12px;">sendmail</a>
