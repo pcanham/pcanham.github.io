@@ -250,548 +250,9 @@
         </a>
 
         <header class="article-header">
-    <a href="https://thinkside.uk/posts/beware-of-over-engineering/">
+    <a href="https://thinkside.uk/posts/deleting-file-by-inode-delete-thoughs-file-rm-just-cant-get-rid-of/">
     <h1 class="article-title" itemprop="name">
-        Beware of over-engineering
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/categories/blog">blog</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/engineering">engineering</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/troubleshooting">troubleshooting</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                I have been working on a migration project and one thing i have seen a couple of times is people love to over engineer solutions when basic troubleshooting and debugging would have found the problem.
-One example of this was an engineer was migrating a java based application shared with the testers the URL saying ready for smoke testing. The URL was slightly different to what the tester was expecting, it ended in 8080 e.
-            </p>
-            <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/beware-of-over-engineering/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/beware-of-over-engineering/" data-id=" 4d0f4661d11c8309b983707d0473947a " class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://thinkside.uk/posts/new-blog-engine/">
-    <h1 class="article-title" itemprop="name">
-        New Blog Engine
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/categories/blog">blog</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/hugo">hugo</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                Nearly a new year, but a new blog engine, why would you ask and the honest answer would be to play with some new technology but also to find away to reduce costs and free up my time from having to constantly patch a wordpress site.
-            </p>
-            <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/new-blog-engine/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/new-blog-engine/" data-id=" ced0e684dcc9e32fc2c9ada2e1a1765c " class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://thinkside.uk/posts/creating-freedos-image-under-ubuntu/">
-    <h1 class="article-title" itemprop="name">
-        Creating FreeDOS Image under ubuntu
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/categories/ubuntu">Ubuntu</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/firmware">firmware</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/freedos">freedos</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/iso">iso</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/pxe">pxe</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/ubuntu">ubuntu</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                Pre-requites apt-get install wget unzip genisoimage wget - pulling down files from the internet unzip - uncompress any zip files genisoimage - Needed for creating the ISO image
-Making custom freedos disk  make a source directory where you will keep all these files.  mkdir ~/src_freedos export FDSRC=~/src_freedos cd $FDSRC Download the FreeDos OEM CD-ROM disc builder http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip  wget http://www.fdos.org/bootdisks/ISO/FDOEMCD.builder.zip -O ${FDSRC}/FDOEMCD.builder.zip unzip the package and go into the new directory called &ldquo;FDOEMCD&rdquo;  unzip FDOEMCD.
-            </p>
-            <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/creating-freedos-image-under-ubuntu/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/creating-freedos-image-under-ubuntu/" data-id=" fb2b279dd4ff6d213245f37dcdda34df " class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://thinkside.uk/posts/making-postfix-config-changes-on-the-fly/">
-    <h1 class="article-title" itemprop="name">
-        Making Postfix config changes on the fly
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/categories/postfix">Postfix</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/postfix">Postfix</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                This example shows how to update the aliases path so we have this standard across all machines in a datacentre, this is a quick hack method. The correct way to fix this in a production would be to use a configuration management system like chef/puppet or cfengine.
-PATH=$PATH:/opt/csw/bin:/opt/csw/sbin:/usr/local/bin:/usr/local/postfix/sbin export PATH ## Show the existing aliases paths postconf | grep &#39;^alias&#39; ## Make the changes to main.cf postconf -e alias_maps=&#39;dbm:/etc/mail/aliases&#39; postconf -e alias_database=&#39;dbm:/etc/mail/aliases&#39; ## Make new aliases database newaliases ## Show aliases paths just to make sure things have been updated postconf | grep &#39;^alias&#39; ## send test email to self uname -a | mailx -s &#34;`uname -n`&#34; pcanham@`uname -n`
-            </p>
-            <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/making-postfix-config-changes-on-the-fly/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/making-postfix-config-changes-on-the-fly/" data-id=" f4fd7119ae4662fdeeba08fd043b435c " class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://thinkside.uk/posts/corosync-logging/">
-    <h1 class="article-title" itemprop="name">
-        Corosync Logging
+        Deleting file by inode (delete though&#39;s file rm just cant get rid of)
     </h1>
     </a>
     <div class="article-meta">
@@ -808,7 +269,7 @@ PATH=$PATH:/opt/csw/bin:/opt/csw/sbin:/usr/local/bin:/usr/local/postfix/sbin exp
                 &middot;
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/categories/ubuntu">Ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/categories/solaris">Solaris</a>
                 
                 
             </div>
@@ -822,8 +283,542 @@ PATH=$PATH:/opt/csw/bin:/opt/csw/sbin:/usr/local/bin:/usr/local/postfix/sbin exp
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/tags/ha">HA</a>
+                <a class="article-category-link" href="https://thinkside.uk/tags/linux">Linux</a>
                 &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/solaris">Solaris</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Find out file inode Find out file inode number: ls -il {&lt;filename&gt;
+Use find command to remove file find . -inum &lt;inode-number&gt; -exec rm -i {} ; 
+            </p>
+            <p class="article-more-link">
+                <a href="https://thinkside.uk/posts/deleting-file-by-inode-delete-thoughs-file-rm-just-cant-get-rid-of/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://thinkside.uk/posts/deleting-file-by-inode-delete-thoughs-file-rm-just-cant-get-rid-of/" data-id=" 9c6b8a9c2c834b18051519bd5ef4089d " class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/">
+    <h1 class="article-title" itemprop="name">
+        Displaying DHCP clients from the CLI of a CISCO 877 router
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/cisco">cisco</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/networking">Networking</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/cisco">cisco</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/networking">Networking</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                gateway#show ip dhcp binding Bindings from all pools not associated with VRF: IP address Client-ID/ Lease expiration Type Hardware address/ User name 192.168.2.23 XXXX.XXX.XXXX.XX Jan 12 2009 05:12 PM Automatic 192.168.2.27 XXXX.XXXX.XXXX.XX Jan 12 2009 05:20 PM Automatic gateway# XXXX.XXXX.XXXX.XX = MAC address of server or network appliance.
+            </p>
+            <p class="article-more-link">
+                <a href="https://thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/" data-id=" 4f78c39c4cd7bc543c1c9e9a389dfc67 " class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://thinkside.uk/posts/turn-on-built-in-vncserver-in-osx/">
+    <h1 class="article-title" itemprop="name">
+        Turn on built in vncserver in OSX
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/mac">Mac</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/osx">OSX</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/mac">Mac</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/osx">OSX</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                 goto System Preferences Select Sharing Turn on Apple Remote Desktop  
+            </p>
+            <p class="article-more-link">
+                <a href="https://thinkside.uk/posts/turn-on-built-in-vncserver-in-osx/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://thinkside.uk/posts/turn-on-built-in-vncserver-in-osx/" data-id=" 89e98a4b5a89fb3ae2cf605b2cec7519 " class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://thinkside.uk/posts/42/">
+    <h1 class="article-title" itemprop="name">
+        Home and End Keys on a Mac Keyboard
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/mac">Mac</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/mac">Mac</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                the HOME and END keys on a mac keyboard scroll to the very top or bottom of the current document.
+To go to the start or end of the current line, all you need to do is use CMD+left-arrow or CMD+right-arrow
+            </p>
+            <p class="article-more-link">
+                <a href="https://thinkside.uk/posts/42/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://thinkside.uk/posts/42/" data-id=" d21d98aa23ebff56c453b6e2af75daaf " class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://thinkside.uk/posts/useful-centos-repos/">
+    <h1 class="article-title" itemprop="name">
+        Useful CentOS Repo&#39;s
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/linux">Linux</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
                 
                 
                 <a class="article-category-link" href="https://thinkside.uk/tags/linux">Linux</a>
@@ -837,17 +832,16 @@ PATH=$PATH:/opt/csw/bin:/opt/csw/sbin:/usr/local/bin:/usr/local/postfix/sbin exp
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                Setting up corosync logging, by default the data is logged to /var/log/syslog in ubuntu.
-corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr: yes to_logfile: yes to_syslog: no syslog_facility: daemon debug: off logfile: /var/log/corosync/corosync.log timestamp: on logger_subsys { subsys: AMF debug: off tags: enter|leave|trace1|trace2|trace3|trace4|trace6 } logrotate config - /etc/logrotate.d/corosync /var/log/corosync/*.log { weekly missingok rotate 52 compress delaycompress notifempty create 640 root adm sharedscripts copytruncate } 
+                EPEL - http://fedoraproject.org/wiki/EPEL RPMForge - https://rpmrepo.org/RPMforge
             </p>
             <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/corosync-logging/">
+                <a href="https://thinkside.uk/posts/useful-centos-repos/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/corosync-logging/" data-id=" cc1e4800581ecdb86c3d46b29d4a4ba2 " class="article-share-link">
+    <a data-url="https://thinkside.uk/posts/useful-centos-repos/" data-id=" 836b0b1986e33aba5eae55c3f780bd0f " class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -927,9 +921,9 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
         </a>
 
         <header class="article-header">
-    <a href="https://thinkside.uk/posts/bbwin-xymonhobbitmon-windows-client-installation/">
+    <a href="https://thinkside.uk/posts/adding-a-swap-file-in-solaris/">
     <h1 class="article-title" itemprop="name">
-        bbwin - xymon/hobbitmon windows client installation
+        Adding a swap file in solaris
     </h1>
     </a>
     <div class="article-meta">
@@ -942,7 +936,7 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/categories/monitoring">Monitoring</a>
+                <a class="article-category-link" href="https://thinkside.uk/categories/solaris">Solaris</a>
                 
                 
             </div>
@@ -956,15 +950,7 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/tags/bbwin">bbwin</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/hobbitmon">hobbitmon</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/xymon">xymon</a>
+                <a class="article-category-link" href="https://thinkside.uk/tags/solaris">Solaris</a>
                 
                 
             </div>
@@ -975,19 +961,17 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                BBwin installation   Install bbwin client to machine
-  Edit c:program filesBBWinetcBBWin.cfg telling it the server is &ldquo;10.10.10.10&rdquo; (will be under a setting called bbdisplay)
-  edit the bbwin registry to make it use the FQDN and not the server name. Change the hostname entry from &ldquo;%COMPUTERNAME%&rdquo; to &ldquo;%COMPUTERNAME%.%USERDNSDOMAIN%&rdquo; minus the quotes
-  * 64bit Machines = &quot;HKEY_LOCAL_MACHINESOFTWAREWow6432NodeBBWin&quot;. * 32bit Machines = &quot;HKEY_LOCAL_MACHINESOFTWAREBBWin&quot;   With 64bit Windows you need to add an extra setting in bbwin.
+                Adding a 2gb swap file cd /usr/local/swap mkfile 2G swapfile.0 swap -a /usr/local/swap/swapfile.0 Deleting a swap file swap -d &lt;swapfilename&gt; Making sure a swap file doesnt get lost after a reboot Add line as follows to /etc/vfstab /usr/local/swap/swapfile.0 - swap - no -
+that&rsquo;ll make it use the extra swap file when the system reboots
             </p>
             <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/bbwin-xymonhobbitmon-windows-client-installation/">
+                <a href="https://thinkside.uk/posts/adding-a-swap-file-in-solaris/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/bbwin-xymonhobbitmon-windows-client-installation/" data-id=" 85ea9e75ea8cc482314353c8669536e3 " class="article-share-link">
+    <a data-url="https://thinkside.uk/posts/adding-a-swap-file-in-solaris/" data-id=" a2ad6973d7a2fc25fa3e0f35409b570d " class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1067,9 +1051,9 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
         </a>
 
         <header class="article-header">
-    <a href="https://thinkside.uk/posts/installing-ubuntu-to-hp-dl140-g3/">
+    <a href="https://thinkside.uk/posts/top-10-processs-using-memory/">
     <h1 class="article-title" itemprop="name">
-        Installing ubuntu to HP DL140 G3
+        Top 10 Process&#39;s using memory
     </h1>
     </a>
     <div class="article-meta">
@@ -1082,7 +1066,11 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/categories/ubuntu">Ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/categories/linux">Linux</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/solaris">Solaris</a>
                 
                 
             </div>
@@ -1096,7 +1084,11 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/tags/ubuntu">Ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/tags/linux">Linux</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/solaris">Solaris</a>
                 
                 
             </div>
@@ -1107,17 +1099,16 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                ilom You will get into the inital screen all OK but if you dont alter the frame buffer you will just see rubbish on the screen, to fix this, do the following.
- Set what Language you wish to use. Hit &lsquo;F6&rsquo; to choose the &ldquo;Other Options&rdquo; menu Choose &ldquo;Expert Mode&rdquo; this will allow you to alter the kernel parameters Hit &ldquo;Space bar&rdquo; to select the Expert Mode and then &ldquo;Esc&rdquo; to escape out of the menu option.
+                Memory ps -ef -o vsz,pid,args | sort -rn | head -10 
             </p>
             <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/installing-ubuntu-to-hp-dl140-g3/">
+                <a href="https://thinkside.uk/posts/top-10-processs-using-memory/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/installing-ubuntu-to-hp-dl140-g3/" data-id=" 3948ee01f804392845d6af8e77050375 " class="article-share-link">
+    <a data-url="https://thinkside.uk/posts/top-10-processs-using-memory/" data-id=" beaf581ee7f403c31df7f890c1c337c1 " class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1197,9 +1188,9 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
         </a>
 
         <header class="article-header">
-    <a href="https://thinkside.uk/posts/ubuntu-booting-from-iso-from-pxe/">
+    <a href="https://thinkside.uk/posts/creating-virtual-interfaces/">
     <h1 class="article-title" itemprop="name">
-        Ubuntu:  Booting from ISO from PXE
+        Creating Virtual interfaces
     </h1>
     </a>
     <div class="article-meta">
@@ -1212,7 +1203,7 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/categories/ubuntu">Ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/categories/solaris">Solaris</a>
                 
                 
             </div>
@@ -1226,15 +1217,7 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/tags/freedos">freedos</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/pxe">pxe</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/ubuntu">ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/tags/solaris">Solaris</a>
                 
                 
             </div>
@@ -1245,16 +1228,16 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                 install syslinux  # apt-get install syslinux copy memdisk to tftp root  # cp /usr/lib/syslinux/memdisk /var/lib/tftpboot/11.04/ Add following into pxelinux.cdf/default  LABEL dos kernel memdisk append iso initrd=dos/dos_622_supermicro_bios.iso 
+                Create the virtual interface: # ifconfig eri0:1 plumb Configure the virtual interface: # ifconfig eri0:1 192.162.2.161 netmask 255.255.255.0 Check to make sure it worked: # ifconfig -a lo0: flags=1000849 mtu 8232 index 1 inet 127.0.0.1 netmask ff000000 eri0: flags=1000843 mtu 1500 index 2 inet 192.162.2.160 netmask ffffff00 broadcast 192.162.2.255 ether 0:3:ba:9:63:9b eri0:1: flags=1000842 mtu 1500 index 2 inet 192.162.2.161 netmask ffffff00 broadcast 192.162.2.255 Finally bring up your new virtual interface: # ifconfig eri0:1 up To make it come up on start:
             </p>
             <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/ubuntu-booting-from-iso-from-pxe/">
+                <a href="https://thinkside.uk/posts/creating-virtual-interfaces/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/ubuntu-booting-from-iso-from-pxe/" data-id=" 90327344f0d3be36ead9325ab8e5b952 " class="article-share-link">
+    <a data-url="https://thinkside.uk/posts/creating-virtual-interfaces/" data-id=" 3636c44c2403fbdfa87a02604613ce6f " class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1334,9 +1317,9 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
         </a>
 
         <header class="article-header">
-    <a href="https://thinkside.uk/posts/fixing-locale-errors-in-ubuntu/">
+    <a href="https://thinkside.uk/posts/changing-ip-and-hostname-in-solaris-10/">
     <h1 class="article-title" itemprop="name">
-        Fixing Locale errors in Ubuntu
+        Changing IP and hostname in Solaris 10
     </h1>
     </a>
     <div class="article-meta">
@@ -1349,11 +1332,7 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/categories/software">Software</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/categories/ubuntu">Ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/categories/solaris">Solaris</a>
                 
                 
             </div>
@@ -1367,15 +1346,7 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/tags/locale">locale</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/software">Software</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/ubuntu">Ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/tags/solaris">Solaris</a>
                 
                 
             </div>
@@ -1386,18 +1357,19 @@ corosync config - /etc/corosync/corosync.conf logging { fileline: off to_stderr:
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                How to fix the following error when you are running apt-get update or installs.
-perl: warning: Setting locale failed. perl: warning: Please check that your locale settings: LANGUAGE = (unset), LC_ALL = (unset), LC_MONETARY = &#34;en_US.ISO8859-1&#34;, LC_NUMERIC = &#34;en_US.ISO8859-1&#34;, LC_MESSAGES = &#34;C&#34;, LC_COLLATE = &#34;en_US.ISO8859-1&#34;, LC_CTYPE = &#34;en_US.ISO8859-1&#34;, LC_TIME = &#34;en_US.ISO8859-1&#34;, LANG = &#34;en_GB.UTF-8&#34; export LC_ALL=&#34;en_GB.UTF-8&#34; export LANGUAGE=&#34;en_GB.UTF-8&#34; export LANG=&#34;en_GB.UTF-8&#34; printf &#34;LANGUAGE=&#34;en_GB.UTF-8&#34;nLC_ALL=&#34;en_GB.UTF-8&#34;&#34; &gt;&gt; /etc/default/locale dpkg-reconfigure locales to test run
-echo | perl this will generate the error if the locales are wrong.
+                Changing the IP on Solaris 10 requires editing two files:
+ /etc/hosts /etc/inet/ipnodes  If you are changing network address, you will need to change the router address in the file:
+ /etc/defaultrouter  Changing the hostname now only requires editing these files:
+ /etc/hosts /etc/nodename /etc/hostname.*  
             </p>
             <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/fixing-locale-errors-in-ubuntu/">
+                <a href="https://thinkside.uk/posts/changing-ip-and-hostname-in-solaris-10/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/fixing-locale-errors-in-ubuntu/" data-id=" 2c86ffc01fbe73132a58152094461a2b " class="article-share-link">
+    <a data-url="https://thinkside.uk/posts/changing-ip-and-hostname-in-solaris-10/" data-id=" 0b4c5caf6cb5cb04e359a71c65b4a301 " class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1477,9 +1449,9 @@ echo | perl this will generate the error if the locales are wrong.
         </a>
 
         <header class="article-header">
-    <a href="https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/">
+    <a href="https://thinkside.uk/posts/how-to-change-ip-address-in-solaris-8/">
     <h1 class="article-title" itemprop="name">
-        How to install your own CA cert into Google Chrome
+        How to change IP address in Solaris 8
     </h1>
     </a>
     <div class="article-meta">
@@ -1492,15 +1464,7 @@ echo | perl this will generate the error if the locales are wrong.
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/categories/chrome">Chrome</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/categories/software">Software</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/categories/ubuntu">Ubuntu</a>
+                <a class="article-category-link" href="https://thinkside.uk/categories/solaris">Solaris</a>
                 
                 
             </div>
@@ -1514,11 +1478,7 @@ echo | perl this will generate the error if the locales are wrong.
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://thinkside.uk/tags/ssl">ssl</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://thinkside.uk/tags/chrome-google">chrome google</a>
+                <a class="article-category-link" href="https://thinkside.uk/tags/solaris">Solaris</a>
                 
                 
             </div>
@@ -1529,18 +1489,16 @@ echo | perl this will generate the error if the locales are wrong.
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
-To stop this from happening here is how you install your CA certificate to chrome
- Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert.
+                /etc/hosts /etc/hostname.* /etc/defaultrouter /etc/netmasks /etc/resolv.conf Also check the /etc/security/hosts.allow on the machine as well to make sure your new ip range is allowed for ssh access or telnet etc.
             </p>
             <p class="article-more-link">
-                <a href="https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/">
+                <a href="https://thinkside.uk/posts/how-to-change-ip-address-in-solaris-8/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/" data-id=" 620ed6b5c00558f979c9aefec1c4e317 " class="article-share-link">
+    <a data-url="https://thinkside.uk/posts/how-to-change-ip-address-in-solaris-8/" data-id=" 20665a9e515e084361db2a1510c4dfe3 " class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1618,8 +1576,12 @@ To stop this from happening here is how you install your CA certificate to chrom
 <nav id="page-nav">
 
     
+        <a class="extend prev" rel="prev" href="https://thinkside.uk/page/5/">
+            « Prev
+        </a>
     
-        <a class="extend next" rel="next" href="https://thinkside.uk/page/2/">
+    
+        <a class="extend next" rel="next" href="https://thinkside.uk/page/7/">
             Next »
         </a>
     
