@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solaris on ThinkSide</title>
+    <link>https://thinkside.uk/tags/solaris/</link>
+    <description>Recent content in Solaris on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Apr 2010 20:14:23 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/solaris/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Working out used physical memory in solaris 10</title>
+      <link>https://thinkside.uk/posts/working-out-used-physical-memory-in-solaris-10/</link>
+      <pubDate>Sun, 11 Apr 2010 20:14:23 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/working-out-used-physical-memory-in-solaris-10/</guid>
+      <description>How much memory is being used pcanham@solman:~$ echo &amp;#34;`prtconf | grep &amp;#39;Memory size&amp;#39; | awk &amp;#39;{print $3}&amp;#39;` - (`vmstat 1 2 | tail -1 | awk &amp;#39;{print $5}&amp;#39;` /1024)&amp;#34; | bc 4891 Workout total server memory pcanham@solman:~$ prtconf | grep &amp;#39;Memory size&amp;#39; | awk &amp;#39;{print $3}&amp;#39; 8064 Percentage of memory in use pcanham@solman:~$ echo &amp;#34;4891/(8064/100)&amp;#34; | bc 61 61% of memory in use</description>
+    </item>
+    
+    <item>
+      <title>Packages needed for installing X Windows in Solaris 10 for being able to use vncserver</title>
+      <link>https://thinkside.uk/posts/packages-needed-for-installing-x-windows-in-solaris-10-for-being-able-to-use-vncserver/</link>
+      <pubDate>Mon, 21 Sep 2009 10:50:13 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/packages-needed-for-installing-x-windows-in-solaris-10-for-being-able-to-use-vncserver/</guid>
+      <description>I have found a couple of times that i need to setup vncserver on a machine in one of the remote offices very useful when needing to load up either some web UI&amp;rsquo;s or applications locally due to either bandwidth limitations or licensing.
+These are the packages you need for being able to install vncserver from the opencsw repository (these should also work for the blastwave repo as well)
+system SUNWxwcft X Window System common (not required) fonts system SUNWxwdv X Windows System Window Drivers system SUNWxwfnt X Window System platform required fonts system SUNWxwice X Window System Inter-Client Exchange (ICE) Components system SUNWxwmod X Window System kernel modules system SUNWxwopt X Window System Optional Clients system SUNWxwplr X Window System platform software configuration system SUNWxwplt X Window System platform software system SUNWxwrtl X Window System &amp;amp; Graphics Runtime Library Links in /usr/lib system SUNWpl5u Perl 5.</description>
+    </item>
+    
+    <item>
+      <title>svc:/application/management/sma:default not displaying even though packages have been installed</title>
+      <link>https://thinkside.uk/posts/svcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed/</link>
+      <pubDate>Mon, 06 Jul 2009 13:35:31 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/svcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed/</guid>
+      <description>When you try and manually start the sma up you get the following error
+bash-3.00# /etc/init.d/init.sma start svcadm: Pattern &amp;#39;svc:/application/management/sma:default&amp;#39; doesn&amp;#39;t match any instances Solution:
+pkill configd svccfg -v import /var/svc/manifest/application/management/sma.xml svccfg -v import /var/svc/manifest/application/management/seaport.xml svcadm enable svc:/application/management/sma:default Link back: http://www.gnuunix.info/forum?id=12&amp;amp;catid=13&amp;amp;func=fb_pdf</description>
+    </item>
+    
+    <item>
+      <title>Great ramdisk script for start/stopping and backing up</title>
+      <link>https://thinkside.uk/posts/great-ramdisk-script-for-startstopping-and-backing-up/</link>
+      <pubDate>Wed, 04 Mar 2009 15:24:15 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/great-ramdisk-script-for-startstopping-and-backing-up/</guid>
+      <description>While i was looking around reading up on ramdisks in Solaris i found this every useful script which might be helpful to people, the key part i like about this is the backup section this saves me some time having to implement my own custom method.
+http://wikis.sun.com/display/BigAdmin/A+script+to+start+and+stop+ramdisks+in+the+Solaris+OS</description>
+    </item>
+    
+    <item>
+      <title>Useful Solaris pkg commands</title>
+      <link>https://thinkside.uk/posts/useful-solaris-pkg-commands/</link>
+      <pubDate>Tue, 03 Mar 2009 10:40:00 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/useful-solaris-pkg-commands/</guid>
+      <description>Finding out what package claims responsibility for a particular file root@monitor:/opt/csw/libexec/hobbit/server&amp;gt; pkgchk -l -p /opt/csw/apache2/sbin/apachectl Pathname: /opt/csw/apache2/sbin/apachectl Type: regular file Expected mode: 0755 Expected owner: root Expected group: bin Expected file size (bytes): 3425 Expected sum(1) of contents: 22037 Expected last modification: Oct 23 01:42:17 PM 2007 Referenced by the following packages: CSWapache2c Current status: installed To find out which package a file is in grep &amp;lt;filename&amp;gt; /&amp;lt;span class=&amp;quot;code-keyword&amp;quot;&amp;gt;var&amp;lt;/span&amp;gt;/sadm/install/contents  To find out what files are in a package grep &amp;lt;&amp;lt;span class=&amp;quot;code-keyword&amp;quot;&amp;gt;package&amp;lt;/span&amp;gt; name&amp;gt; /&amp;lt;span class=&amp;quot;code-keyword&amp;quot;&amp;gt;var&amp;lt;/span&amp;gt;/sadm/install/contents  Displaying what files is in a package # pkgchk -l -P RICHPse | less Pathname: /opt/RICHPse Type: directory Expected mode: 0755 Expected owner: root Expected group: bin Referenced by the following packages: RICHPse Current status: installed Pathname: /opt/RICHPse/bin Type: directory Expected mode: 0755 Expected owner: root Expected group: bin Referenced by the following packages: RICHPse Current status: installed Pathname: /opt/RICHPse/bin/pw_example.</description>
+    </item>
+    
+    <item>
+      <title>Enabling SNMP (SMA - System Management Agent) under Solaris 10</title>
+      <link>https://thinkside.uk/posts/enabling-snmp-sma-system-management-agent-under-solaris-10/</link>
+      <pubDate>Wed, 25 Feb 2009 17:15:41 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/enabling-snmp-sma-system-management-agent-under-solaris-10/</guid>
+      <description>Installation Install SUNWsmaS, SUNWsmagt, SUNWsmcmd, SUNWsmdoc, SUNWsmmgr
+Configuration cd /etc/sma/snmp cp snmpd.conf cp snmpd.conf snmpd.conf.bak-`date +%F` vi snmpd.conf change rocommunity (by default set to public) Change syslocation and syscontact to something useful e.g.
+From syslocation &amp;#34;System administrators office&amp;#34; syscontact &amp;#34;System administrator&amp;#34; To syslocation &amp;#34;Test x86 Server on Floor 2&amp;#34; syscontact &amp;#34;monitoring@example.com&amp;#34; Start or restart SMA service svcadm restart svc:/application/management/sma:default # Restart svcadm enable svc:/application/management/sma:default # Start Test from remote server pcanham@jafar:~$ snmpwalk -v 2c -c public 192.</description>
+    </item>
+    
+    <item>
+      <title>Solaris 10 packages needed for SNMP/SMA (System Management Agent)</title>
+      <link>https://thinkside.uk/posts/solaris-10-packages-needed-for-snmpsma-system-management-agent/</link>
+      <pubDate>Wed, 25 Feb 2009 16:33:16 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/solaris-10-packages-needed-for-snmpsma-system-management-agent/</guid>
+      <description>SUNWsmaS - Source Files needed SUNWsmagt - snmpd and snmptrapd application and library files. SUNWsmcmd - SMA SNMP applications and utilities (e.g. snmpget) SUNWsmdoc - Documentation on System Management Agent SUNWsmmgr - MIB files and default config files (e.g. default snmpd.conf)</description>
+    </item>
+    
+    <item>
+      <title>Deleting a ramdisk in Solaris 10</title>
+      <link>https://thinkside.uk/posts/deleting-a-ramdisk-in-solaris-10/</link>
+      <pubDate>Tue, 24 Feb 2009 15:22:25 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/deleting-a-ramdisk-in-solaris-10/</guid>
+      <description>Unmount disk umount /ramdisk_rrd Check what ramdisks are present ramdiskadm Block Device Size Removable /dev/ramdisk/ramdisk_rrd 41943040 Yes Deleting ram disk ramdiskadm -d /dev/ramdisk/ramdisk_rrd </description>
+    </item>
+    
+    <item>
+      <title>Creating a ramdisk in Solaris 10</title>
+      <link>https://thinkside.uk/posts/creating-a-ramdisk-in-solaris-10/</link>
+      <pubDate>Tue, 24 Feb 2009 15:17:37 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/creating-a-ramdisk-in-solaris-10/</guid>
+      <description>Creating a 40m ramdisk bash-3.00# ramdiskadm -a ramdisk_rrd 40m /dev/ramdisk/ramdisk_rrd Checking ramdisk file system bash-3.00# fstyp /dev/ramdisk/ramdisk_rrd Unknown_fstyp (no matches) Creating filesystem on ramdisk bash-3.00# newfs /dev/ramdisk/ramdisk_rrd newfs: construct a new file system /dev/rramdisk/ramdisk_rrd: (y/n)? y /dev/rramdisk/ramdisk_rrd: 81872 sectors in 136 cylinders of 1 tracks, 602 sectors 40.0MB in 9 cyl groups (16 c/g, 4.70MB/g, 2240 i/g) super-block backups (for fsck -F ufs -o b=#) at: 32, 9664, 19296, 28928, 38560, 48192, 57824, 67456, 77088, Make mount path bash-3.</description>
+    </item>
+    
+    <item>
+      <title>Getting the following error in your script &#39;-bash: 08: value too great for base (error token is &#34;08&#34;)&#39;</title>
+      <link>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</link>
+      <pubDate>Mon, 02 Feb 2009 16:36:04 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/getting-the-following-error-in-your-script-bash-08-value-too-great-for-base-error-token-is-08/</guid>
+      <description>Loop which will fail with this error nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[${nodes}+1] done Solution nodes=&amp;#34;0&amp;#34; nodestotal=&amp;#34;20&amp;#34; while [ ${nodes} -lt ${nodestotal} ] do if [ &amp;#34;${nodes}&amp;#34; -lt &amp;#34;10&amp;#34; ] then nodes=&amp;#34;0${nodes}&amp;#34; fi echo ${nodes} nodes=$[$((10#${nodes}))+1] done 10#${nodes} = base#number (in this case we want to be using base 10)</description>
+    </item>
+    
+    <item>
+      <title>Permissions error on postfix package from blastwave</title>
+      <link>https://thinkside.uk/posts/permissions-error-on-postfix-package-from-blastwave/</link>
+      <pubDate>Tue, 27 Jan 2009 11:03:35 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/permissions-error-on-postfix-package-from-blastwave/</guid>
+      <description>Error - Can send emails as root but not any other user
+Error May 20 23:32:51 server.example.com postfix/postdrop[7779]: [ID 947731 mail.warning] warning: mail_queue_enter: create file maildrop/610017.7779: Permission denied Solution root@server:/&amp;gt; cd /etc/opt/csw/postfix root@server:/etc/opt/csw/postfix&amp;gt; ./post-install set-permissions command_directory=/opt/csw/sbin </description>
+    </item>
+    
+    <item>
+      <title>Simple use of netcat for checking a port is open on a firewall/load balancer</title>
+      <link>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</link>
+      <pubDate>Tue, 27 Jan 2009 11:01:27 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/simple-use-of-netcat-for-checking-a-port-is-open-on-a-firewallload-balancer/</guid>
+      <description>Server (Listener) root@server:/var/tmp&amp;gt; cat pcanham.txt Welcome to the Server on port 7735. root@server:/var/tmp&amp;gt; netcat -l -s server.example.com -p 7735 &amp;lt;pcanham.txt Client root@scar:/&amp;gt; telnet server.example.com 7735 Trying 10.10.10.20... Connected to server.example.com. Escape character is &amp;#39;^]&amp;#39;. Welcome to the Server on port 7735. ^] telnet&amp;gt; q Connection to server.example.com closed. </description>
+    </item>
+    
+    <item>
+      <title>Compiling Orca in Solaris 10</title>
+      <link>https://thinkside.uk/posts/compiling-orca-in-solaris-10/</link>
+      <pubDate>Tue, 27 Jan 2009 10:52:36 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/compiling-orca-in-solaris-10/</guid>
+      <description>Compiling Software Locations   Orca - http://www.orcaware.com/orca/pub/snapshots/ (writing of the snapshot-r531 was the latest)
+  RICHSe - http://puzzle.dl.sourceforge.net/sourceforge/setoolkit/RICHPse-3.4.1.pkg.gz
+  Setting up the build environment  Make sure the following packages are installed to a Solaris 10 env  SUNWbtool, SUNWsprot, SUNWtoo, SUNWcpp, SUNWhea, SUNWarc, SUNWlibm, SUNWlibms, SUNWdfbh, SUNWcg6h, SUNWxwinc, SUNWlibC, SUNWzlib, SUNWscpu, SUNWperl584core, SUNWperl584usr On solaris 10 (or 9), grab SUNWspro CC compilers from developer toolkit, and put /opt/SUNWspro/bin on the path.</description>
+    </item>
+    
+    <item>
+      <title>Setting up an account in Solaris 10 which cannot become locked.</title>
+      <link>https://thinkside.uk/posts/setting-up-an-account-in-solaris-10-which-cannot-become-locked/</link>
+      <pubDate>Tue, 27 Jan 2009 10:49:27 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/setting-up-an-account-in-solaris-10-which-cannot-become-locked/</guid>
+      <description>This isnt something you really want to have to do on a regular basis, if an account is getting locked on a regular basis you should really go find out who or what is causing this than just setting the account to never lock. But some times you have to do this. So here we go
+Where do i go to check lock account on X amount of logins is enabled</description>
+    </item>
+    
+    <item>
+      <title>Deleting file by inode (delete though&#39;s file rm just cant get rid of)</title>
+      <link>https://thinkside.uk/posts/deleting-file-by-inode-delete-thoughs-file-rm-just-cant-get-rid-of/</link>
+      <pubDate>Fri, 16 Jan 2009 17:02:47 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/deleting-file-by-inode-delete-thoughs-file-rm-just-cant-get-rid-of/</guid>
+      <description>Find out file inode Find out file inode number: ls -il {&amp;lt;filename&amp;gt;
+Use find command to remove file find . -inum &amp;lt;inode-number&amp;gt; -exec rm -i {} ; </description>
+    </item>
+    
+    <item>
+      <title>Adding a swap file in solaris</title>
+      <link>https://thinkside.uk/posts/adding-a-swap-file-in-solaris/</link>
+      <pubDate>Mon, 15 Dec 2008 12:32:22 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/adding-a-swap-file-in-solaris/</guid>
+      <description>Adding a 2gb swap file cd /usr/local/swap mkfile 2G swapfile.0 swap -a /usr/local/swap/swapfile.0 Deleting a swap file swap -d &amp;lt;swapfilename&amp;gt; Making sure a swap file doesnt get lost after a reboot Add line as follows to /etc/vfstab /usr/local/swap/swapfile.0 - swap - no -
+that&amp;rsquo;ll make it use the extra swap file when the system reboots</description>
+    </item>
+    
+    <item>
+      <title>Top 10 Process&#39;s using memory</title>
+      <link>https://thinkside.uk/posts/top-10-processs-using-memory/</link>
+      <pubDate>Mon, 01 Dec 2008 16:41:35 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/top-10-processs-using-memory/</guid>
+      <description>Memory ps -ef -o vsz,pid,args | sort -rn | head -10 </description>
+    </item>
+    
+    <item>
+      <title>Creating Virtual interfaces</title>
+      <link>https://thinkside.uk/posts/creating-virtual-interfaces/</link>
+      <pubDate>Mon, 01 Dec 2008 16:36:35 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/creating-virtual-interfaces/</guid>
+      <description>Create the virtual interface: # ifconfig eri0:1 plumb Configure the virtual interface: # ifconfig eri0:1 192.162.2.161 netmask 255.255.255.0 Check to make sure it worked: # ifconfig -a lo0: flags=1000849 mtu 8232 index 1 inet 127.0.0.1 netmask ff000000 eri0: flags=1000843 mtu 1500 index 2 inet 192.162.2.160 netmask ffffff00 broadcast 192.162.2.255 ether 0:3:ba:9:63:9b eri0:1: flags=1000842 mtu 1500 index 2 inet 192.162.2.161 netmask ffffff00 broadcast 192.162.2.255 Finally bring up your new virtual interface: # ifconfig eri0:1 up To make it come up on start:</description>
+    </item>
+    
+    <item>
+      <title>Changing IP and hostname in Solaris 10</title>
+      <link>https://thinkside.uk/posts/changing-ip-and-hostname-in-solaris-10/</link>
+      <pubDate>Thu, 02 Oct 2008 12:13:25 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/changing-ip-and-hostname-in-solaris-10/</guid>
+      <description>Changing the IP on Solaris 10 requires editing two files:
+ /etc/hosts /etc/inet/ipnodes  If you are changing network address, you will need to change the router address in the file:
+ /etc/defaultrouter  Changing the hostname now only requires editing these files:
+ /etc/hosts /etc/nodename /etc/hostname.*  </description>
+    </item>
+    
+    <item>
+      <title>How to change IP address in Solaris 8</title>
+      <link>https://thinkside.uk/posts/how-to-change-ip-address-in-solaris-8/</link>
+      <pubDate>Thu, 02 Oct 2008 11:41:39 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-change-ip-address-in-solaris-8/</guid>
+      <description>/etc/hosts /etc/hostname.* /etc/defaultrouter /etc/netmasks /etc/resolv.conf Also check the /etc/security/hosts.allow on the machine as well to make sure your new ip range is allowed for ssh access or telnet etc.</description>
+    </item>
+    
+    <item>
+      <title>Seeing emails with the following subject in adm or roots mail file ***UPDATE /etc/acct/holidays WITH NEW HOLIDAYS***</title>
+      <link>https://thinkside.uk/posts/seeing-emails-with-the-following-subject-in-adm-or-roots-mail-file-update-etcacctholidays-with-new-holidays/</link>
+      <pubDate>Thu, 17 Jul 2008 12:18:08 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/seeing-emails-with-the-following-subject-in-adm-or-roots-mail-file-update-etcacctholidays-with-new-holidays/</guid>
+      <description>To get rid of these edit the following file and change the year to the current year
+File: /etc/acct/holidays
+Example Output below with section marked as bold what you need to alter
+* @(#)holidays January 1, 2006 * * Prime/Nonprime Table for UNIX Accounting System * * Curr Prime Non-Prime * Year Start Start * **2008 ** 0800 1800 * * only the first column (month/day) is significiant. * * month/day Company * Holiday * 1/1 New Years Day 7/4 Indep.</description>
+    </item>
+    
+    <item>
+      <title>Mounting ISO images in Solaris</title>
+      <link>https://thinkside.uk/posts/mounting-iso-images-in-solaris/</link>
+      <pubDate>Mon, 31 Mar 2008 09:07:49 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/mounting-iso-images-in-solaris/</guid>
+      <description>mounting ISO   lofiadm -a /usr/local/jumpstart_files/ISO/sol-10-GA-sp-dvd.iso /dev/lofi/1
+  mkdir /mnt/iso
+  mount -F hsfs -o ro /dev/lofi/1 /mnt/iso
+  unmounting ISO   umount /mnt/iso
+  lofiadm -d /dev/lofi/1
+  </description>
+    </item>
+    
+    <item>
+      <title>OK prompt on a SunBlade 100</title>
+      <link>https://thinkside.uk/posts/ok-prompt-on-a-sunblade-100/</link>
+      <pubDate>Mon, 18 Feb 2008 15:45:24 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/ok-prompt-on-a-sunblade-100/</guid>
+      <description>If you need to get into the OK prompt and you are physically at the machine do the following.
+  Power off machine
+  Power machine on
+  When you hear the initial beep from the system highlighting it is starting up press the power supply button twice.
+  </description>
+    </item>
+    
+    <item>
+      <title>Solaris 10 Services</title>
+      <link>https://thinkside.uk/posts/solaris-10-services/</link>
+      <pubDate>Mon, 07 Jan 2008 14:55:55 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/solaris-10-services/</guid>
+      <description>Solaris 10 uses the svcadm application for starting and stopping services and class&amp;rsquo;s any scripts in /etc/init.d as a legacy way of doing this.
+Display services
+svcs Turning on svcadm start sendmail Turning off svcadm stop sendmail Disabling  svcadm disable sendmail  Note: Here is a good blog which has information on how to convert your rc scripts into SMF format.
+http://prefetch.net/blog/index.php/2005/11/12/converting-an-rc-script-to-an-smf-manifest/</description>
+    </item>
+    
+    <item>
+      <title>Orca - Trending, reporting, and Capacity Planning</title>
+      <link>https://thinkside.uk/posts/orca-trending-reporting-and-capacity-planning/</link>
+      <pubDate>Mon, 24 Dec 2007 12:14:58 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/orca-trending-reporting-and-capacity-planning/</guid>
+      <description>This is a great application for trending your servers (Solaris, Linux and also windows machines with some tweaking)
+Trends all the usual things cpu, memory, http requests, uptime etc.
+http://www.orcaware.com/orca/
+Worth taking a look at it if you need some sort of data to prove you need to either purchase additional equipment or just need to move certain services off machines due to CPU being maxed.
+You can also create your own monitoring plugins as well you can set the system up to monitor garbage collection states for any java process&amp;rsquo;s you have running.</description>
+    </item>
+    
+    <item>
+      <title>Creating an account in ALOM on a T2000</title>
+      <link>https://thinkside.uk/posts/creating-an-account-in-alom-on-a-t2000/</link>
+      <pubDate>Mon, 26 Nov 2007 09:05:52 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/creating-an-account-in-alom-on-a-t2000/</guid>
+      <description>Get into ALOM (from console for &amp;lsquo;#.&amp;rsquo; minus quotes)
+  to add the user run the following &amp;lsquo;useradd &amp;rsquo;
+  To assign a password this account run &amp;lsquo;userpassword &amp;rsquo;
+  Assigning permissions to the user account &amp;lsquo;userperm [a|u|c|r]&amp;rsquo; e.g. full permissions would be &amp;lsquo;userperm aucr&amp;rsquo;
+  Permission Level Description</description>
+    </item>
+    
+    <item>
+      <title>Finding out how many physical CPU&#39;s you have in a SUN Box</title>
+      <link>https://thinkside.uk/posts/finding-out-how-many-physical-cpus-you-have-in-a-sun-box/</link>
+      <pubDate>Thu, 25 Oct 2007 15:07:04 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/finding-out-how-many-physical-cpus-you-have-in-a-sun-box/</guid>
+      <description>When running &amp;lsquo;psrinfo&amp;rsquo; on a T2000 it will display all of the cores as CPU&amp;rsquo;s. Runing &amp;lsquo;psrinfo -p&amp;rsquo; will display only the physical CPU&amp;rsquo;s.
+Example # psrinfo 0 on-line since 02/20/2007 00:48:07 1 on-line since 02/20/2007 00:48:08 2 on-line since 02/20/2007 00:48:08 3 on-line since 02/20/2007 00:48:08 4 on-line since 02/20/2007 00:48:08 5 on-line since 02/20/2007 00:48:08 6 on-line since 02/20/2007 00:48:08 7 on-line since 02/20/2007 00:48:08 8 on-line since 02/20/2007 00:48:08 9 on-line since 02/20/2007 00:48:08 10 on-line since 02/20/2007 00:48:08 11 on-line since 02/20/2007 00:48:08 12 on-line since 02/20/2007 00:48:08 13 on-line since 02/20/2007 00:48:08 14 on-line since 02/20/2007 00:48:08 15 on-line since 02/20/2007 00:48:08 16 on-line since 02/20/2007 00:48:08 17 on-line since 02/20/2007 00:48:08 18 on-line since 02/20/2007 00:48:08 19 on-line since 02/20/2007 00:48:08 20 on-line since 02/20/2007 00:48:08 21 on-line since 02/20/2007 00:48:08 22 on-line since 02/20/2007 00:48:08 23 on-line since 02/20/2007 00:48:08 24 on-line since 02/20/2007 00:48:08 25 on-line since 02/20/2007 00:48:08 26 on-line since 02/20/2007 00:48:08 27 on-line since 02/20/2007 00:48:08 28 on-line since 02/20/2007 00:48:08 29 on-line since 02/20/2007 00:48:08 30 on-line since 02/20/2007 00:48:08 31 on-line since 02/20/2007 00:48:08 # psrinfo -p 1 </description>
+    </item>
+    
+    <item>
+      <title>Displaying yesterdays date in solaris</title>
+      <link>https://thinkside.uk/posts/displaying-yesterdays-date-in-solaris/</link>
+      <pubDate>Thu, 25 Oct 2007 09:21:02 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/displaying-yesterdays-date-in-solaris/</guid>
+      <description>Sounds like a daft thing to do i know but for a couple of my scripts this is needed # echo `TZ=GMT+24 date +&amp;#34;%D&amp;#34;` This method doesnt always work, depends on what time of day you call this. I have also found a perl method of doing this as well # perl -e &amp;#39;($d,$m,$y)=(localtime(time-86400))[3..5];$m+=1;$y+=1900;print &amp;#34;$m/$d/$yn&amp;#34;;&amp;#39;</description>
+    </item>
+    
+    <item>
+      <title>Blocking Users in Sendmail</title>
+      <link>https://thinkside.uk/posts/blocking-users-in-sendmail/</link>
+      <pubDate>Tue, 23 Oct 2007 12:46:14 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/blocking-users-in-sendmail/</guid>
+      <description>Instructions  Go to ‘/etc/mail’ Put a line in &amp;lsquo;/etc/mail/access&amp;rsquo; along the lines of ‘email address DISCARD’ Update table ‘makemap hash access.db &amp;lt; access’  Example  Browse to folder cd /etc/mail Edit access vi access # joebloggs@example.com - email address being blocked # due to being invalid joebloggs@example.com DISCARD Update table makemap hash access.db &amp;lt; access  </description>
+    </item>
+    
+    <item>
+      <title>Solaris Package Tips</title>
+      <link>https://thinkside.uk/posts/solaris-package-tips/</link>
+      <pubDate>Tue, 23 Oct 2007 12:35:39 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/solaris-package-tips/</guid>
+      <description>View the files that make up a Solaris package /usr/sbin/pkgchk -l SUNWcsr | grep Pathname | sed &amp;#39;s/Pathname: (.*)/1/&amp;#39; Check which package a file belongs to /usr/sbin/pkgchk -lp somefile </description>
+    </item>
+    
+    <item>
+      <title>Displaying EPOCH Date in Solaris</title>
+      <link>https://thinkside.uk/posts/displaying-epoch-date-in-solaris-10/</link>
+      <pubDate>Tue, 23 Oct 2007 10:22:49 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/displaying-epoch-date-in-solaris-10/</guid>
+      <description>Solaris 10 #!/bin/sh /usr/bin/truss /usr/bin/date 2&amp;gt;&amp;amp;1 | nawk -F= &amp;#39;/^time()/ {gsub(/ /,&amp;#34;&amp;#34;,$2);print $2}&amp;#39; exit $? Solaris 9 and below /usr/bin/perl -e &amp;#39;printf &amp;#34;%dn&amp;#34;, time;&amp;#39; </description>
+    </item>
+    
+    <item>
+      <title>Bash Shortcuts</title>
+      <link>https://thinkside.uk/posts/bash-shortcuts/</link>
+      <pubDate>Tue, 23 Oct 2007 10:21:58 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/bash-shortcuts/</guid>
+      <description>alt-f &amp;ndash; move forward one word alt-b &amp;ndash; move backwards one word ctrl-a &amp;ndash; takes you to the begining of the command you are currently typing. ctrl-b &amp;ndash; move backwards one character ctrl-c &amp;ndash; kills the current command or process. ctrl-d &amp;ndash; kills the shell. ctrl-e &amp;ndash; takes you to the end of the command you are currently typing in. ctrl-f &amp;ndash; move forward one character ctrl-h &amp;ndash; deletes one letter at a time from the command you are typing in.</description>
+    </item>
+    
+  </channel>
+</rss>

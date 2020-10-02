@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on ThinkSide</title>
+    <link>https://thinkside.uk/categories/software/</link>
+    <description>Recent content in Software on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 May 2011 14:32:01 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixing Locale errors in Ubuntu</title>
+      <link>https://thinkside.uk/posts/fixing-locale-errors-in-ubuntu/</link>
+      <pubDate>Thu, 12 May 2011 14:32:01 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/fixing-locale-errors-in-ubuntu/</guid>
+      <description>How to fix the following error when you are running apt-get update or installs.
+perl: warning: Setting locale failed. perl: warning: Please check that your locale settings: LANGUAGE = (unset), LC_ALL = (unset), LC_MONETARY = &amp;#34;en_US.ISO8859-1&amp;#34;, LC_NUMERIC = &amp;#34;en_US.ISO8859-1&amp;#34;, LC_MESSAGES = &amp;#34;C&amp;#34;, LC_COLLATE = &amp;#34;en_US.ISO8859-1&amp;#34;, LC_CTYPE = &amp;#34;en_US.ISO8859-1&amp;#34;, LC_TIME = &amp;#34;en_US.ISO8859-1&amp;#34;, LANG = &amp;#34;en_GB.UTF-8&amp;#34; export LC_ALL=&amp;#34;en_GB.UTF-8&amp;#34; export LANGUAGE=&amp;#34;en_GB.UTF-8&amp;#34; export LANG=&amp;#34;en_GB.UTF-8&amp;#34; printf &amp;#34;LANGUAGE=&amp;#34;en_GB.UTF-8&amp;#34;nLC_ALL=&amp;#34;en_GB.UTF-8&amp;#34;&amp;#34; &amp;gt;&amp;gt; /etc/default/locale dpkg-reconfigure locales to test run
+echo | perl this will generate the error if the locales are wrong.</description>
+    </item>
+    
+    <item>
+      <title>How to install your own CA cert into Google Chrome</title>
+      <link>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</link>
+      <pubDate>Wed, 11 May 2011 08:29:24 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</guid>
+      <description>There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
+To stop this from happening here is how you install your CA certificate to chrome
+ Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>How to install your own CA cert into Google Chrome &middot; ThinkSide</title>
+    <meta name="generator" content="Hugo 0.75.1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Paul Canham">
+    
+      <meta name="description" content="blah">
+    
+    
+    <link rel="canonical" href="https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/"/>
+    <link rel="icon" href="https://thinkside.uk/favicon.ico">
+    <link rel="apple-touch-icon" href="https://thinkside.uk/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://thinkside.uk/css/style.css">
+    <link rel="stylesheet" href="https://thinkside.uk/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://thinkside.uk/css/monokai.css">
+    <link rel="stylesheet" href="https://thinkside.uk/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="How to install your own CA cert into Google Chrome" />
+<meta property="og:description" content="There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
+To stop this from happening here is how you install your CA certificate to chrome
+ Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/" />
+<meta property="article:published_time" content="2011-05-11T08:29:24+00:00" />
+<meta property="article:modified_time" content="2011-05-11T08:29:24+00:00" />
+
+    
+    <meta itemprop="name" content="How to install your own CA cert into Google Chrome">
+<meta itemprop="description" content="There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
+To stop this from happening here is how you install your CA certificate to chrome
+ Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert.">
+<meta itemprop="datePublished" content="2011-05-11T08:29:24+00:00" />
+<meta itemprop="dateModified" content="2011-05-11T08:29:24+00:00" />
+<meta itemprop="wordCount" content="177">
+
+
+
+<meta itemprop="keywords" content="ssl,chrome google," />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to install your own CA cert into Google Chrome"/>
+<meta name="twitter:description" content="There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
+To stop this from happening here is how you install your CA certificate to chrome
+ Install the following package to your machine  sudo apt-get install libnss3-tools Download the CA cert you wish to install (in this example cacert."/>
+<meta name="twitter:site" content="@darkjest"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://thinkside.uk/" id="logo">
+          
+          <i class="logo" style="background-image: url('https://thinkside.uk/css/images/thinkside.png')"></i>
+          
+          <span class="site-title">ThinkSide</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://thinkside.uk/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="https://thinkside.uk/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://thinkside.uk/about/">About</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://thinkside.uk/css/images/thinkside-avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://thinkside.uk/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://thinkside.uk/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="https://thinkside.uk/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://thinkside.uk/about/">About</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://thinkside.uk/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/270b2a23f4c15e0ddb872c7b6dfb94fd?s=100&d=identicon"/>
+      
+      <h2 id="name">Paul Canham</h2>
+      <h3 id="title">Blogger &amp; Technologist</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>UK</span>
+      
+          <a id="follow" href="https://github.com/pcanham">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        0
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          39
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/pcanham" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/pcanham" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+
+
+<td><a href="//reddit.com/user/pcanham" target="_blank" title="Reddit"><i class="fa fa-reddit"></i></a></td>
+
+
+
+
+
+
+
+<td><a href="//twitter.com/darkjest" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="https://thinkside.uk/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/">
+    <h1 class="article-title" itemprop="name">
+        How to install your own CA cert into Google Chrome
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/chrome">Chrome</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/software">Software</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/categories/ubuntu">Ubuntu</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/ssl">ssl</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://thinkside.uk/tags/chrome-google">chrome google</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.</p>
+<p>To stop this from happening here is how you install your CA certificate to chrome</p>
+<ol>
+<li>Install the following package to your machine</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    sudo apt-get install libnss3-tools</code></pre></div>
+<ol start="2">
+<li>Download the CA cert you wish to install (in this example cacert.crt is the CA cert in question)</li>
+<li>Run the following command</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    certutil -d sql:$HOME/.pki/nssdb -A -t TC -n <span style="color:#e6db74">&#34;Example CA Cert&#34;</span> -i cacert.crt</code></pre></div>
+<p>Note: &ldquo;Example CA Cert&rdquo; need to be the Certificate Name</p>
+<p>job done</p>
+<p>I have also found a useful script to automate adding machines in from the following site <a href="http://www.google.com/support/forum/p/Chrome/thread?tid=18ea33a150bbccd2&amp;hl=en">http://www.google.com/support/forum/p/Chrome/thread?tid=18ea33a150bbccd2&amp;hl=en</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#75715e">#!/bin/sh</span>
+    <span style="color:#75715e">#</span>
+    <span style="color:#75715e"># usage:  import-cert.sh remote.host.name [port]</span>
+    <span style="color:#75715e">#</span>
+    REMHOST<span style="color:#f92672">=</span>$1
+    REMPORT<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>2<span style="color:#66d9ef">:-</span>443<span style="color:#e6db74">}</span>
+    exec 6&gt;&amp;<span style="color:#ae81ff">1</span>
+    exec &gt; $REMHOST
+    echo | openssl s_client -connect <span style="color:#e6db74">${</span>REMHOST<span style="color:#e6db74">}</span>:<span style="color:#e6db74">${</span>REMPORT<span style="color:#e6db74">}</span> 2&gt;&amp;<span style="color:#ae81ff">1</span> |sed -ne <span style="color:#e6db74">&#39;/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p&#39;</span>
+    certutil -d sql:$HOME/.pki/nssdb -A -t TC -n <span style="color:#e6db74">&#34;</span>$REMHOST<span style="color:#e6db74">&#34;</span> -i $REMHOST
+    exec 1&gt;&amp;<span style="color:#ae81ff">6</span> 6&gt;&amp;-</code></pre></div>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/" data-id=" 620ed6b5c00558f979c9aefec1c4e317 " class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="https://thinkside.uk/posts/installing-cx_oracle-under-ubuntu-10-10/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">installing cx_oracle under ubuntu 10.10</div>
+    </a>
+    
+
+    
+    <a href="https://thinkside.uk/posts/fixing-locale-errors-in-ubuntu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Fixing Locale errors in Ubuntu</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/apache">
+                    apache
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/bash-shell-scripting">
+                    bash-shell-scripting
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/blog">
+                    blog
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/chrome">
+                    chrome
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/cisco">
+                    cisco
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/databases">
+                    databases
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/java">
+                    java
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/linux">
+                    linux
+                </a>
+                <span class="category-list-count">21</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/mac">
+                    mac
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/miscellaneous">
+                    miscellaneous
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/monitoring">
+                    monitoring
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/networking">
+                    networking
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/operating-systems">
+                    operating-systems
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/oracle">
+                    oracle
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/osx">
+                    osx
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/postfix">
+                    postfix
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/sendmail">
+                    sendmail
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/snmp">
+                    snmp
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/software">
+                    software
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/solaris">
+                    solaris
+                </a>
+                <span class="category-list-count">32</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/unix">
+                    unix
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/windows">
+                    windows
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://thinkside.uk/categories/xen">
+                    xen
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="https://thinkside.uk/tags/apache" style="font-size: 12px;">apache</a>
+        
+        
+        <a href="https://thinkside.uk/tags/bash-shell-scripting" style="font-size: 12px;">bash-shell-scripting</a>
+        
+        
+        <a href="https://thinkside.uk/tags/bbwin" style="font-size: 12px;">bbwin</a>
+        
+        
+        <a href="https://thinkside.uk/tags/chrome-google" style="font-size: 12px;">chrome-google</a>
+        
+        
+        <a href="https://thinkside.uk/tags/cisco" style="font-size: 12px;">cisco</a>
+        
+        
+        <a href="https://thinkside.uk/tags/databases" style="font-size: 12px;">databases</a>
+        
+        
+        <a href="https://thinkside.uk/tags/debian" style="font-size: 12px;">debian</a>
+        
+        
+        <a href="https://thinkside.uk/tags/engineering" style="font-size: 12px;">engineering</a>
+        
+        
+        <a href="https://thinkside.uk/tags/firmware" style="font-size: 12px;">firmware</a>
+        
+        
+        <a href="https://thinkside.uk/tags/freedos" style="font-size: 12px;">freedos</a>
+        
+        
+        <a href="https://thinkside.uk/tags/ha" style="font-size: 12px;">ha</a>
+        
+        
+        <a href="https://thinkside.uk/tags/hobbitmon" style="font-size: 12px;">hobbitmon</a>
+        
+        
+        <a href="https://thinkside.uk/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        
+        <a href="https://thinkside.uk/tags/iso" style="font-size: 12px;">iso</a>
+        
+        
+        <a href="https://thinkside.uk/tags/java" style="font-size: 12px;">java</a>
+        
+        
+        <a href="https://thinkside.uk/tags/jvm" style="font-size: 12px;">jvm</a>
+        
+        
+        <a href="https://thinkside.uk/tags/linux" style="font-size: 12px;">linux</a>
+        
+        
+        <a href="https://thinkside.uk/tags/locale" style="font-size: 12px;">locale</a>
+        
+        
+        <a href="https://thinkside.uk/tags/mac" style="font-size: 12px;">mac</a>
+        
+        
+        <a href="https://thinkside.uk/tags/miscellaneous" style="font-size: 12px;">miscellaneous</a>
+        
+        
+        <a href="https://thinkside.uk/tags/monitoring" style="font-size: 12px;">monitoring</a>
+        
+        
+        <a href="https://thinkside.uk/tags/networking" style="font-size: 12px;">networking</a>
+        
+        
+        <a href="https://thinkside.uk/tags/operating-systems" style="font-size: 12px;">operating-systems</a>
+        
+        
+        <a href="https://thinkside.uk/tags/oracle" style="font-size: 12px;">oracle</a>
+        
+        
+        <a href="https://thinkside.uk/tags/osx" style="font-size: 12px;">osx</a>
+        
+        
+        <a href="https://thinkside.uk/tags/postfix" style="font-size: 12px;">postfix</a>
+        
+        
+        <a href="https://thinkside.uk/tags/pxe" style="font-size: 12px;">pxe</a>
+        
+        
+        <a href="https://thinkside.uk/tags/sendmail" style="font-size: 12px;">sendmail</a>
+        
+        
+        <a href="https://thinkside.uk/tags/snmp" style="font-size: 12px;">snmp</a>
+        
+        
+        <a href="https://thinkside.uk/tags/software" style="font-size: 12px;">software</a>
+        
+        
+        <a href="https://thinkside.uk/tags/solaris" style="font-size: 12px;">solaris</a>
+        
+        
+        <a href="https://thinkside.uk/tags/ssl" style="font-size: 12px;">ssl</a>
+        
+        
+        <a href="https://thinkside.uk/tags/timezone" style="font-size: 12px;">timezone</a>
+        
+        
+        <a href="https://thinkside.uk/tags/troubleshooting" style="font-size: 12px;">troubleshooting</a>
+        
+        
+        <a href="https://thinkside.uk/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+        
+        <a href="https://thinkside.uk/tags/unix" style="font-size: 12px;">unix</a>
+        
+        
+        <a href="https://thinkside.uk/tags/windows" style="font-size: 12px;">windows</a>
+        
+        
+        <a href="https://thinkside.uk/tags/xen" style="font-size: 12px;">xen</a>
+        
+        
+        <a href="https://thinkside.uk/tags/xymon" style="font-size: 12px;">xymon</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020
+      
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://thinkside.uk/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://thinkside.uk/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

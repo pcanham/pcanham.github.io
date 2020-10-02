@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Databases on ThinkSide</title>
+    <link>https://thinkside.uk/tags/databases/</link>
+    <description>Recent content in Databases on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Dec 2010 15:30:52 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/databases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>installing cx_oracle under ubuntu 10.10</title>
+      <link>https://thinkside.uk/posts/installing-cx_oracle-under-ubuntu-10-10/</link>
+      <pubDate>Wed, 01 Dec 2010 15:30:52 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/installing-cx_oracle-under-ubuntu-10-10/</guid>
+      <description>If you plan on writing any python applications/scripts for performing any basic SQL query&amp;rsquo;s against an oracle database you will need to have the cx_oracle library files installed to your machine (or server) here are some quick instructions on how to install them.
+Please be aware i have only tested these instructions under Ubuntu 10.10 (32bit) using the 11.2 oracle instant client, when I have time I will try and install this on one of the x86_64 machines i have access to.</description>
+    </item>
+    
+    <item>
+      <title>Adding a new data file into an Oracle 10g instance</title>
+      <link>https://thinkside.uk/posts/adding-a-new-data-file-into-an-oracle-10g-instance/</link>
+      <pubDate>Tue, 28 Jul 2009 14:44:05 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/adding-a-new-data-file-into-an-oracle-10g-instance/</guid>
+      <description>First thing we need to check where the data files are being stored to do this all you need to do is log in as sysdba and then run &amp;lsquo;select * from dba_data_files;&amp;rsquo;
+e.g.
+SQL&amp;gt; connect / as sysdba Connected. SQL&amp;gt; select * from dba_data_files; Once you have the location the syntax for adding the file is
+SQL&amp;gt; connect / as sysdba Connected. SQL&amp;gt; alter tablespace data_large add datafile &amp;#39;/lh0-mmm-sync/oracle/oradata/data0/data_large02.dbf&amp;#39; size 1g; Note: Oracle will create the data file for you, you don&amp;rsquo;t need to make the file though the OS or anything.</description>
+    </item>
+    
+    <item>
+      <title>How to change a password in Oracle 10g</title>
+      <link>https://thinkside.uk/posts/how-to-change-a-password-in-oracle-10g/</link>
+      <pubDate>Tue, 03 Mar 2009 12:57:27 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-change-a-password-in-oracle-10g/</guid>
+      <description>sqlplus /nolog SQL&amp;gt; connect / as sysdba SQL&amp;gt; ALTER USER Your_Login IDENTIFIED BY Your_Password; </description>
+    </item>
+    
+    <item>
+      <title>How to unlock an account in Oracle 10g</title>
+      <link>https://thinkside.uk/posts/how-to-unlock-an-account-in-oracle-10g/</link>
+      <pubDate>Tue, 03 Mar 2009 12:57:04 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-unlock-an-account-in-oracle-10g/</guid>
+      <description>sqlplus /nolog SQL&amp;gt; connect / as sysdba SQL&amp;gt; alter user account unlock; </description>
+    </item>
+    
+    <item>
+      <title>How to find out if an account has been locked in Oracle 10g</title>
+      <link>https://thinkside.uk/posts/how-to-find-out-if-an-account-has-been-locked-in-oracle-10g/</link>
+      <pubDate>Tue, 03 Mar 2009 12:56:29 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-find-out-if-an-account-has-been-locked-in-oracle-10g/</guid>
+      <description>sqlplus /nolog SQL&amp;gt; connect / as sysdba SQL&amp;gt; SELECT username, account_status, password FROM dba_users; </description>
+    </item>
+    
+    <item>
+      <title>Listing all users in a Oracle 10g database</title>
+      <link>https://thinkside.uk/posts/listing-all-users-in-a-oracle-10g-database/</link>
+      <pubDate>Tue, 03 Mar 2009 12:55:56 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/listing-all-users-in-a-oracle-10g-database/</guid>
+      <description>sqlplus /nolog SQL&amp;gt; connect / as sysdba SQL&amp;gt; select * from all_users; &amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-sql&amp;#34; data-lang=&amp;#34;sql&amp;#34;&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/div&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>Starting and stopping an oracle DB</title>
+      <link>https://thinkside.uk/posts/starting-and-stopping-an-oracle-db/</link>
+      <pubDate>Tue, 03 Mar 2009 12:55:26 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/starting-and-stopping-an-oracle-db/</guid>
+      <description>STARTING DATABASE Start Listerner up # lsnrctl start 1. Connect to sqlplus as sysdba SQL&amp;gt; connect sys as sysdba 2. run command &amp;#39;startup&amp;#39; SQL&amp;gt; startup 3. Exit from sqlplus SQL&amp;gt; exit ### STARTING Enterprise Manager 1. Login as oracle user 2. run following command &amp;lt;div class=&amp;#34;highlight&amp;#34;&amp;gt;&amp;lt;pre style=&amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;#34;&amp;gt;&amp;lt;code class=&amp;#34;language-bash&amp;#34; data-lang=&amp;#34;bash&amp;#34;&amp;gt;&amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;# emctl start dbconsole&amp;lt;/span&amp;gt; &amp;lt;span style=&amp;#34;color:#75715e&amp;#34;&amp;gt;#### example&amp;lt;/span&amp;gt; &amp;amp;lt;div class&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;highlight&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;pre style&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;&amp;amp;lt;code class&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;language-bash&amp;amp;#34;&amp;lt;/span&amp;gt; data-lang&amp;lt;span style=&amp;#34;color:#f92672&amp;#34;&amp;gt;=&amp;lt;/span&amp;gt;&amp;lt;span style=&amp;#34;color:#e6db74&amp;#34;&amp;gt;&amp;amp;#34;bash&amp;amp;#34;&amp;lt;/span&amp;gt;&amp;amp;gt;-bash-3.00$ emctl start dbconsole Oracle Enterprise Manager 10g Database Control Release 10.</description>
+    </item>
+    
+  </channel>
+</rss>

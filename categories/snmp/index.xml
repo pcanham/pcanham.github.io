@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SNMP on ThinkSide</title>
+    <link>https://thinkside.uk/categories/snmp/</link>
+    <description>Recent content in SNMP on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Sep 2009 14:14:22 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/snmp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enabling SNMP on a Netscaler though the CLI</title>
+      <link>https://thinkside.uk/posts/enabling-snmp-on-a-netscaler-though-the-cli/</link>
+      <pubDate>Thu, 17 Sep 2009 14:14:22 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/enabling-snmp-on-a-netscaler-though-the-cli/</guid>
+      <description>Useful if you wish to monitor the Netscaler remotely though cacti or some other monitoring/trending software.
+## # Display SNMP Community ## sh snmp community ## # Adding SNMP community ## addsnmpcommunity public all Where public is the community string, you can also create traps on the Netscalers as well but i havent done much digging into this yet. More playing with monitoring the different services we have setup.</description>
+    </item>
+    
+    <item>
+      <title>SNMP and XEN Machines on debian lenny</title>
+      <link>https://thinkside.uk/posts/snmp-and-xen-machines-on-debian-lenny/</link>
+      <pubDate>Tue, 28 Jul 2009 13:25:53 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/snmp-and-xen-machines-on-debian-lenny/</guid>
+      <description>Found out the hard way on this that yes you can install snmpd on the xen domu machines but, you have a very limited amount of snmp mibs to play with, things you can not do unless you create your own snmp mib file.
+ Disk space CPU Connected users to machine  If you do some googling though you will find that some people have written some perl scripts which you can use in conjunction with snmp to collect this information.</description>
+    </item>
+    
+    <item>
+      <title>svc:/application/management/sma:default not displaying even though packages have been installed</title>
+      <link>https://thinkside.uk/posts/svcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed/</link>
+      <pubDate>Mon, 06 Jul 2009 13:35:31 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/svcapplicationmanagementsmadefault-not-displaying-even-though-packages-have-been-installed/</guid>
+      <description>When you try and manually start the sma up you get the following error
+bash-3.00# /etc/init.d/init.sma start svcadm: Pattern &amp;#39;svc:/application/management/sma:default&amp;#39; doesn&amp;#39;t match any instances Solution:
+pkill configd svccfg -v import /var/svc/manifest/application/management/sma.xml svccfg -v import /var/svc/manifest/application/management/seaport.xml svcadm enable svc:/application/management/sma:default Link back: http://www.gnuunix.info/forum?id=12&amp;amp;catid=13&amp;amp;func=fb_pdf</description>
+    </item>
+    
+    <item>
+      <title>Enabling SNMP (SMA - System Management Agent) under Solaris 10</title>
+      <link>https://thinkside.uk/posts/enabling-snmp-sma-system-management-agent-under-solaris-10/</link>
+      <pubDate>Wed, 25 Feb 2009 17:15:41 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/enabling-snmp-sma-system-management-agent-under-solaris-10/</guid>
+      <description>Installation Install SUNWsmaS, SUNWsmagt, SUNWsmcmd, SUNWsmdoc, SUNWsmmgr
+Configuration cd /etc/sma/snmp cp snmpd.conf cp snmpd.conf snmpd.conf.bak-`date +%F` vi snmpd.conf change rocommunity (by default set to public) Change syslocation and syscontact to something useful e.g.
+From syslocation &amp;#34;System administrators office&amp;#34; syscontact &amp;#34;System administrator&amp;#34; To syslocation &amp;#34;Test x86 Server on Floor 2&amp;#34; syscontact &amp;#34;monitoring@example.com&amp;#34; Start or restart SMA service svcadm restart svc:/application/management/sma:default # Restart svcadm enable svc:/application/management/sma:default # Start Test from remote server pcanham@jafar:~$ snmpwalk -v 2c -c public 192.</description>
+    </item>
+    
+    <item>
+      <title>Solaris 10 packages needed for SNMP/SMA (System Management Agent)</title>
+      <link>https://thinkside.uk/posts/solaris-10-packages-needed-for-snmpsma-system-management-agent/</link>
+      <pubDate>Wed, 25 Feb 2009 16:33:16 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/solaris-10-packages-needed-for-snmpsma-system-management-agent/</guid>
+      <description>SUNWsmaS - Source Files needed SUNWsmagt - snmpd and snmptrapd application and library files. SUNWsmcmd - SMA SNMP applications and utilities (e.g. snmpget) SUNWsmdoc - Documentation on System Management Agent SUNWsmmgr - MIB files and default config files (e.g. default snmpd.conf)</description>
+    </item>
+    
+    <item>
+      <title>How to enable SNMP with a JVM</title>
+      <link>https://thinkside.uk/posts/how-to-enable-snmp-with-a-jvm/</link>
+      <pubDate>Tue, 23 Oct 2007 13:00:37 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-enable-snmp-with-a-jvm/</guid>
+      <description>This is useful to do when you are wishing to monitor the Memory allocation with in your java application.
+HowTo  Add the following to JVM_OPTS -Dcom.sun.management.config.file=/export/home/pcanham/jvmsnmp/management.properties Contents of management.properties is com.sun.management.snmp.interface=0.0.0.0 com.sun.management.snmp.port=1161 com.sun.management.snmp.trap=1162 com.sun.management.snmp.acl=false If wishing ACL create a file called snmp.acl and the change &amp;lsquo;com.sun.management.snmp.acl=false&amp;rsquo; to &amp;lsquo;com.sun.management.snmp.acl=snmp.acl&amp;rsquo; Make sure only owner has read and write access nobody and group are not allowed any access -rw------- 1 pcanham other 356 Aug 8 16:01 snmp.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xymon on ThinkSide</title>
+    <link>https://thinkside.uk/tags/xymon/</link>
+    <description>Recent content in xymon on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2012 16:44:03 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/xymon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bbwin - xymon/hobbitmon windows client installation</title>
+      <link>https://thinkside.uk/posts/bbwin-xymonhobbitmon-windows-client-installation/</link>
+      <pubDate>Fri, 10 Feb 2012 16:44:03 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/bbwin-xymonhobbitmon-windows-client-installation/</guid>
+      <description>BBwin installation   Install bbwin client to machine
+  Edit c:program filesBBWinetcBBWin.cfg telling it the server is &amp;ldquo;10.10.10.10&amp;rdquo; (will be under a setting called bbdisplay)
+  edit the bbwin registry to make it use the FQDN and not the server name. Change the hostname entry from &amp;ldquo;%COMPUTERNAME%&amp;rdquo; to &amp;ldquo;%COMPUTERNAME%.%USERDNSDOMAIN%&amp;rdquo; minus the quotes
+  * 64bit Machines = &amp;quot;HKEY_LOCAL_MACHINESOFTWAREWow6432NodeBBWin&amp;quot;. * 32bit Machines = &amp;quot;HKEY_LOCAL_MACHINESOFTWAREBBWin&amp;quot;   With 64bit Windows you need to add an extra setting in bbwin.</description>
+    </item>
+    
+  </channel>
+</rss>

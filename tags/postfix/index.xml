@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postfix on ThinkSide</title>
+    <link>https://thinkside.uk/tags/postfix/</link>
+    <description>Recent content in Postfix on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2012 16:58:50 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/postfix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making Postfix config changes on the fly</title>
+      <link>https://thinkside.uk/posts/making-postfix-config-changes-on-the-fly/</link>
+      <pubDate>Fri, 10 Feb 2012 16:58:50 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/making-postfix-config-changes-on-the-fly/</guid>
+      <description>This example shows how to update the aliases path so we have this standard across all machines in a datacentre, this is a quick hack method. The correct way to fix this in a production would be to use a configuration management system like chef/puppet or cfengine.
+PATH=$PATH:/opt/csw/bin:/opt/csw/sbin:/usr/local/bin:/usr/local/postfix/sbin export PATH ## Show the existing aliases paths postconf | grep &amp;#39;^alias&amp;#39; ## Make the changes to main.cf postconf -e alias_maps=&amp;#39;dbm:/etc/mail/aliases&amp;#39; postconf -e alias_database=&amp;#39;dbm:/etc/mail/aliases&amp;#39; ## Make new aliases database newaliases ## Show aliases paths just to make sure things have been updated postconf | grep &amp;#39;^alias&amp;#39; ## send test email to self uname -a | mailx -s &amp;#34;`uname -n`&amp;#34; pcanham@`uname -n`</description>
+    </item>
+    
+    <item>
+      <title>If you wish to setup a postfix/courier imap mail server under ubuntu</title>
+      <link>https://thinkside.uk/posts/if-you-wish-to-setup-a-postfixcourier-imap-mail-server-under-ubuntu/</link>
+      <pubDate>Sun, 11 Apr 2010 20:40:40 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/if-you-wish-to-setup-a-postfixcourier-imap-mail-server-under-ubuntu/</guid>
+      <description>Here is a very good how to on setting up a mail server under ubuntu (can be modified to work under Debian Lenny as well just need to tweak some of the package versions :) )
+http://flurdy.com/docs/postfix/
+I&amp;rsquo;m working on tweaking my setup to get maildrop working so I can get some server side mail rules working, only down side i can see doing this is that you might see some slowness on mail being processed.</description>
+    </item>
+    
+    <item>
+      <title>Attachment size limit in postfix</title>
+      <link>https://thinkside.uk/posts/attachment-size-limit-in-postfix/</link>
+      <pubDate>Fri, 04 Dec 2009 09:32:53 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/attachment-size-limit-in-postfix/</guid>
+      <description>By default this is set to 10mb, if you want this to be set to a smaller value you will need to add this into your config file (main.cf)
+Quick way to check what its set to
+postconf | grep message_size_limit message_size_limit = 10240000 10240000 = 10mb</description>
+    </item>
+    
+    <item>
+      <title>Remove all emails for MAILER-DAEMON</title>
+      <link>https://thinkside.uk/posts/remove-all-emails-for-mailer-daemon/</link>
+      <pubDate>Tue, 27 Jan 2009 11:24:42 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/remove-all-emails-for-mailer-daemon/</guid>
+      <description>mailq | grep MAILER-DAEMON | awk &amp;#39;{print $1}&amp;#39; | xargs -n 1 /usr/local/postfix/sbin/postsuper -d Mailq format 4F12F2AC5A 322 Wed May 21 13:11:39 root@solman.toon-net.local (delivery temporarily suspended: connect to example.org[208.77.188.166]: Connection timed out) user@example.org root@solman.toon-net.local = Sending email address user@example.org = Recipient</description>
+    </item>
+    
+    <item>
+      <title>How to send an entire domain to /dev/null in Postfix</title>
+      <link>https://thinkside.uk/posts/how-to-send-an-entire-domain-to-devnull-in-postfix/</link>
+      <pubDate>Tue, 27 Jan 2009 11:13:10 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-send-an-entire-domain-to-devnull-in-postfix/</guid>
+      <description>vi /etc/opt/csw/postfix/main.cf virtual_alias_maps = hash:/opt/csw/etc/postfix/virtual # vi /opt/csw/etc/postfix/virtual @exampledomain.com blackhole@localhost # /opt/csw/sbin/postmap hash:/opt/csw/etc/postfix/virtual # vi /etc/opt/csw/postfix/aliases blackhole: /dev/null # newaliases example output root@server:/etc/opt/csw/postfix&amp;gt; mailx test@exampledomain.com Subject: test . EOT root@server:/etc/opt/csw/postfix&amp;gt; grep example /var/log/syslog Oct 30 06:51:36 server.example.com postfix/local[26477]: [ID 197553 mail.info] C045F83C6: to=&amp;lt;blackhole@localhost.example.com&amp;gt;, orig_to=&amp;lt;test@exampledomain.com&amp;gt;, relay=local, delay=0.45, delays=0.18/0.27/0/0, dsn=2.0.0, status=sent (delivered to file: /dev/null) </description>
+    </item>
+    
+    <item>
+      <title>How to discard emails using the sender email address in Postfix</title>
+      <link>https://thinkside.uk/posts/how-to-discard-emails-using-the-sender-email-address-in-postfix/</link>
+      <pubDate>Tue, 27 Jan 2009 11:10:27 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-discard-emails-using-the-sender-email-address-in-postfix/</guid>
+      <description> Make list of email address/domains you wish to discard vi /opt/csw/etc/postfix/sender_access sender@example.com DISCARD DoNotReply@spam.example.com DISCARD subdomain.example.com DISCARD Hash table the file /opt/csw/sbin/postmap dbm:/opt/csw/etc/postfix/sender_access Add into the postfix config the smtp restriction line in vi /etc/opt/csw/postfix/main.cf smtpd_sender_restrictions = check_sender_access dbm:/opt/csw/etc/postfix/sender_access Reload postfix /opt/csw/sbin/postfix reload  </description>
+    </item>
+    
+    <item>
+      <title>How To Delete Mails From Or To A Specific Email Address From Your PostFix Mail Queue</title>
+      <link>https://thinkside.uk/posts/how-to-delete-mails-from-or-to-a-specific-email-address-from-your-postfix-mail-queue/</link>
+      <pubDate>Tue, 27 Jan 2009 11:07:43 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/how-to-delete-mails-from-or-to-a-specific-email-address-from-your-postfix-mail-queue/</guid>
+      <description>You can check your current mail queue like this: /usr/local/postfix/sbin/postqueue -p To delete all mails from the mail queue that come from buqg@mail.example.com or are sent to buqg@mail.example.com (the command is the same regardless of if it&amp;rsquo;s the sender or recipient address), you can use this command: mailq | tail +2 | awk &amp;#39;BEGIN { RS = &amp;#34;&amp;#34; } / buqg@mail.example.com$/ { print $1 }&amp;#39; | tr -d &amp;#39;*!&amp;#39; | xargs -n 1 /usr/local/postfix/sbin/postsuper -d Afterwards check your mail queue again: /usr/local/postfix/sbin/postqueue -p It should now be much shorter.</description>
+    </item>
+    
+    <item>
+      <title>Permissions error on postfix package from blastwave</title>
+      <link>https://thinkside.uk/posts/permissions-error-on-postfix-package-from-blastwave/</link>
+      <pubDate>Tue, 27 Jan 2009 11:03:35 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/permissions-error-on-postfix-package-from-blastwave/</guid>
+      <description>Error - Can send emails as root but not any other user
+Error May 20 23:32:51 server.example.com postfix/postdrop[7779]: [ID 947731 mail.warning] warning: mail_queue_enter: create file maildrop/610017.7779: Permission denied Solution root@server:/&amp;gt; cd /etc/opt/csw/postfix root@server:/etc/opt/csw/postfix&amp;gt; ./post-install set-permissions command_directory=/opt/csw/sbin </description>
+    </item>
+    
+  </channel>
+</rss>

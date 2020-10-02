@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on ThinkSide</title>
+    <link>https://thinkside.uk/tags/hugo/</link>
+    <description>Recent content in hugo on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Dec 2018 20:58:00 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Blog Engine</title>
+      <link>https://thinkside.uk/posts/new-blog-engine/</link>
+      <pubDate>Fri, 21 Dec 2018 20:58:00 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/new-blog-engine/</guid>
+      <description>Nearly a new year, but a new blog engine, why would you ask and the honest answer would be to play with some new technology but also to find away to reduce costs and free up my time from having to constantly patch a wordpress site.</description>
+    </item>
+    
+  </channel>
+</rss>

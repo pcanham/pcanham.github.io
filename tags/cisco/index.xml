@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cisco on ThinkSide</title>
+    <link>https://thinkside.uk/tags/cisco/</link>
+    <description>Recent content in cisco on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jul 2009 13:38:15 +0000</lastBuildDate><atom:link href="https://thinkside.uk/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Releasing IP from DHCP pool of a cisco router</title>
+      <link>https://thinkside.uk/posts/releasing-ip-from-dhcp-pool-of-a-cisco-router/</link>
+      <pubDate>Mon, 06 Jul 2009 13:38:15 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/releasing-ip-from-dhcp-pool-of-a-cisco-router/</guid>
+      <description>gateway#show ip dhcp binding Bindings from all pools not associated with VRF: IP address Client-ID/ Lease expiration Type Hardware address/ User name 192.168.2.22 0100.123f.8e52.06 Apr 17 2009 03:41 PM Automatic 192.168.2.25 0100.0244.3908.79 Apr 17 2009 03:13 PM Automatic 192.168.2.59 0100.1500.2020.6b Apr 17 2009 03:42 PM Automatic 192.168.2.134 0100.016c.cb00.0e Apr 17 2009 03:12 PM Automatic gateway#clear ip dhcp binding 192.168.2.25 gateway#show ip dhcp binding Bindings from all pools not associated with VRF: IP address Client-ID/ Lease expiration Type Hardware address/ User name 192.</description>
+    </item>
+    
+    <item>
+      <title>Displaying DHCP clients from the CLI of a CISCO 877 router</title>
+      <link>https://thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/</link>
+      <pubDate>Mon, 12 Jan 2009 15:48:16 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/displaying-dhcp-clients-from-the-cli-of-a-cisco-877-router/</guid>
+      <description>gateway#show ip dhcp binding Bindings from all pools not associated with VRF: IP address Client-ID/ Lease expiration Type Hardware address/ User name 192.168.2.23 XXXX.XXX.XXXX.XX Jan 12 2009 05:12 PM Automatic 192.168.2.27 XXXX.XXXX.XXXX.XX Jan 12 2009 05:20 PM Automatic gateway# XXXX.XXXX.XXXX.XX = MAC address of server or network appliance.</description>
+    </item>
+    
+  </channel>
+</rss>

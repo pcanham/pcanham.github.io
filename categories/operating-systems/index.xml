@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operating Systems on ThinkSide</title>
+    <link>https://thinkside.uk/categories/operating-systems/</link>
+    <description>Recent content in Operating Systems on ThinkSide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Sep 2009 10:50:13 +0000</lastBuildDate><atom:link href="https://thinkside.uk/categories/operating-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Packages needed for installing X Windows in Solaris 10 for being able to use vncserver</title>
+      <link>https://thinkside.uk/posts/packages-needed-for-installing-x-windows-in-solaris-10-for-being-able-to-use-vncserver/</link>
+      <pubDate>Mon, 21 Sep 2009 10:50:13 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/packages-needed-for-installing-x-windows-in-solaris-10-for-being-able-to-use-vncserver/</guid>
+      <description>I have found a couple of times that i need to setup vncserver on a machine in one of the remote offices very useful when needing to load up either some web UI&amp;rsquo;s or applications locally due to either bandwidth limitations or licensing.
+These are the packages you need for being able to install vncserver from the opencsw repository (these should also work for the blastwave repo as well)
+system SUNWxwcft X Window System common (not required) fonts system SUNWxwdv X Windows System Window Drivers system SUNWxwfnt X Window System platform required fonts system SUNWxwice X Window System Inter-Client Exchange (ICE) Components system SUNWxwmod X Window System kernel modules system SUNWxwopt X Window System Optional Clients system SUNWxwplr X Window System platform software configuration system SUNWxwplt X Window System platform software system SUNWxwrtl X Window System &amp;amp; Graphics Runtime Library Links in /usr/lib system SUNWpl5u Perl 5.</description>
+    </item>
+    
+    <item>
+      <title>Great ramdisk script for start/stopping and backing up</title>
+      <link>https://thinkside.uk/posts/great-ramdisk-script-for-startstopping-and-backing-up/</link>
+      <pubDate>Wed, 04 Mar 2009 15:24:15 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/great-ramdisk-script-for-startstopping-and-backing-up/</guid>
+      <description>While i was looking around reading up on ramdisks in Solaris i found this every useful script which might be helpful to people, the key part i like about this is the backup section this saves me some time having to implement my own custom method.
+http://wikis.sun.com/display/BigAdmin/A+script+to+start+and+stop+ramdisks+in+the+Solaris+OS</description>
+    </item>
+    
+    <item>
+      <title>Deleting a ramdisk in Solaris 10</title>
+      <link>https://thinkside.uk/posts/deleting-a-ramdisk-in-solaris-10/</link>
+      <pubDate>Tue, 24 Feb 2009 15:22:25 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/deleting-a-ramdisk-in-solaris-10/</guid>
+      <description>Unmount disk umount /ramdisk_rrd Check what ramdisks are present ramdiskadm Block Device Size Removable /dev/ramdisk/ramdisk_rrd 41943040 Yes Deleting ram disk ramdiskadm -d /dev/ramdisk/ramdisk_rrd </description>
+    </item>
+    
+    <item>
+      <title>Creating a ramdisk in Solaris 10</title>
+      <link>https://thinkside.uk/posts/creating-a-ramdisk-in-solaris-10/</link>
+      <pubDate>Tue, 24 Feb 2009 15:17:37 +0000</pubDate>
+      
+      <guid>https://thinkside.uk/posts/creating-a-ramdisk-in-solaris-10/</guid>
+      <description>Creating a 40m ramdisk bash-3.00# ramdiskadm -a ramdisk_rrd 40m /dev/ramdisk/ramdisk_rrd Checking ramdisk file system bash-3.00# fstyp /dev/ramdisk/ramdisk_rrd Unknown_fstyp (no matches) Creating filesystem on ramdisk bash-3.00# newfs /dev/ramdisk/ramdisk_rrd newfs: construct a new file system /dev/rramdisk/ramdisk_rrd: (y/n)? y /dev/rramdisk/ramdisk_rrd: 81872 sectors in 136 cylinders of 1 tracks, 602 sectors 40.0MB in 9 cyl groups (16 c/g, 4.70MB/g, 2240 i/g) super-block backups (for fsck -F ufs -o b=#) at: 32, 9664, 19296, 28928, 38560, 48192, 57824, 67456, 77088, Make mount path bash-3.</description>
+    </item>
+    
+  </channel>
+</rss>
