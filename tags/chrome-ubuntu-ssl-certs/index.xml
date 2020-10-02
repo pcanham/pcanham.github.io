@@ -7,20 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 11 May 2011 08:29:24 +0000</lastBuildDate>
-    
+
 	<atom:link href="http://blog.thinkside.uk/tags/chrome-ubuntu-ssl-certs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+
+
     <item>
       <title>How to install your own CA cert into Google Chrome</title>
       <link>http://blog.thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</link>
       <pubDate>Wed, 11 May 2011 08:29:24 +0000</pubDate>
-      
+
       <guid>http://blog.thinkside.uk/posts/how-to-install-your-own-ca-cert-into-google-chrome/</guid>
       <description>There are a couple of different sites, which i log into on a regular basis which have there own self sign certificates. This isnt a bad thing but it does start to get annoying when you have to approve viewing the site every time you open up chome.
 To stop this from happening here is how you install your CA certificate to chrome
  Install the following package to your machine</description>
     </item>
-    
+
   </channel>
 </rss>
